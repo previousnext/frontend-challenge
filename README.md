@@ -23,6 +23,7 @@ form, and module components, using a combination of SASS, twig and jQuery (where
 
 The following guidelines must be followed to pass the test:
 
+- Timebox to one hour only!
 - Follow [SMACCS](https://smacss.com/) process.
 - Use [BEM](http://getbem.com/naming/) naming.
 - Adhere to [kss-node](https://github.com/kss-node/kss/blob/spec/SPEC.md) specification when writing component documentation.
