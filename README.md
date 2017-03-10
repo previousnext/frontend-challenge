@@ -1,6 +1,6 @@
-# pnx-frontend-test
+# PNX Frontend Challenge
 
-This test is designed to give you a peek into our workflow at PNX and to test your skills with the following technologies:
+This challenged is designed to give you a peek into our workflow at PNX and to test your skills with the following technologies:
 
 - SASS
 - Twig
@@ -21,7 +21,7 @@ form, and module components, using a combination of SASS, twig and jQuery (where
 
 ### Guidelines
 
-The following guidelines must be followed to pass the test:
+The following guidelines should be followed:
 
 - Timebox to one hour only!
 - Follow [SMACCS](https://smacss.com/) process.
