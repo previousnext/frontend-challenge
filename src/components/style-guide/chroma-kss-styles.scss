@@ -1,0 +1,22 @@
+// sass-lint:disable empty-args no-color-literals leading-zero
+
+// Build the stylesheet needed for the color section of the KSS style guide.
+@import 'chroma';
+@import 'chroma/kss';
+@import 'init/colors';
+
+@include chroma-kss-styles;
+
+.kss-style {
+  .chroma-kss {
+    line-height: 50px;
+    margin-bottom: 12px;
+  }
+
+  .chroma-kss__swatch {
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+  }
+}

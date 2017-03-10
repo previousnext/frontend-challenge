@@ -1,0 +1,24 @@
+// Image replace
+//
+// Modern image replacement technique from Zeldman.
+// See http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+//
+// .image-replace--reset - Reset an element that has been replaced by an image.
+//
+// Markup: image-replace.twig
+//
+// Style guide: 2.3
+
+.image-replace,
+%image-replace {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &--reset {
+    text-indent: 0;
+    white-space: normal;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,153 @@
+// sass-lint:disable no-vendor-prefixes
+
+// Typography
+//
+// Text in its default appearance.
+//
+// Markup: text-defaults.twig
+//
+// Style guide: 3.1
+
+$chroma: add-colors('primary', (
+  text:     'grey-mid',
+  text-alt: 'grey',
+  text-bg:  'white',
+  heading:  'grey',
+));
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @include define-type-sizing;
+  color: color(text);
+  background: color(text-bg);
+
+  // Hide scroll bars on IE.
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Strong (bold)
+//
+// Bold text using the `<strong>` tag. Please note that bold text uses a _semi-bold_ weight
+// (600 instead of 700), so using `font-weight: bold;` will produce text that
+// uses faux bold (and hence will look poor). Instead use the `<strong>` tag or
+// `font-weight: weight(bold);` if implementing in SASS.
+//
+// Markup: text-strong.twig
+//
+// Style guide: 3.1.1
+
+b,
+strong {
+  font-weight: weight(bold);
+}
+
+// Emphasis (italic)
+//
+// Italic text using the `<em>` tag.
+//
+// Markup: text-em.twig
+//
+// Style guide: 3.1.2
+
+// Paragraph
+//
+// Text grouped with paragraph tags.
+//
+// Markup: text-p.twig
+//
+// Style guide: 3.1.3
+
+p {
+  @include margin(0 0 1);
+}
+
+// Headings
+//
+// `<h1>` through to `<h6>` tag text and the spacing relationship with paragraphs.
+//
+// Markup: text-h.twig
+//
+// Style guide: 3.1.4
+
+%text__h-base {
+  @include margin(2 0 1);
+  font-weight: weight(normal);
+  color: color(heading);
+}
+
+h1,
+%h1 {
+  @extend %text__h-base;
+  @include typeset(h1);
+}
+
+h2,
+%h2 {
+  @extend %text__h-base;
+  @include typeset(h2);
+}
+
+h3,
+%h3 {
+  @extend %text__h-base;
+  @include typeset(h3);
+}
+
+h4,
+%h4 {
+  @extend %text__h-base;
+  @include typeset(h4);
+}
+
+h5,
+%h5 {
+  @extend %text__h-base;
+  @include typeset(h5);
+}
+
+h6,
+%h6 {
+  @extend %text__h-base;
+  @include typeset(h6);
+}
+
+// Unordered list
+//
+// The standard approach for a bullet (unordered list) is to use the default
+// `<ul>` tag as shown below.
+//
+// Markup: text-ul.twig
+//
+// Style guide: 3.1.5
+
+// Ordered list
+//
+// An ordered list.
+//
+// Markup: text-ol.twig
+//
+// Style guide: 3.1.6
+
+ul,
+ol {
+  @include margin(0 0 1);
+  @include padding(0 0 0 2);
+
+  // Nested lists have altered spacing.
+  ul,
+  ol {
+    @include margin(.25 0 0)
+  }
+
+  li {
+    @include margin(0 0 .25);
+  }
+}

@@ -1,0 +1,29 @@
+// Add Breakpoint to manage media queries.
+@import 'breakpoint';
+
+// Breakpoints
+//
+// Use the `respond-to()` mixin to use named breakpoints. Documentation is
+// available in the [Breakpoint wiki pages](https://github.com/at-import/breakpoint/wiki/Respond-To).
+//
+// The following mobile first breakpoints are based on common screen sizes;
+// * initial state - 0px+ (without media query)
+// * xxs  - 320px+ (not currently used)
+// * xs   - 375px+ (not currently used)
+// * s    - 414px+ (larger than most mobile screens)
+// * m    - 768px+ (larger than most tablet screens)
+// * l    - 1024px+ (larger than most laptop screens)
+// * xl   - 1280px+ (larger than some laptop or smaller desktop screens)
+// * xxl  - 1680px+ (not currently used)
+//
+// Custom breakpoints, required for specific components should be defined inside that component.
+//
+// Style guide: 1.2
+
+@include add-breakpoint('xxs', (320px, 'no-query' true));
+@include add-breakpoint('xs', (375px, 'no-query' true));
+@include add-breakpoint('s', (414px, 'no-query' true));
+@include add-breakpoint('m', (768px, 'no-query' true));
+@include add-breakpoint('l', (1024px, 'no-query' true));
+@include add-breakpoint('xl', 1280px);
+@include add-breakpoint('xxl', 1680px);

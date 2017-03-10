@@ -1,0 +1,59 @@
+// @file
+// The major stylesheet for this theme.
+//
+// We categorize our components by creating headings in this file. See the
+// description on the style guide home page for more information.
+
+
+// Colors and Sass
+//
+// Documentation for colors and Sass mixins and variables.
+//
+// Style guide: 1
+@import 'init/**/*';
+
+// Utilities
+//
+// These are small utility components that can be used everywhere.
+//
+// Style guide: 2
+
+// Now include our utils.
+@import 'utils/**/*';
+
+// Defaults
+//
+// These are the default base styles applied to HTML elements.
+//
+// Component classes can override these styles, but if no class applies a style
+// to an HTML element, these styles will be the ones displayed.
+//
+// Style guide: 3
+
+@import 'base/normalize';
+@import 'base/**/*';
+
+// Layout
+//
+// Layout components. Display is styleguide is modified for demonstration purposes.
+// The final use has no padding or borders.
+//
+// Style guide: 4
+
+@import 'layout/**/*';
+
+// Forms
+//
+// Form components are specialized design components that are applied to forms
+// or form elements.
+//
+// Style guide: 5
+
+// Modules
+//
+// Design components (or modules) are reusable designs that can be applied using just the CSS
+// class names specified in the component.
+//
+// Style guide: 6
+
+@import 'modules/**/*';

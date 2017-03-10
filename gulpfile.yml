@@ -1,0 +1,27 @@
+httpRoot: dist
+
+sass:
+  src: src/components
+  dest: dist/css
+
+js:
+  src:
+    - src/components
+
+styleguide:
+  title: Style Guide
+  dest: dist
+  builder: node_modules/kss-offscreen-twig
+  cssFiles:
+    - https://fonts.googleapis.com/css?family=Open+Sans:400,700
+    - dist/css/styles.css
+    - dist/css/style-guide/chroma-kss-styles.css
+    - dist/css/style-guide/kss-only.css
+  jsFiles:
+    - https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js
+
+autoprefixer:
+  browsers:
+    - last 2 versions
+    - ie >= 10
+    - and_chr >= 2.3

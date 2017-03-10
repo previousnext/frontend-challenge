@@ -1,0 +1,48 @@
+// Links
+//
+// The standard `<a>` tag and its various states.
+//
+// :hover - The hover style.
+// :visited - A link that has already been visited.
+// :focus - A link that has been given keyboard focus.
+// :active - A link that is being actively clicked.
+//
+// Markup: link.twig
+//
+// Style guide: 3.2
+
+$chroma: add-colors('primary', (
+  link:               'black',
+  link-active:        'black',
+  link-focus-border:  'grey-light',
+));
+
+:link,
+%link {
+  color: color(link);
+  text-decoration: underline;
+
+  &:focus {
+    color: color(link);
+    text-decoration: none;
+    outline: 2px solid color(link-focus-border);
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    outline: 0;
+  }
+
+  &:active {
+    color: color(link-active);
+  }
+}
+
+:visited {
+  color: color(link);
+
+  &:active {
+    color: color(link-active);
+  }
+}

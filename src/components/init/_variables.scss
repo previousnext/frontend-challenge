@@ -1,0 +1,19 @@
+// Variables
+//
+// Set misc vars here.
+
+// Borders
+$border-width:              1px !default;
+$border-style:              $border-width solid !default;
+$border-radius:             10px !default;
+
+// Spacing
+$spacing-s:                 10px !default;
+$spacing-m:                 30px !default;
+$spacing-l:                 70px !default;
+
+// Set container padding as a portion of the viewport width.
+$container-padding:         6vw !default;
+
+// Set the width that the container will max out at.
+$container-max-width:       1280px !default;

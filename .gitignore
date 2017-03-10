@@ -1,0 +1,8 @@
+/dist
+/eyeglass_cache
+/node_modules
+yarn.lock
+.map
+.DS_Store
+ehthumbs.db
+Thumbs.db

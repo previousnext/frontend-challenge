@@ -1,0 +1,10 @@
+// sass-lint:disable no-css-comments
+
+// Build the markup needed for the color section of the KSS style guide.
+@import 'chroma';
+@import 'chroma/kss';
+@import 'init/colors';
+
+/*
+#{chroma-kss-markup()}
+*/

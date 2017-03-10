@@ -1,0 +1,31 @@
+// scss-lint:disable ColorKeyword, ColorVariable, SpaceAfterComma
+
+// Add Chroma to manage colors.
+@import 'chroma';
+
+// Colors
+//
+// Use the `color()` function to add colors to CSS properties.
+//
+// Markup: chroma-kss-markup.twig
+//
+// Style guide: 1.1
+
+// These colours make up the building blocks for component colors.
+$chroma: define-default-color-scheme('Descriptive color names for use in "functional" color names below.');
+$chroma: add-colors((
+  'white':                  #fff,
+  'grey-xxlight':           #fbfbfb,
+  'grey-xlight':            #ececec,
+  'grey-light':             #ccc,
+  'grey-mid':               #5f5f5f,
+  'grey':                   #3f3f3f,
+  'black':                  #111,
+  'blue':                   #0074cb,
+  'blue-mid':               #015ea4,
+));
+
+// The primary color scheme provides components with colors.
+// Primary colors should be defined in each component.
+$chroma: define-color-scheme('primary', 'Colors used by design components.');
+$chroma-active-scheme: 'primary';

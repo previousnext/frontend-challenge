@@ -1,0 +1,20 @@
+// Horizontal rule
+//
+// The `<hr>` tag can be used to easily seperate blocks of text.
+//
+// Markup: hr.twig
+//
+// Style guide: 3.4
+
+$chroma: add-colors('primary', (
+  hr: 'grey-light'
+));
+
+hr {
+  @include margin(1 0);
+  display: block;
+  background: 0;
+  height: 0;
+  border: 0;
+  border-top: $border-style color(hr);
+}

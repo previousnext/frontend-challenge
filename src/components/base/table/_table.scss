@@ -1,0 +1,46 @@
+// Table
+//
+// The default table display.
+//
+// Markup: table.twig
+//
+// Style guide: 3.3
+
+$chroma: add-colors('primary', (
+  table-border:     'grey-light',
+  table-th-text:    'grey',
+  table-th-bg:      'grey-xlight',
+  table-td-odd-bg:  'white',
+  table-td-even-bg: 'grey-xxlight'
+));
+
+table {
+  @include margin(0 0 1);
+  width: 100%;
+  border: 1px solid color(table-border);
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: $spacing-s;
+    vertical-align: top;
+    text-align: left;
+    border-right: 1px solid color(table-border);
+  }
+
+  th {
+    font-weight: weight(normal);
+    color: color(table-th-text);
+    background-color: color(table-th-bg);
+  }
+
+  tr {
+    &:nth-child(odd) td {
+      background-color: color(table-td-odd-bg);
+    }
+
+    &:nth-child(even) td {
+      background-color: color(table-td-even-bg);
+    }
+  }
+}

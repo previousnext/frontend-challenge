@@ -1,0 +1,33 @@
+// Add typey to manage font sizes and margins.
+@import 'typey';
+
+// Typography Variables
+//
+// Various variables, largely relating to typey.
+
+$base-unit:               rem;
+$rem-fallback:            false;
+
+$base-font-size:          16px;
+$base-line-height:        20px;
+
+$line-height-method:      ratio;
+$base-line-height-ratio:  21 / 16;
+
+$font-weight: (
+  bold:          700,
+  normal:        400
+);
+
+$typestyles: (
+  default:       16px normal,
+  small:         14px,
+  large:         18px,
+);
+
+// Font families
+$font-base:      'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$typefaces: (
+  base:          $font-base,
+);
