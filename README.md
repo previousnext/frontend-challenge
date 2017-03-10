@@ -1,6 +1,6 @@
-# PNX Frontend Challenge
+# Frontend Challenge
 
-This challenged is designed to give you a peek into our workflow at PNX and to test your skills with the following technologies:
+This challenge is designed to give you a peek into our workflow at PNX and to test your skills with the following technologies:
 
 - SASS
 - Twig
