@@ -31,7 +31,7 @@ The following guidelines must be followed to pass the test:
 
 ### Getting started
 
-Firstly, please fork this repo so the results of your work can be shared with us.
+Firstly, please fork this repo so you can share the results of your work.
 
 To setup your development environment, make sure you have [nvm](https://github.com/creationix/nvm#installation) and [yarn](https://yarnpkg.com/en/docs/install#mac-tab) installed locally.
 
