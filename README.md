@@ -9,7 +9,7 @@ This test is designed to give you a peek into our workflow at PNX and to test yo
 
 Inside the `design` folder there is a PSD file.
 
-Inside `src/components` is a very light-weight sass scaffold in the form of
+Inside `src/components` is a very light-weight SASS scaffold in the form of
 a handful of base components, some very simple utility classes and one example
 button component. You'll be expected to flesh this out with your own layout,
 form, and module components, using a combination of SASS, twig and jQuery (where necessary).
@@ -23,10 +23,10 @@ form, and module components, using a combination of SASS, twig and jQuery (where
 
 The following guidelines must be followed to pass the test:
 
-- Follow (SMACCS)[https://smacss.com/] process.
-- Use (BEM)[http://getbem.com/naming/] naming.
-- Adhere to (kss-node)[https://github.com/kss-node/kss/blob/spec/SPEC.md] specification when writing component documentation.
-- Use of (breakpoint)[https://github.com/at-import/breakpoint], (typey)[https://github.com/jptaranto/typey] and (chroma)[https://github.com/JohnAlbin/chroma] sass modules.
+- Follow [SMACCS](https://smacss.com/) process.
+- Use [BEM](http://getbem.com/naming/) naming.
+- Adhere to [kss-node](https://github.com/kss-node/kss/blob/spec/SPEC.md) specification when writing component documentation.
+- Use of [breakpoint](https://github.com/at-import/breakpoint), [typey](https://github.com/jptaranto/typey) and [chroma](https://github.com/JohnAlbin/chroma) sass modules.
 - Use of jQuery.
 
 ### Getting started
@@ -52,7 +52,7 @@ gulp watch
 This will build all the files inside the `src/components` directory and start
 the Browsersync server, opening it in your default browser.
 
-When you make changes to a `scss` file, `js` file or a `twig` file the watch
+When you make changes to a `scss`, `js`, or `twig` file the watch
 task will lint, rebuild and refresh Browsersync for you.
 
 ### Good luck!
