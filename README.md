@@ -11,24 +11,30 @@ Inside the `design` folder there is a PSD file.
 
 Inside `src/components` is a very light-weight SASS scaffold in the form of
 a handful of base components, some very simple utility classes and one example
-button component. You'll be expected to flesh this out with your own layout,
-form, and module components, using a combination of SASS, twig and jQuery (where necessary).
+button component.
+
+We'd like you to have a go at implementing as many of the components from the
+design `design/pnx.psd` as you can in an hour, into a living style guide (kss-node).
+
+It's OK if you aren't familiar with kss-node or Twig, the button example in `src/components/modules/button/` is your friend, follow it's lead.
 
 ### Outcome
 
-1. Setup working development environment (following the instructions below).
-2. Translate the provided design into a component library within a living style guide.
+We just want to see your code!
+Ideally you won't use a CSS framework but can demonstrate at least some of the following:
 
-### Guidelines
+- Understanding of [SMACCS](https://smacss.com/) architecture.
+- Understanding of [BEM](http://getbem.com/naming/) naming.
+- Ability to reference [kss-node](https://github.com/kss-node/kss/blob/spec/SPEC.md) specification when writing component documentation.
+- Use of common Sass functions like [breakpoint](https://github.com/at-import/breakpoint)
+- Ability to self-learn new sass modules like [typey](https://github.com/jptaranto/typey) and [chroma](https://github.com/JohnAlbin/chroma).
+- Use of HTML5 markup
+- Use of jQuery where necessary
 
-The following guidelines should be followed:
+Bonus points for:
 
-- Timebox to one hour only!
-- Follow [SMACCS](https://smacss.com/) process.
-- Use [BEM](http://getbem.com/naming/) naming.
-- Adhere to [kss-node](https://github.com/kss-node/kss/blob/spec/SPEC.md) specification when writing component documentation.
-- Use of [breakpoint](https://github.com/at-import/breakpoint), [typey](https://github.com/jptaranto/typey) and [chroma](https://github.com/JohnAlbin/chroma) sass modules.
-- Use of jQuery.
+- Use of flexbox
+- Understanding of SVG scaling issues
 
 ### Getting started
 
