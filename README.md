@@ -2,19 +2,18 @@
 
 This challenge is designed to give you a peek into our workflow at PNX and to test your skills with the following technologies:
 
-- SASS
+- Sass
 - Twig
-- JS/jQuery
+- jQuery
 - kss-node
 
 Inside the `design` folder there is a PSD file.
 
-Inside `src/components` is a very light-weight SASS scaffold in the form of
+Inside `src/components` is a very light-weight Sass scaffold in the form of
 a handful of base components, some very simple utility classes and one example
 button component.
 
-We'd like you to have a go at implementing as many of the components from the
-design `design/pnx.psd` as you can in an hour, into a living style guide (kss-node).
+We'd like you to have a go at implementing as many of the components from `design/pnx.psd` as you can in an hour, into a living style guide (kss-node).
 
 It's OK if you aren't familiar with kss-node or Twig, the button example in `src/components/modules/button/` is your friend, follow it's lead.
 
@@ -27,7 +26,7 @@ Ideally you won't use a CSS framework but can demonstrate at least some of the f
 - Understanding of [BEM](http://getbem.com/naming/) naming.
 - Ability to reference [kss-node](https://github.com/kss-node/kss/blob/spec/SPEC.md) specification when writing component documentation.
 - Use of common Sass functions like [breakpoint](https://github.com/at-import/breakpoint)
-- Ability to self-learn new sass modules like [typey](https://github.com/jptaranto/typey) and [chroma](https://github.com/JohnAlbin/chroma).
+- Ability to self-learn new Sass modules like [typey](https://github.com/jptaranto/typey) and [chroma](https://github.com/JohnAlbin/chroma).
 - Use of HTML5 markup
 - Use of jQuery where necessary
 
