@@ -35,6 +35,7 @@ Bonus points for:
 
 - Use of flexbox
 - Understanding of SVG scaling issues
+- Having fun!!
 
 ### Getting started
 
