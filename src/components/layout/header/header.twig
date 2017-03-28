@@ -1,0 +1,7 @@
+<header class="header" role="banner">
+  <a class="header__logo" href="#" rel="home">
+    {% include '../../../../design/logo.svg' %}
+  </a>
+  {% include '../../modules/navigation/navigation.twig' with {'modifier_class': 'header__navigation'} %}
+  {% include '../../forms/search.twig' with {'modifier_class': 'header__search'} %}
+</header>

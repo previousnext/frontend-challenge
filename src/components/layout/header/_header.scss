@@ -1,0 +1,43 @@
+// Header
+//
+// The site header. This typically contains site logo, navigation and a simple search form.
+//
+// Markup: header.twig
+//
+// Style guide: 4.1
+
+$chroma: add-colors('primary', (
+  header-text-color: 'white',
+));
+
+$header-padding: spacing(20px);
+$header-logo-padding: spacing(15px);
+
+.header,
+%header {
+  padding: $header-padding;
+  background-color: color(brand-primary);
+  overflow: hidden;
+
+  &__logo {
+    float: left;
+    padding: $header-logo-padding;
+
+    svg {
+      height: 27px;
+    }
+  }
+
+  &__navigation {
+    float: left;
+
+    .navigation__link {
+      color: color(header-text-color);
+    }
+  }
+
+  &__search {
+    float: right;
+    margin-right: spacing(51px);
+  }
+}

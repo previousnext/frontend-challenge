@@ -1,0 +1,43 @@
+// Search form
+//
+// A simple search form.
+//
+// Markup: search.twig
+//
+// Style guide: 5.1
+
+$chroma: add-colors('primary', (
+    search-background-color: 'white',
+));
+
+$search-padding: spacing(15px);
+$search-border-radius: 6px;
+$search-button-size: spacing(51px);
+
+.search,
+%search {
+  position: relative;
+
+  &__input {
+    display: inline-block;
+    padding: $search-padding;
+    border: 0 none;
+    border-top-left-radius: $search-border-radius;
+    border-bottom-left-radius: $search-border-radius;
+  }
+
+  &__button {
+    position: absolute;
+    border: 0 none;
+    background-color: color(search-background-color);
+    height: $search-button-size;
+    width: $search-button-size;
+    border-top-right-radius: $search-border-radius;
+    border-bottom-right-radius: $search-border-radius;
+
+    svg {
+      height: 27px;
+      width: 27px;
+    }
+  }
+}
