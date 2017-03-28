@@ -1,0 +1,32 @@
+// Navigation
+//
+// The main navigation.
+//
+// Markup: navigation.twig
+//
+// Style guide: 6.2
+
+$navigation-link-padding-vertical: spacing(20px);
+$navigation-link-padding-horizontal: spacing(25px);
+
+.navigation,
+%navigation {
+  @include typeset(default);
+  @include typeface(base);
+
+  ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    padding: $navigation-link-padding-vertical $navigation-link-padding-horizontal;
+  }
+}
