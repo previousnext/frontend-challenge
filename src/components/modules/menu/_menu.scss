@@ -1,0 +1,48 @@
+// Menu
+//
+// The main menu module displays menu links
+//
+// .menu
+//
+// Markup: menu.twig
+//
+// Style guide: 6.2
+
+$chroma: add-colors('primary', (
+    menu-primary-bg:                #425467,
+    menu-primary-text:              'white',
+    menu-item-text:                 'white',
+    menu-item-border-color-active:  'white',
+    menu-item-border-color-hover:   rgba(255, 255, 255, .2),
+));
+
+$menu-height: spacing(100px);
+$menu-padding: spacing(25px);
+$menu-border-width: 100%;
+
+.menu,
+%menu {
+  background-color: color(menu-primary-bg);
+  color: color(menu-primary-text);
+  display: flex;
+  padding: 10px;
+
+  &__item {
+    display: block;
+    padding: 10px;
+    color: color(menu-item-text);
+    text-decoration: none;
+
+    &:hover,
+    &--active {
+      text-decoration: none;
+      cursor: pointer;
+      border-bottom: 2px solid color(menu-item-border-color-hover);
+    }
+
+    &--active {
+      border-bottom: 2px solid color(menu-item-border-color-active);
+    }
+  }
+
+}
