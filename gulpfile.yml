@@ -18,7 +18,7 @@ styleguide:
     - dist/css/style-guide/chroma-kss-styles.css
     - dist/css/style-guide/kss-only.css
   jsFiles:
-    - https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js
+    - https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js
 
 autoprefixer:
   browsers:
