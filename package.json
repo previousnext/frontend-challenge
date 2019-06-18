@@ -13,7 +13,7 @@
     "del": "^2",
     "eslint": "^3",
     "eyeglass": "^1",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3",
     "gulp-eslint": "^3",
     "gulp-rename": "^1",
