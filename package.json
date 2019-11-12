@@ -11,7 +11,7 @@
     "browser-sync": "^2.6.9",
     "chroma-sass": "^1",
     "del": "^2",
-    "eslint": "^3",
+    "eslint": "^4",
     "eyeglass": "^1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3",
