@@ -19,9 +19,3 @@ styleguide:
     - dist/css/style-guide/kss-only.css
   jsFiles:
     - https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js
-
-autoprefixer:
-  browsers:
-    - last 2 versions
-    - ie >= 10
-    - and_chr >= 2.3

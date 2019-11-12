@@ -215,7 +215,7 @@ const stylesDev = function() {
     .pipe(sassGlob())
     .pipe(sourcemaps.init())
     .pipe(sass(eyeglass(config.sassOptions)).on('error', sass.logError))
-    .pipe(autoprefixer(config.autoprefixer))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.sass.dest))
     .pipe(browserSync.stream({ match: '**/*.css' }));
@@ -231,7 +231,7 @@ const stylesProd = function() {
   return gulp.src(sassFiles)
     .pipe(sassGlob())
     .pipe(sass(eyeglass(config.sassOptions)).on('error', sass.logError))
-    .pipe(autoprefixer(config.autoprefixer))
+    .pipe(autoprefixer())
     .pipe(size({ showFiles: true, showTotal: false }))
     .pipe(gulp.dest(config.sass.dest));
 };
@@ -246,7 +246,7 @@ const kssStyles = function() {
   return gulp.src(kssSassFiles)
     .pipe(sassGlob())
     .pipe(sass(eyeglass(config.sassOptions)).on('error', sass.logError))
-    .pipe(autoprefixer(config.autoprefixer))
+    .pipe(autoprefixer())
     .pipe(gulp.dest(config.sass.dest + '/style-guide'));
 };
 
