@@ -1,0 +1,18 @@
+{% set baseClass = 'mx-media' %}
+{% set classes = [
+  baseClass,
+  type ? baseClass~'--'~type : null,
+  align ? baseClass~'--'~align : null,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+<figure{{ attributes }}>
+  {{ item }}
+  {% if caption is not empty or attribution is not empty %}
+  <figcaption>
+    {{ caption }}
+    {% if caption is not empty and attribution is not empty %} - {% endif %}
+    {{ attribution }}
+  </figcaption>
+  {% endif %}
+</figure>

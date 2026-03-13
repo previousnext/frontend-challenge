@@ -1,0 +1,29 @@
+{% set style = null %}
+{% for modifier in modifiers %}
+  {% if modifier == "h1" %}
+    {% set style = 'xxl' %}
+  {% endif %}
+  {% if modifier == "h2" %}
+    {% set style = 'xl' %}
+  {% endif %}
+  {% if modifier == "h3" %}
+    {% set style = 'l' %}
+  {% endif %}
+  {% if modifier == "h4" %}
+    {% set style = 'm' %}
+  {% endif %}
+  {% if modifier == "h5" %}
+    {% set style = 's' %}
+  {% endif %}
+{% endfor %}
+{% set classes = [
+  excluded ? 'is-excluded' : null,
+  srOnly ? 'sr-only' : null,
+  style ? 'mx-heading--'~style : null,
+] %}
+{% set attributes = (attributes ?? create_attribute()) %}
+{% if classes|join(" ")|trim() %}
+  {% set attributes = attributes.addClass(classes) %}
+{% endif %}
+
+<{{ as|default('h2')  }} {{ attributes }}>{{ title }}</{{ as|default('h2') }}>

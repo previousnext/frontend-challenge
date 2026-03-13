@@ -1,0 +1,107 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Background 1`] = `
+"    
+<div class="mx-background--primary mx-section--xl">
+      <div class="mx-container mx-vertical-flow">
+            <div class="mx-section__header">
+      
+<h2>Section name</h2>
+
+        
+<a class="mx-link--more" href="#">
+  
+  <span>See more content</span>
+    
+<span class="mx-icon mx-icon--arrow-right"></span>
+
+</a>
+
+      </div>
+        <p class="mx-text--lede">A short description to help explain enough about the subject matter to encourage visitors to learn more.</p>
+      </div>
+  </div>
+"
+`;
+
+exports[`Box 1`] = `
+"    
+<div class="mx-background--box mx-section--xl">
+      <div class="mx-container mx-vertical-flow">
+            <div class="mx-section__header">
+      
+<h2>Section name</h2>
+
+        
+<a class="mx-link--more" href="#">
+  
+  <span>See more content</span>
+    
+<span class="mx-icon mx-icon--arrow-right"></span>
+
+</a>
+
+      </div>
+        <p class="mx-text--lede">A short description to help explain enough about the subject matter to encourage visitors to learn more.</p>
+      </div>
+  </div>
+"
+`;
+
+exports[`Header 1`] = `
+"    
+<div class="mx-section--xl">
+      <div class="mx-container mx-vertical-flow">
+          <p class="mx-text--lede">A short description to help explain enough about the subject matter to encourage visitors to learn more.</p>
+      </div>
+  </div>
+"
+`;
+
+exports[`Modifiers 1`] = `
+"        
+<div class="mx-section--top-s mx-section--bottom-xl">
+      <div class="mx-container mx-vertical-flow">
+            <div class="mx-section__header">
+      
+<h2>Section name</h2>
+
+        
+<a class="mx-link--more" href="#">
+  
+  <span>See more content</span>
+    
+<span class="mx-icon mx-icon--arrow-right"></span>
+
+</a>
+
+      </div>
+        <p class="mx-text--lede">A short description to help explain enough about the subject matter to encourage visitors to learn more.</p>
+      </div>
+  </div>
+"
+`;
+
+exports[`Section 1`] = `
+"    
+<div class="mx-section--xl">
+      <div class="mx-container mx-vertical-flow">
+            <div class="mx-section__header">
+      
+<h2>Section name</h2>
+
+        
+<a class="mx-link--more" href="#">
+  
+  <span>See more content</span>
+    
+<span class="mx-icon mx-icon--arrow-right"></span>
+
+</a>
+
+      </div>
+        <p class="mx-text--lede">A short description to help explain enough about the subject matter to encourage visitors to learn more.</p>
+      </div>
+  </div>
+"
+`;

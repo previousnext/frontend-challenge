@@ -1,0 +1,161 @@
+/**
+ * Section
+ */
+
+@layer design-system.layouts {
+  .mx-container {
+    --container-name: container;
+
+    container-name: var(--container-name);
+    container-type: inline-size;
+  }
+
+  .mx-section--divider {
+    border-block-start: 1px solid var(--colour-border);
+  }
+
+  .mx-section--s {
+    padding-block: var(--section-s, var(--spacing-s));
+  }
+
+  .mx-section--m {
+    padding-block: var(--section-m, var(--spacing-m));
+  }
+
+  .mx-section--l {
+    padding-block: var(--section-l, var(--spacing-xl));
+  }
+
+  .mx-section--xl {
+    padding-block: var(--section-xl, var(--spacing-uul));
+  }
+
+  .mx-section--top-s {
+    padding-block-start: var(--section-s, var(--spacing-s));
+  }
+
+  .mx-section--top-m {
+    padding-block-start: var(--section-m, var(--spacing-m));
+  }
+
+  .mx-section--top-l {
+    padding-block-start: var(--section-l, var(--spacing-xl));
+  }
+
+  .mx-section--top-xl {
+    padding-block-start: var(--section-xl, var(--spacing-uul));
+  }
+
+  .mx-section--bottom-s {
+    padding-block-end: var(--section-s, var(--spacing-s));
+  }
+
+  .mx-section--bottom-m {
+    padding-block-end: var(--section-m, var(--spacing-m));
+  }
+
+  .mx-section--bottom-l {
+    padding-block-end: var(--section-l, var(--spacing-xl));
+  }
+
+  .mx-section--bottom-xl {
+    padding-block-end: var(--section-xl, var(--spacing-uul));
+  }
+}
+
+/**
+ * Sections breakouts
+ *
+ * Uses `subgrid` so no supported in older browsers.
+ */
+
+/**
+ * Sections flows & groups
+ *
+ * Uses `:has` so is not supported in older browsers.
+ * see https://www.bram.us/2022/12/13/quantity-queries-for-islands-of-elements-with-the-same-class-thanks-to-css-has/
+ */
+
+@layer design-system.layouts {
+  .mx-section--flow {
+    --flow-spacing: var(--section-l, var(--spacing-xl));
+
+    padding-block-end: var(--flow-spacing);
+
+    &:is(
+      [class*="mx-background"],
+      [class*="mx-background"] + .mx-section--flow,
+      :not(.mx-section--flow:not(.mx-section--group) + .mx-section--flow)
+    ) {
+      padding-block-start: var(--flow-spacing);
+    }
+  }
+
+  .mx-section--group {
+    --group-spacing: var(--section-l, var(--spacing-xl));
+
+    padding-block: 0;
+
+    /* :first-in-island-of-class */
+
+    &:is(
+      :not([class*="mx-background"]) + .mx-section--group[class*="mx-background"],
+      :not(.mx-section--group + .mx-section--group)
+    ) {
+      padding-block-start: var(--group-spacing);
+    }
+
+    /* :last-in-island-of-class */
+
+    &:is(
+      :not([class*="mx-background"]):has(+ .mx-section--group[class*="mx-background"]),
+      :not(:has(+ .mx-section--group))
+    ) {
+      padding-block-end: var(--group-spacing);
+    }
+
+    /* :single-in-island-of-class */
+
+    &:not(.mx-section--group + .mx-section--group, :has(+ .mx-section--group)) {
+      padding-block: var(--group-spacing);
+    }
+  }
+}
+
+/**
+ * Section header
+ */
+
+@layer design-system.layouts {
+  .mx-section__header {
+    margin-block-end: var(--spacing-m);
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--spacing-s);
+    align-items: center;
+    justify-content: space-between;
+
+    &:has(.sr-only:only-child) {
+      margin-block-end: 0;
+    }
+  }
+
+  .mx-vertical-flow > .mx-section__header:has(.sr-only:only-child) {
+    margin-block-end: calc(var(--flow-gap, var(--gap)) * -1);
+  }
+}
+
+/**
+ * Section Background image
+ */
+
+@layer design-system.layouts {
+  :is(.mx-section--has-background, .mx-section:has(.mx-background--image)) {
+    overflow: hidden;
+    position: relative;
+
+    & > div {
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Alignment 1`] = `
+"
+<span class="mx-icon mx-icon--arrow-left mx-icon--end mx-icon--size-sm">Message with icon</span>
+"
+`;
+
+exports[`Icon 1`] = `
+"
+<span class="mx-icon mx-icon--arrow-right mx-icon--size-sm"></span>
+"
+`;
+
+exports[`Large 1`] = `
+"
+<span class="mx-icon mx-icon--arrow-right mx-icon--size-xl"></span>
+"
+`;
+
+exports[`Primary 1`] = `
+"
+<span class="mx-icon mx-icon--arrow-right mx-icon--color-brand mx-icon--size-sm"></span>
+"
+`;
+
+exports[`With Text 1`] = `
+"
+<span class="mx-icon mx-icon--arrow-right mx-icon--size-sm">Message with icon</span>
+"
+`;

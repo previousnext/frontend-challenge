@@ -1,0 +1,12 @@
+{% set baseClass = 'mx-icon' %}
+{% set classes = [
+  baseClass,
+  baseClass~'--'~icon,
+  align ? baseClass~'--'~align : null,
+  color ? baseClass~'--color-'~color : null,
+  rotate ? baseClass~'--'~rotate : null,
+  size ? baseClass~'--size-'~size : null,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+<span{{ attributes }}>{{ text }}</span>

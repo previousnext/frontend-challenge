@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Media 1`] = `
+"
+<figure class="mx-media mx-media--image">
+  <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Some blurry bubble image">
+</picture>
+
+    <figcaption>
+    A picsum image
+        
+  </figcaption>
+  </figure>
+"
+`;
+
+exports[`Remote Video 1`] = `
+"
+<figure class="mx-media mx-media--video">
+  <figure class="mx-video">
+  <iframe src="https://www.youtube.com/embed/NpEaa2P7qZI" title="Something from youtube" allowfullscreen=""></iframe>
+</figure>
+
+    <figcaption>
+    A remote video
+        
+  </figcaption>
+  </figure>
+"
+`;

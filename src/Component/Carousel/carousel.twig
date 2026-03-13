@@ -1,0 +1,26 @@
+{% set classes = [
+  'mx-carousel',
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+<mx-carousel{{ attributes }} role="group" {% if loop %} loop{% endif %}>
+  <div class="mx-carousel__buttons" data-buttons hidden>
+    <button class="mx-carousel__prev mx-button mx-button--icon-only" type="button">
+      <span class="sr-only">previous</span>
+      <span class="mx-icon mx-icon--chevron-left"></span>
+    </button>
+    <button class="mx-carousel__next mx-button mx-button--icon-only" type="button">
+      <span class="sr-only">next</span>
+      <span class="mx-icon mx-icon--chevron-right"></span>
+    </button>
+  </div>
+  <ul class="mx-carousel__scrollable">
+    {% for item in items %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% if pagination or counter %}
+    {% set type = pagination ? 'pagination' : 'counter' %}
+    <ol class="mx-carousel__pagination" data-pagination="{{ type }}" hidden></ol>
+  {% endif %}
+</mx-carousel>

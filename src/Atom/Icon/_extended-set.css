@@ -1,0 +1,37 @@
+@import "_mixin-icon.css";
+
+/**
+ * Icon - Extended
+ */
+@layer design-system.atoms {
+  @mixin icon attachment;
+  @mixin icon blockquote;
+  @mixin icon building;
+  @mixin icon calendar;
+  @mixin icon clock;
+  @mixin icon globe;
+  @mixin icon heart-selected;
+  @mixin icon heart-unselected;
+  @mixin icon image;
+  @mixin icon home;
+  @mixin icon lock;
+  @mixin icon login;
+  @mixin icon media-play;
+  @mixin icon media-pause;
+  @mixin icon media-stop;
+  @mixin icon media-next;
+  @mixin icon media-previous;
+  @mixin icon media-rewind;
+  @mixin icon media-skip;
+  @mixin icon more;
+  @mixin icon notification;
+  @mixin icon pencil;
+  @mixin icon restart;
+  @mixin icon settings;
+  @mixin icon star-selected;
+  @mixin icon star-unselected;
+  @mixin icon tick;
+  @mixin icon trash;
+  @mixin icon user;
+  @mixin icon video;
+}

@@ -1,0 +1,53 @@
+/**
+ * Page
+ */
+
+@layer design-system.layouts {
+  :where(.mx-page) {
+    --plus: token("size.container.plus");
+    --minus: token("size.container.minus");
+    --diff: calc(var(--plus) - var(--minus));
+    --gutter: clamp(var(--gutter-min), 6vw, var(--gutter-max));
+    --full: minmax(var(--gutter), 1fr);
+    --narrow: min(var(--container-max-width), 100% - (var(--gutter) * 2));
+    --feature: minmax(0, var(--minus));
+    --container: minmax(0, var(--diff));
+
+    display: grid;
+    grid-template-columns:
+      [full-start] var(--full)
+      [container-start] var(--container)
+      [feature-start] var(--feature)
+      [narrow-start] var(--narrow) [narrow-end]
+      var(--feature) [feature-end]
+      var(--container) [container-end]
+      var(--full) [full-end];
+
+    & > :where(*:not(.mx-page, [class*="mx-background--"]), .mx-background--box) {
+      grid-column: var(--grid-column, container);
+    }
+
+    /* Immediate nested or adding a background triggers subgrid */
+    & > :where(.mx-page, [class*="mx-background--"]:not(.mx-background--box)) {
+      grid-column: full;
+      display: grid;
+      grid-template-columns: subgrid;
+
+      & > :where(*:not(.mx-page, [class*="mx-background--"]), .mx-background--box) {
+        grid-column: var(--grid-column, container);
+      }
+    }
+  }
+
+  :where(.mx-page--feature > *, .mx-section--feature) {
+    --grid-column: feature;
+  }
+
+  :where(.mx-page--narrow > *, .mx-section--narrow) {
+    --grid-column: narrow;
+  }
+
+  :where(.mx-page--full > *, .mx-section--full) {
+    --grid-column: full;
+  }
+}

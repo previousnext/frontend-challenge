@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Center 1`] = `
+"<div class="mx-rich-text mx-vertical-flow mx-section--narrow mx-text--center">
+  In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document without relying on meaningful content (also called greeking). Replacing the actual content with placeholder text allows designers to design the form of the content before the content itself has been produced.
+</div>
+"
+`;
+
+exports[`Example 1`] = `
+"<div class="mx-rich-text mx-vertical-flow">
+<p class="mx-text--embellished-headline">Embelished headline: Lorem ipsum dolor sit amet consectetur</p>
+
+<p class="mx-text--section-headline">Section headline: Lorem ipsum dolor sit amet consectetur</p>
+
+<p class="mx-text--xxxl">Text xxxl: Lorem ipsum dolor sit amet consectetur</p>
+
+<p class="mx-text--xxl">Text xxl: Lorem ipsum dolor sit amet consectetur</p>
+
+<p class="mx-text--xl">Text xl: Lorem ipsum dolor sit amet consectetur</p>
+
+<p class="mx-text--l">Text l: Lorem ipsum dolor sit amet consectetur</p>
+
+<p class="mx-text--m">Text m: Lorem ipsum dolor sit amet consectetur</p>
+
+<p>Text: Lorem ipsum dolor sit amet consectetur</p>
+
+<p class="mx-text--s">Text s: Lorem ipsum dolor sit amet consectetur</p>
+
+<p class="mx-text--xs">Text xs: Lorem ipsum dolor sit amet consectetur</p>
+
+</div>"
+`;
+
+exports[`Text 1`] = `
+"<div class="mx-rich-text mx-vertical-flow mx-section--narrow">
+  In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document without relying on meaningful content (also called greeking). Replacing the actual content with placeholder text allows designers to design the form of the content before the content itself has been produced.
+</div>
+"
+`;

@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Breakouts 1`] = `
+"<p>Default is container width, with an inline gutter for smaller screens.</p>
+<p class="mx-section--narrow ">Or for optimum content width with .section--narrow</p>
+<p class="mx-section--feature">or slightly larger feature widths with .section--feature</p>
+<p class="mx-section--full">or full width with .section--full</p>
+<p class="mx-section--flow">Sections can be spaced naturally with .mx-section--flow</p>
+<p class="mx-section--flow mx-section--feature">to create a gap between them, even if they have different widths.</p>
+<p class="mx-section--group">Or they can be grouped together</p>
+<p class="mx-section--feature mx-section--group">even if they have different content widths.</p>
+
+<section class="mx-page mx-section--flow mx-background--reverse">
+  <p>Any section can have a background color, or utilise any of the section vertical spacing classes</p>
+  <p class="mx-section--s">even children</p>
+  <p class="mx-background--box mx-section--m mx-background--reset">and ones with their own backgrounds.</p>
+  <p class="mx-section--s mx-section--narrow">A section with a background colour creates a subgrid.</p>
+</section>
+<section class="mx-page mx-section--flow mx-background--alt">
+  <p>Page can be nested and have the same content width options as un-nested ones;</p>
+  <section class="mx-page mx-section--flow">
+    <p class="mx-section--narrow">like the optimum content widths with .section--narrow</p>
+    <p class="mx-section--feature">or slightly larger feature widths with .section--feature</p>
+    <p class="mx-section--full">or full width with .section--full</p>
+  </section>
+  <section class="mx-page mx-page--feature mx-section--flow">
+    <p>Pages can say for all children to have a certain width</p>
+    <p>by using .page--narrow or .page--feature or .page--full</p>
+    <p>on the parent.</p>
+  </section>
+</section>
+<section class="mx-section--narrow mx-section--flow">
+  <p>Sections can also say for all children to have a certain width</p>
+  <p>by using .section--narrow or .section--feature or .section--full</p>
+  <p>on the parent.</p>
+</section>
+"
+`;

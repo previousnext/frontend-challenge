@@ -1,0 +1,39 @@
+/**
+ * Link List
+ */
+
+@layer design-system.components {
+  .mx-link-list {
+    list-style-type: none;
+    padding-inline-start: 0;
+
+    & li {
+      min-block-size: var(--min-height, var(--spacing-xl));
+      border-block-end: var(--line-width, 1px) solid var(--line-colour, var(--colour-border));
+
+      &:last-child {
+        border-block-end: 0;
+      }
+    }
+
+    & a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-block: var(--vertical-padding, var(--spacing-xxxs));
+      inline-size: 100%;
+      justify-content: var(--justify, space-between);
+      gap: var(--spacing-s);
+      text-decoration-line: none;
+      color: inherit;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  * + .mx-link-list {
+    margin-block-start: var(--spacing-m);
+  }
+}

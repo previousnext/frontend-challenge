@@ -1,0 +1,84 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks"
+
+<Meta title="Atom/Atom" />
+
+# Base
+
+Base styles and HTML elements, used by all Elements and Components.
+
+## Colours
+
+<ColorPalette>
+  <ColorItem
+    title="Light"
+    subtitle="Neutral colours"
+    colors={{
+      white: "hsl(60 0% 100%)",
+      light: "hsl(60 4% 95%)",
+      mid: "hsl(60 0% 90%)",
+    }}
+  />
+  <ColorItem
+    title="Dark"
+    subtitle="Neutral colours"
+    colors={{
+      black: "hsl(60 0% 0%)",
+      dark: "hsl(60 0% 5%)",
+      mid: "hsl(60 0% 10%)",
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="Primary colour"
+    colors={{
+      full: "hsl(223 100% 50%)",
+      light: "color-mix(in oklch, hsl(223 100% 50%), white 95%)",
+    }}
+  />
+  <ColorItem
+    title="Accent"
+    subtitle="Accent colour"
+    colors={{
+      full: "hsl(60, 94%, 68%)",
+      light: "color-mix(in oklch, hsl(60, 94%, 68%), white 95%)",
+    }}
+  />
+</ColorPalette>
+
+## State colours
+
+<ColorPalette>
+
+  <ColorItem
+    title="Success"
+    subtitle="Success colour"
+    colors={{
+      full: "hsl(120 100% 26%)",
+      light: "color-mix(in oklch, hsl(120 100% 21%), white 95%)",
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="Warning colour"
+    colors={{
+      full: "hsl(35 100% 32%)",
+      light: "color-mix(in oklch, hsl(35 100% 32%), white 95%)",
+    }}
+  />
+  <ColorItem
+    title="Error"
+    subtitle="Error colour"
+    colors={{
+      full: "hsl(348 100% 33%)",
+      light: "color-mix(in oklch, hsl(348 100% 33%), white 95%)",
+    }}
+  />
+  <ColorItem
+    title="Info"
+    subtitle="Info colour"
+    colors={{
+      full: "hsl(223 100% 50%)",
+      light: "color-mix(in oklch, hsl(223 100% 50%), white 95%)",
+    }}
+  />
+</ColorPalette>

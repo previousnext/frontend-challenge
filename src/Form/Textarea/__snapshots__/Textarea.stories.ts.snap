@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Text Area 1`] = `
+"  
+<textarea class="mx-input__textarea" id="form-input-textarea" name="unique-0" aria-label="Visually hidden label" aria-describedby="unique-0"></textarea>
+"
+`;

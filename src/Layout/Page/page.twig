@@ -1,0 +1,13 @@
+{% set classes = ['mx-page'] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set mainAttributes = (attributes ?? create_attribute()).addClass(classes) %}
+<div{{ attributes }}>
+  {{ masthead }}
+  {{ header }}
+  <main{{ mainAttributes }}>
+    {% for child in main %}
+      {{ child }}
+    {% endfor %}
+  </main>
+  {{ footer }}
+</div>

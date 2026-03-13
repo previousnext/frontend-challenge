@@ -1,0 +1,82 @@
+{
+  "name": "pnx-fe-challenge",
+  "version": "0.0.1",
+  "description": "PNX Frontend Technical Challenge",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n \"VITE,STORYBOOK\" -c \"#636cff,#ff4785\" \"pnpm dev-vite\" \"pnpm dev-storybook\"",
+    "build": "concurrently -n \"VITE,STORYBOOK\" -c \"#636cff,#ff4785\" \"pnpm build-vite\" \"pnpm build-storybook\"",
+    "test": "pnpm test-storybook",
+    "lint": "pnpm lint-format && pnpm lint-css && pnpm lint-ts && pnpm lint-js",
+    "format": "oxfmt && pnpm fix-css && pnpm fix-js",
+    "dev-vite": "vite build -w -m development",
+    "dev-storybook": "storybook dev -p 6006",
+    "build-vite": "vite build",
+    "build-ci": "pnpm build",
+    "build-storybook": "storybook build -o dist/storybook",
+    "test-storybook": "vitest --project=storybook --run",
+    "lint-ci": "pnpm lint-format && pnpm lint-css-ci && pnpm lint-ts && pnpm lint-js-ci",
+    "lint-format": "oxfmt --check",
+    "lint-css": "stylelint \"./**/*.css\"",
+    "lint-css-ci": "stylelint \"./**/*.css\" --custom-formatter @csstools/stylelint-formatter-github",
+    "lint-js": "oxlint \"./**/*.{ts,tsx}\"",
+    "lint-js-ci": "oxlint \"./**/*.{ts,tsx}\" --format github",
+    "lint-ts": "tsc",
+    "fix-css": "pnpm lint-css --fix",
+    "fix-js": "pnpm lint-js --fix",
+    "clean": "rm -rf ./dist",
+    "commit": "git-cz",
+    "bump-version": "pnpm version patch -m \"chore: tag %s\"",
+    "prepublishOnly": "pnpm build-ci"
+  },
+  "dependencies": {
+    "@pnx-mixtape/ids-shape": "^0.0.24"
+  },
+  "devDependencies": {
+    "@csstools/postcss-global-data": "^4.0.0",
+    "@csstools/stylelint-formatter-github": "^2.0.0",
+    "@storybook/addon-a11y": "^10.1.4",
+    "@storybook/addon-docs": "^10.1.4",
+    "@storybook/addon-links": "^10.1.4",
+    "@storybook/addon-vitest": "^10.1.4",
+    "@storybook/html-vite": "^10.1.4",
+    "@types/node": "^25.0.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/browser-playwright": "^4.0.15",
+    "@vitest/coverage-v8": "^4.0.15",
+    "axe-playwright": "^2.2.2",
+    "concurrently": "^9.2.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "drupal-attribute": "^1.2.1",
+    "drupal-twig-extensions": "1.0.0-beta.5",
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.31.0",
+    "playwright": "^1.57.0",
+    "postcss": "^8.5.6",
+    "postcss-design-tokens": "^1.3.0",
+    "postcss-inline-svg": "^6.0.0",
+    "postcss-mixins": "^12.1.2",
+    "postcss-prepend-layer": "^1.0.2",
+    "postcss-preset-env": "^11.1.1",
+    "postcss-pxtorem": "^6.1.0",
+    "storybook": "^10.1.10",
+    "stylelint": "^17.0.0",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-use-logical-spec": "^5.0.1",
+    "twig": "^1.17.1",
+    "typescript": "^5.9.3",
+    "vite": "8.0.0-beta.16",
+    "vite-plugin-twig-drupal": "^1.6.2",
+    "vitest": "^4.0.15"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": ">= 22.0"
+  },
+  "packageManager": "pnpm@10.32.1"
+}

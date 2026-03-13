@@ -1,0 +1,4 @@
+{% set attributes = (attributes ?? create_attribute()).addClass("mx-description") %}
+<div{{ attributes}} id="help-{{ id }}" role="tooltip">
+  {{ description }}
+</div>

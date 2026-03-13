@@ -1,0 +1,13 @@
+{% set as = as|default("label") %}
+{% if as == "label" %}
+  {% set baseClass = "mx-label" %}
+{% else %}
+  {% set baseClass = "mx-legend" %}
+{% endif %}
+{% set classes = [
+  baseClass,
+  inline ? baseClass~"--inline" : null,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+<{{ as }}{{ attributes }}{% if id%} for="{{ id }}"{% endif %}>{{ title }}</{{ as }}>

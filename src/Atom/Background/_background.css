@@ -1,0 +1,64 @@
+/**
+ * Backgrounds
+ */
+@layer design-system.atoms {
+  :where([class*="mx-background--"]) {
+    background-color: var(--background, var(--colour-background));
+    color: var(--foreground, var(--colour-foreground));
+    color-scheme: var(--scheme, var(--colour-scheme));
+  }
+
+  .mx-background--reset {
+    /* use to revert .background--reverse on children */
+    --scheme: var(--colour-scheme);
+    --background: var(--colour-background);
+    --foreground: var(--colour-foreground);
+    --link-colour: var(--colour-link);
+    --line-colour: var(--colour-border);
+  }
+
+  .mx-background--alt {
+    --scheme: var(--alt-scheme, var(--colour-scheme));
+    --background: var(--colour-background-alt);
+  }
+
+  .mx-background--primary {
+    --scheme: var(--primary-scheme, var(--colour-primary-scheme, var(--colour-scheme)));
+    --background: var(--colour-primary);
+    --line-colour: light-dark(var(--colour-primary-darker), var(--colour-primary-lighter));
+    --colour-foreground-alt: var(--colour-primary-light);
+  }
+
+  .mx-background--accent {
+    --scheme: var(--accent-scheme, var(--colour-accent-scheme, var(--colour-scheme)));
+    --background: var(--colour-accent);
+    --line-colour: light-dark(var(--colour-accent-darker), var(--colour-accent-lighter));
+    --icon-colour: var(--colour-foreground);
+  }
+
+  .mx-background--image {
+    & img {
+      object-fit: cover;
+      position: absolute;
+      inline-size: 100%;
+      min-block-size: 100%;
+      filter: brightness(var(--bg-img-brightness, 1)) saturate(var(--bg-img-saturate, 1.25))
+        opacity(var(--bg-img-opacity, 0.5));
+    }
+  }
+
+  .mx-background--reverse {
+    --scheme: var(--reverse-scheme, var(--colour-reverse-scheme, dark));
+
+    & .mx-background--image {
+      --bg-img-brightness: 0.45;
+      --bg-img-opacity: 1;
+    }
+  }
+
+  .mx-background--box {
+    border: var(--line-width, 1px) solid var(--line-colour, var(--colour-border));
+    border-radius: var(--border-radius);
+    padding-inline: var(--gutter, 1rem);
+  }
+}

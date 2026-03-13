@@ -1,0 +1,25 @@
+{% set classes = [
+  'mx-input__select',
+  status == "invalid" ? "error" : null,
+  status == "valid" ? "success" : null,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% if hasDescription or status != "default" %}
+  {% set helpers = [
+    hasDescription ? "help-"~ id : null,
+    status != "default" ?  "status-"~ id : null,
+  ]|join(" ")|trim() %}
+{% endif %}
+
+<select{{ attributes}}
+    id="{{ id }}"
+    name="{{ name }}"
+    {% if label %} aria-label="{{ label }}"{% endif %}
+    {% if helpers is not empty %} aria-describedby="{{ helpers }}"{% endif %}
+    {% if status == "invalid" %} aria-invalid="true"{% endif %}
+    {% if required %} required{% endif %}
+>
+  {% for option in options %}
+  <option value="{{ option.value }}"{% if option.selected %} selected{% endif %}>{{ option.label }}</option>
+  {% endfor %}
+</select>

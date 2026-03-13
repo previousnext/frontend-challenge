@@ -1,0 +1,60 @@
+@layer design-system.utilities {
+  .mx-vertical-flow {
+    /* Default vertical flow. */
+
+    & > :where(:not(:first-child, .mx-vertical-flow__collapse)) {
+      margin-block-start: var(--flow-gap, var(--gap));
+    }
+
+    /* Rich text vertical flow is enhanced */
+    &.mx-rich-text > .mx-text--lede {
+      --flow-gap: var(--gap-xl);
+    }
+  }
+
+  .mx-vertical-flow-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--flow-gap, var(--gap));
+
+    & > * {
+      margin: 0;
+    }
+
+    &:is(ul, ol) {
+      padding-inline-start: unset;
+      list-style: none;
+    }
+  }
+
+  .mx-vertical-flow-grid {
+    display: grid;
+    align-items: start;
+    gap: var(--flow-gap, var(--gap));
+
+    & > * {
+      margin: 0;
+    }
+
+    &:is(ul, ol) {
+      padding-inline-start: unset;
+      list-style: none;
+    }
+  }
+
+  .mx-horizontal-flow-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--flow-gap, var(--gap));
+
+    & > * {
+      margin: 0;
+    }
+
+    &:is(ul, ol) {
+      padding-inline-start: unset;
+      list-style: none;
+    }
+  }
+}

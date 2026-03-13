@@ -1,0 +1,25 @@
+{% set baseClass = 'mx-button' %}
+{% set classes = [
+  baseClass,
+  iconOnly ? baseClass~"--icon-only" : null,
+] %}
+{% for modifier in modifiers %}
+  {% set classes = classes|merge([baseClass~"--"~modifier]) %}
+{% endfor %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+{% if as == "link" %}
+  <a{{ attributes}} href="{{ href }}">
+    {{ iconStart }}
+    <span{% if iconOnly %} class="sr-only"{% endif %}>{{ title }}</span>
+    {{ iconEnd }}
+  </a>
+{% elseif as == 'input' %}
+  <input{{ attributes}} type="button" value="{{ title }}"{% if disabled %} disabled{% endif %}>
+{% else %}
+  <button{{ attributes}} type="{{ as|default("button") }}"{% if disabled %} disabled{% endif %}>
+    {{ iconStart }}
+    <span{% if iconOnly %} class="sr-only"{% endif %}>{{ title }}</span>
+    {{ iconEnd }}
+  </button>
+{% endif %}

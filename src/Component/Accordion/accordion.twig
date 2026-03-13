@@ -1,0 +1,21 @@
+<div class="mx-accordions">
+  {% if toggleAll %}
+  <mx-accordion-group>
+  {% endif %}
+    {% if title is not empty or toggleAll %}
+      <div class="mx-accordion__title">
+        {{ title }}
+        {% if toggleAll %}
+          <div class="mx-accordions__toggle-all">
+            <button data-expand class="mx-button mx-button--light mx-button--small" type="button">Expand all</button><button data-collapse class="mx-button mx-button--light mx-button--small" type="button">Collapse all</button>
+          </div>
+        {% endif %}
+      </div>
+  {% endif %}
+  {% for item in items %}
+    {{ item }}
+  {% endfor %}
+  {% if toggleAll %}
+  </mx-accordion-group>
+  {% endif %}
+</div>

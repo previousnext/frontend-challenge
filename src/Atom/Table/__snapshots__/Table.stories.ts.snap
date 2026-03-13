@@ -1,0 +1,145 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Bordered 1`] = `
+"  
+<table class="mx-table--bordered">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Desktop</th>
+      <th>Tablet</th>
+      <th>Mobile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Columns</th>
+      <td>12</td>
+      <td>12</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Gutter</th>
+      <td>32px</td>
+      <td>16px</td>
+      <td>16px</td>
+    </tr>
+    <tr>
+      <th>Max-width</th>
+      <td>1180px</td>
+      <td>1024px</td>
+      <td>~500px</td>
+    </tr>
+  </tbody>
+  <caption>Description of table</caption>
+</table>
+"
+`;
+
+exports[`Striped 1`] = `
+"  
+<table class="mx-table--striped">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Desktop</th>
+      <th>Tablet</th>
+      <th>Mobile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Columns</th>
+      <td>12</td>
+      <td>12</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Gutter</th>
+      <td>32px</td>
+      <td>16px</td>
+      <td>16px</td>
+    </tr>
+    <tr>
+      <th>Max-width</th>
+      <td>1180px</td>
+      <td>1024px</td>
+      <td>~500px</td>
+    </tr>
+  </tbody>
+  <caption>Description of table</caption>
+</table>
+"
+`;
+
+exports[`Striped And Bordered 1`] = `
+"    
+<table class="mx-table--bordered mx-table--striped">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Desktop</th>
+      <th>Tablet</th>
+      <th>Mobile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Columns</th>
+      <td>12</td>
+      <td>12</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Gutter</th>
+      <td>32px</td>
+      <td>16px</td>
+      <td>16px</td>
+    </tr>
+    <tr>
+      <th>Max-width</th>
+      <td>1180px</td>
+      <td>1024px</td>
+      <td>~500px</td>
+    </tr>
+  </tbody>
+  <caption>Description of table</caption>
+</table>
+"
+`;
+
+exports[`Table 1`] = `
+"
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Desktop</th>
+      <th>Tablet</th>
+      <th>Mobile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Columns</th>
+      <td>12</td>
+      <td>12</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>Gutter</th>
+      <td>32px</td>
+      <td>16px</td>
+      <td>16px</td>
+    </tr>
+    <tr>
+      <th>Max-width</th>
+      <td>1180px</td>
+      <td>1024px</td>
+      <td>~500px</td>
+    </tr>
+  </tbody>
+  <caption>Description of table</caption>
+</table>
+"
+`;

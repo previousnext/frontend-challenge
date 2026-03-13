@@ -1,0 +1,41 @@
+{% set baseClass = 'mx-hero-banner' %}
+{% set background = null %}
+{% for modifier in modifiers %}
+  {% if modifier == "dark" %}
+    {% set background = 'mx-background--reverse' %}
+  {% endif %}
+  {% if modifier == "off-white" %}
+    {% set background = 'mx-background--alt' %}
+  {% endif %}
+  {% if modifier == "light" %}
+    {% set background = 'mx-background--primary' %}
+  {% endif %}
+{% endfor %}
+{% set classes = [
+  baseClass,
+  highlight ? baseClass~'--hero' : null,
+  background ? background : null,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+<div{{ attributes }}>
+  <div class="mx-hero-banner__inner">
+    <div class="mx-hero-banner__content mx-vertical-flow-flex mx-section--xl">
+      {{ title }}
+      {% if subtitle is not empty %}
+        <p class="mx-text--lede">{{ subtitle }}</p>
+      {% endif %}
+      {{ content }}
+      {{ link }}
+    </div>
+    {% if linkList is not empty %}
+      <div class="mx-hero-banner__aside mx-section--xl">
+        {{ linkList }}
+      </div>
+    {% elseif image is not empty %}
+      <div class="mx-hero-banner__aside mx-hero-banner__aside-image">
+        {{ image }}
+      </div>
+    {% endif %}
+  </div>
+</div>

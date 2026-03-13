@@ -1,0 +1,61 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Background 1`] = `
+"  
+<div class="mx-section mx-page">
+  <figure class="mx-background--image mx-section--full" aria-hidden="true">
+    <picture>
+    <img src="https://picsum.photos/id/56/1642/560?grayscale" alt="Blurry bubbles">
+</picture>
+
+  </figure>
+  <div class="mx-container mx-section--xl">
+          <div class="mx-section__header">
+        
+<h2>Section name</h2>
+
+          
+<a class="mx-link--more" href="#">
+  
+  <span>See more content</span>
+    
+<span class="mx-icon mx-icon--arrow-right"></span>
+
+</a>
+
+      </div>
+        <p class="mx-text--lede">A short description to help explain enough about the subject matter to encourage visitors to learn more.</p>
+  </div>
+</div>
+"
+`;
+
+exports[`Dark 1`] = `
+"  
+<div class="mx-section mx-page mx-background--reverse">
+  <figure class="mx-background--image mx-section--full" aria-hidden="true">
+    <picture>
+    <img src="https://picsum.photos/id/56/1642/560?grayscale" alt="Blurry bubbles">
+</picture>
+
+  </figure>
+  <div class="mx-container mx-section--xl">
+          <div class="mx-section__header">
+        
+<h2>Section name</h2>
+
+          
+<a class="mx-link--more" href="#">
+  
+  <span>See more content</span>
+    
+<span class="mx-icon mx-icon--arrow-right"></span>
+
+</a>
+
+      </div>
+        <p class="mx-text--lede">A short description to help explain enough about the subject matter to encourage visitors to learn more.</p>
+  </div>
+</div>
+"
+`;

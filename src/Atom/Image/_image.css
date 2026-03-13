@@ -1,0 +1,25 @@
+@layer design-system.defaults {
+  figure {
+    margin: 0;
+    display: table;
+    inline-size: fit-content;
+  }
+
+  figcaption {
+    padding: var(--spacing-xxs);
+    font-size: var(--caption-font-size, var(--font-size-xs));
+    line-height: var(--caption-line-height, var(--line-height-h));
+    caption-side: bottom;
+    display: table-caption;
+  }
+
+  img {
+    vertical-align: bottom;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  svg:not([fill]) {
+    fill: currentcolor;
+  }
+}

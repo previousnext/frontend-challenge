@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Accordion Item 1`] = `
+"
+<mx-accordion>
+  <details class="mx-accordion mx-accordion--divided" id="music-accordion">
+    <summary class="mx-accordion__toggle">
+      Music
+      <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="mx-accordion__content mx-rich-text mx-vertical-flow">
+      I'm baby air plant hashtag letterpress blue bottle. Cloud bread dreamcatcher everyday carry lumbersexual, iceland cardigan swag chicharrones lo-fi fanny pack affogato freegan XOXO shaman. Shoreditch cloud bread waistcoat tbh XOXO. Chillwave pour-over umami pug glossier health goth.
+    </div>
+  </details>
+</mx-accordion>
+"
+`;
+
+exports[`Open 1`] = `
+"
+<mx-accordion>
+  <details class="mx-accordion mx-accordion--divided" id="open-accordion-item" open="">
+    <summary class="mx-accordion__toggle">
+      Music
+      <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="mx-accordion__content mx-rich-text mx-vertical-flow">
+      I'm baby air plant hashtag letterpress blue bottle. Cloud bread dreamcatcher everyday carry lumbersexual, iceland cardigan swag chicharrones lo-fi fanny pack affogato freegan XOXO shaman. Shoreditch cloud bread waistcoat tbh XOXO. Chillwave pour-over umami pug glossier health goth.
+    </div>
+  </details>
+</mx-accordion>
+"
+`;

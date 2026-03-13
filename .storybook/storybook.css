@@ -1,0 +1,35 @@
+.sbdocs-content {
+  max-inline-size: 1440px !important;
+}
+
+:root {
+  --storybook-accent: oklch(50% 0.3 320deg);
+}
+
+[id*="atom-spacing"] [class^="mx-spacing"],
+[id*="layout-section--section--primary"] [class*="mx-section--"]:not([class*="mx-background--"]),
+[id*="layout-grid"] .mx-grid,
+[id*="layout-sidebar"] .mx-grid--sidebar {
+  background-color: color-mix(in oklch, var(--storybook-accent), white 90%);
+  color: var(--storybook-accent);
+
+  & > * {
+    border: 1px solid currentcolor;
+    background-color: white;
+    color: inherit;
+    padding-block: 4px;
+    padding-inline: 8px;
+  }
+}
+
+[id*="component-dialog--dialog"] mx-dialog {
+  min-block-size: 300px;
+}
+
+[id*="atom-background"] .mx-page {
+  display: block;
+
+  & :where(.mx-page, [class*="mx-background--"]:not(.mx-background--box)) {
+    display: block;
+  }
+}

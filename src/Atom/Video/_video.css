@@ -1,0 +1,15 @@
+@layer design-system.defaults {
+  .mx-video {
+    &,
+    & :is(embed, object, iframe) {
+      aspect-ratio: 16 / 9;
+      block-size: 100%;
+      inline-size: 100%;
+      border: 0;
+    }
+  }
+
+  .mx-media--video {
+    inline-size: 100%;
+  }
+}

@@ -1,0 +1,31 @@
+{% set classes = [
+  'mx-input__text',
+  status == "invalid" ? "error" : null,
+  status == "valid" ? "success" : null,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set status = status|default("default") %}
+{% if hasDescription or status != "default" %}
+  {% set helpers = [
+    hasDescription ? "help-"~ id : null,
+    status != "default" ?  "status-"~ id : null,
+  ]|join(" ")|trim() %}
+{% endif %}
+
+{% if icon %}
+<span class="mx-input--icon mx-icon mx-icon--{{ icon }}">
+{% endif %}
+<input{{ attributes }}
+    id="{{ id }}"
+    name="{{ name }}"
+    type="{{ type }}"
+    value="{{ value }}"
+    {% if label %} aria-label="{{ label }}"{% endif %}
+    {% if placeholder %} placeholder="{{ placeholder }}"{% endif %}
+    {% if helpers is not empty %} aria-describedby="{{ helpers }}"{% endif %}
+    {% if status == "invalid" %} aria-invalid="true"{% endif %}
+    {% if required %} required{% endif %}
+/>
+{% if icon %}
+</span>
+{% endif %}

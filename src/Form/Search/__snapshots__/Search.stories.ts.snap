@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Search 1`] = `
+"
+<form class="mx-form mx-form--inline-button" role="search" action="#search">
+  <input class="mx-input__text " id="search-keyword" name="search-form" type="search" value="" aria-label="Search by keywords" placeholder="Keywords...">
+  <button class="mx-button mx-button--icon-only" type="submit">
+    <span class="mx-icon mx-icon--search"></span>
+    <span class="sr-only">Search</span>
+  </button>
+</form>
+"
+`;

@@ -1,0 +1,13 @@
+{% set baseClass = 'mx-grid' %}
+{% set classes = [baseClass] %}
+{% for modifier in modifiers %}
+  {% set classes = classes|merge([baseClass~"--cols-"~modifier]) %}
+{% endfor %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set as = as|default("div") %}
+
+<{{ as }}{{ attributes }}>
+{% for item in items %}
+  {{ item }}
+{% endfor %}
+</{{ as }}>

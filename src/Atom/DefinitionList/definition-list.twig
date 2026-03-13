@@ -1,0 +1,9 @@
+{% set attributes = attributes ?? create_attribute() %}
+<dl{{ attributes }}>
+  {% for item in items %}
+    <div>
+      <dt>{{ item.title }}</dt>
+      <dd>{{ item.content }}</dd>
+    </div>
+  {% endfor %}
+</dl>

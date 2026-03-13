@@ -1,0 +1,107 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button 1`] = `
+"
+  <button class="mx-button" type="button">
+    
+    <span>Button</span>
+    
+  </button>
+"
+`;
+
+exports[`Dark 1`] = `
+"  
+  <button class="mx-button mx-button--dark" type="button">
+    
+    <span>Button</span>
+    
+  </button>
+"
+`;
+
+exports[`Destructive 1`] = `
+"  
+  <button class="mx-button mx-button--destructive" type="button">
+    
+    <span>Button</span>
+    
+  </button>
+"
+`;
+
+exports[`Icon End 1`] = `
+"
+  <button class="mx-button" type="button">
+    
+    <span>Button</span>
+    
+<span class="mx-icon mx-icon--arrow-right"></span>
+
+  </button>
+"
+`;
+
+exports[`Icon Only 1`] = `
+"
+  <button class="mx-button mx-button--icon-only" type="button">
+    
+<span class="mx-icon mx-icon--search"></span>
+
+    <span class="sr-only">Button</span>
+    
+  </button>
+"
+`;
+
+exports[`Icon Start 1`] = `
+"
+  <button class="mx-button" type="button">
+    
+<span class="mx-icon mx-icon--arrow-left"></span>
+
+    <span>Button</span>
+    
+  </button>
+"
+`;
+
+exports[`Light 1`] = `
+"  
+  <button class="mx-button mx-button--light" type="button">
+    
+    <span>Button</span>
+    
+  </button>
+"
+`;
+
+exports[`Link 1`] = `
+"
+  <a class="mx-button" href="#">
+    
+    <span>Button</span>
+    
+  </a>
+"
+`;
+
+exports[`Outline 1`] = `
+"    
+  <button class="mx-button mx-button--dark mx-button--outline" type="button">
+    
+    <span>Button</span>
+    
+  </button>
+"
+`;
+
+exports[`White 1`] = `
+"  
+  <button class="mx-button mx-button--white" type="button">
+    
+    <span>Button</span>
+    
+  </button>
+"
+`;

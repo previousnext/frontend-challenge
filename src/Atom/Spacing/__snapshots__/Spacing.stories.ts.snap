@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Spacing 1`] = `
+"<div class="mx-spacing--xs">
+  <div>mx-spacing--xs</div>
+</div>
+"
+`;

@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Icon 1`] = `
+"
+<span class="mx-input--icon mx-icon mx-icon--email">
+<input class="mx-input__text" id="form-input-text" name="example-form-input" type="email" value="" aria-label="Visually hidden label" placeholder="A text field">
+</span>
+"
+`;
+
+exports[`Text Input 1`] = `
+"
+<input class="mx-input__text" id="form-input-text" name="example-form-input" type="text" value="" aria-label="Visually hidden label" placeholder="A text field">
+"
+`;

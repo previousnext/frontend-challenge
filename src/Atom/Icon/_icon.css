@@ -1,0 +1,160 @@
+@import "_mixin-icon.css";
+
+/**
+ * Icon
+ */
+
+@layer design-system.atoms {
+  :where(.mx-icon) {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xxs);
+
+    &::before {
+      content: "";
+      display: block;
+      flex-shrink: 0;
+      inline-size: var(--icon-size, var(--spacing-s));
+      block-size: var(--icon-size, var(--spacing-s));
+      mask-position: center;
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      background-color: currentcolor;
+      color: var(--icon-colour, inherit);
+    }
+  }
+
+  .mx-icon--only {
+    inline-size: var(--icon-size, var(--spacing-s));
+    block-size: var(--icon-size, var(--spacing-s));
+    overflow: hidden;
+    flex-wrap: wrap;
+
+    &::before {
+      inline-size: 100%;
+      block-size: 100%;
+      mask-size: var(--icon-size, var(--spacing-s));
+    }
+  }
+
+  @mixin icon arrow-down;
+  @mixin icon arrow-left;
+  @mixin icon arrow-up;
+  @mixin icon arrow-right;
+  @mixin icon chevron-down;
+  @mixin icon chevron-left;
+  @mixin icon chevron-right;
+  @mixin icon chevron-up;
+  @mixin icon close;
+  @mixin icon collapse;
+  @mixin icon download;
+  @mixin icon drupal;
+  @mixin icon error;
+  @mixin icon expand;
+  @mixin icon external-link;
+  @mixin icon facebook;
+  @mixin icon google;
+  @mixin icon info;
+  @mixin icon instagram;
+  @mixin icon linkedin;
+  @mixin icon mastodon;
+  @mixin icon bluesky;
+  @mixin icon menu;
+  @mixin icon search;
+  @mixin icon success;
+  @mixin icon twitter;
+  @mixin icon warning;
+  @mixin icon youtube;
+  @mixin icon email;
+  @mixin icon file;
+  @mixin icon link;
+  @mixin icon phone;
+  @mixin icon pin;
+  @mixin icon print;
+  @mixin icon question;
+  @mixin icon share;
+
+  .mx-icon--status::before {
+    mask-image: svg-load("./images/info.svg");
+  }
+}
+
+/**
+ * Icon - Colours
+ */
+
+@layer design-system.atoms {
+  .mx-icon--color-info::before {
+    --icon-colour: var(--colour-info);
+  }
+
+  .mx-icon--color-error::before {
+    --icon-colour: var(--colour-error);
+  }
+
+  .mx-icon--color-warning::before {
+    --icon-colour: var(--colour-warning);
+  }
+
+  .mx-icon--color-success::before {
+    --icon-colour: var(--colour-success);
+  }
+
+  .mx-icon--color-brand::before {
+    --icon-colour: var(--colour-primary);
+  }
+
+  .mx-icon--color-accent::before {
+    --icon-colour: var(--colour-accent);
+  }
+}
+
+/**
+ * Icon - alignment
+ */
+
+@layer design-system.atoms {
+  .mx-icon--end::before {
+    order: 2;
+  }
+}
+
+/**
+ * Icon - rotate
+ */
+
+@layer design-system.atoms {
+  .mx-icon--rotate-90::before {
+    rotate: 90deg;
+  }
+
+  .mx-icon--rotate-180::before {
+    rotate: 180deg;
+  }
+
+  .mx-icon--rotate-270::before {
+    rotate: 270deg;
+  }
+}
+
+/**
+ * Icon - size
+ */
+
+@layer design-system.atoms {
+  .mx-icon--size-sm::before {
+    --icon-size: var(--spacing-s);
+  }
+
+  .mx-icon--size-md::before {
+    --icon-size: var(--spacing-m);
+  }
+
+  .mx-icon--size-lg::before {
+    --icon-size: var(--spacing-l);
+  }
+
+  .mx-icon--size-xl::before {
+    --icon-size: var(--spacing-xl);
+  }
+}

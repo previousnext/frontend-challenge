@@ -1,0 +1,72 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`No Sidebar 1`] = `
+"
+
+<div class="mx-grid--sidebar">
+    <section class="js-content mx-vertical-flow-grid">
+    Main content
+  </section>
+  </div>
+"
+`;
+
+exports[`Reverse Large 1`] = `
+"
+  
+<div class="mx-grid--sidebar mx-grid--sidebar-rev-lg">
+    <section class="js-content mx-vertical-flow-grid">
+    Main content
+  </section>
+          <aside class="mx-vertical-flow-grid">
+      Sidebar content
+    </aside>
+  
+  </div>
+"
+`;
+
+exports[`Revserse Medium 1`] = `
+"
+  
+<div class="mx-grid--sidebar mx-grid--sidebar-rev">
+    <section class="js-content mx-vertical-flow-grid">
+    Main content
+  </section>
+          <aside class="mx-vertical-flow-grid">
+      Sidebar content
+    </aside>
+  
+  </div>
+"
+`;
+
+exports[`Sidebar 1`] = `
+"
+  
+<div class="mx-grid--sidebar">
+    <section class="js-content mx-vertical-flow-grid">
+    Main content
+  </section>
+          <aside class="mx-vertical-flow-grid">
+      Sidebar content
+    </aside>
+  
+  </div>
+"
+`;
+
+exports[`Sidebar First 1`] = `
+"
+  
+<div class="mx-grid--sidebar">
+          <aside class="mx-vertical-flow-grid">
+      Sidebar content
+    </aside>
+  
+    <section class="js-content mx-vertical-flow-grid">
+    Main content
+  </section>
+  </div>
+"
+`;

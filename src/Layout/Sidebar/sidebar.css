@@ -1,0 +1,50 @@
+/**
+ * Page with Sidebar
+ */
+
+@layer design-system.layouts {
+  .mx-grid--sidebar {
+    &:where(:not(:has(> aside))) {
+      grid-column: narrow;
+    }
+
+    &:where(:has(> aside)) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sidebar-gap, var(--gap));
+      justify-content: space-between;
+
+      & > aside {
+        flex-grow: 1;
+        max-inline-size: var(--sidebar-width, 24ch);
+      }
+
+      & > section {
+        flex-basis: 0;
+        flex-grow: 999;
+        min-inline-size: var(--content-min, 50%);
+        max-inline-size: var(--container-max-width, 76ch);
+      }
+
+      &.mx-grid--sidebar-rev {
+        flex-direction: row-reverse;
+      }
+
+      &.mx-grid--sidebar-rev-lg {
+        @media (--medium-up) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Print stylesheet
+ */
+
+@media print {
+  .mx-grid--sidebar {
+    flex-direction: column;
+  }
+}

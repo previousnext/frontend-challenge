@@ -1,0 +1,10 @@
+{% set classes = [
+  type == "invalid" ? "mx-error-message" : null,
+  type == "valid" ? "mx-success-message" : null,
+] %}
+{% if type != "default" %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+<div{{ attributes}} id="status-{{ id }}" role="tooltip">
+  {{ message }}
+</div>
+{% endif %}

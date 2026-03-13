@@ -1,0 +1,122 @@
+@layer design-system.defaults {
+  @media (--use-motion) {
+    @view-transition {
+      navigation: auto;
+    }
+  }
+
+  :is(*, ::before, ::after) {
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    margin: 0;
+    opacity: 1;
+    transition-property:
+      opacity, color, background-color, border-color, transform, rotate, display, overlay;
+    transition-duration: 0.5s;
+    transition-timing-function: var(--ease);
+    transition-behavior: allow-discrete;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
+
+  :focus {
+    scroll-padding-block-end: 4vh;
+  }
+
+  :focus-visible {
+    outline: var(--outline-size, 2px) var(--outline-style, solid) var(--outline-color, currentcolor);
+    outline-offset: var(--outline-offset, var(--outline-size, 2px));
+  }
+
+  html {
+    block-size: 100%;
+    font-size: 100%; /* 16px in most browsers */
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    scroll-behavior: smooth;
+  }
+
+  .translated-rtl {
+    direction: rtl;
+  }
+
+  body {
+    font-size: var(--font-size);
+    color: var(--colour-foreground);
+    accent-color: var(--colour-primary);
+    text-rendering: optimizespeed;
+    block-size: 100%;
+    padding-inline: unset;
+    padding-block: unset;
+  }
+
+  :target,
+  [id],
+  .has-scroll-margin {
+    scroll-margin-block-start: calc(
+      var(--sticky-offset, 0rem) + var(--scroll-margin, var(--spacing-m))
+    );
+  }
+
+  :is(b, strong) {
+    font-weight: var(--font-weight-bold);
+  }
+
+  :is(ol, ul) {
+    padding-inline-start: var(--spacing-m);
+
+    &[role="list"] {
+      list-style: none;
+      padding-inline-start: 0;
+    }
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: min(100%, var(--grid-min, 20ch)) 1fr;
+    grid-template-rows: 1fr;
+    gap: var(--spacing-xs);
+
+    &:has(> div) {
+      container-type: inline-size;
+    }
+
+    & div {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: span 2;
+
+      @container (max-width: 60ch) {
+        gap: var(--spacing-xxxs);
+
+        & > :is(dt, dd) {
+          grid-column: span 2;
+        }
+      }
+    }
+
+    & dt {
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (--reduce-motion) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}

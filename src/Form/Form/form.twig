@@ -1,0 +1,14 @@
+{% set classes = ['mx-form', 'mx-vertical-flow'] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+<form{{ attributes }} action="{{ action }}">
+  {% for item in items %}
+    {{ item }}
+  {% endfor %}
+  {% if actions is not empty %}
+  <div class="mx-form-actions">
+    {% for action in actions %}
+      {{ action }}
+    {% endfor %}
+  </div>
+  {% endif %}
+</form>

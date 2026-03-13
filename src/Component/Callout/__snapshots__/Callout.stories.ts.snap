@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Callout 1`] = `
+"
+<div class="mx-callout mx-vertical-flow">
+  
+<h2>Callout heading</h2>
+
+  <p>Some callout content.</p>
+</div>
+"
+`;

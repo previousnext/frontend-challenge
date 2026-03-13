@@ -1,0 +1,27 @@
+{% set classes = [
+  'mx-checkbox',
+  status == "invalid" ? "error" : null,
+  status == "valid" ? "success" : null,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set status = status|default("default") %}
+{% if hasDescription or status != "default" %}
+  {% set helpers = [
+    hasDescription ? "help-"~ id : null,
+    status != "default" ?  "status-"~ id : null,
+  ]|join(" ")|trim() %}
+{% endif %}
+
+<div{{ attributes }}>
+  <input
+      id="{{ id }}"
+      type="checkbox"
+      name="{{ name }}"
+      value="{{ value }}"
+      {% if checked %} checked="checked"{% endif %}
+      {% if helpers is not empty %} aria-describedby="{{ helpers }}"{% endif %}
+      {% if status == "invalid" %} aria-invalid="true"{% endif %}
+      {% if required %} required{% endif %}
+  >
+  <label for="{{ id }}">{{ label }}</label>
+</div>

@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Table Responsive 1`] = `
+"<div class="mx-table--responsive" tabindex="0">
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Row 1</th>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+        <td>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+      </tr>
+      <tr>
+        <th>Row 2</th>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+        <td>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+      </tr>
+      <tr>
+        <th>Row 3</th>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+        <td>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+"
+`;

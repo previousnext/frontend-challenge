@@ -1,0 +1,121 @@
+/**
+ * Accordion
+ */
+
+@layer design-system.defaults {
+  details {
+    & summary {
+      list-style-type: none;
+
+      &:is(::-webkit-details-marker, ::marker) {
+        display: none;
+        content: "";
+      }
+    }
+  }
+
+  :is(mx-accordion, mx-accordiondiv, mx-accordionmobile, mx-accordion-group) {
+    display: block;
+  }
+
+  :where(:is(div.mx-accordion, mx-accordiondiv)) {
+    & .mx-accordion__toggle {
+      appearance: none;
+      color: inherit;
+      font-size: inherit;
+      background: initial;
+      border: initial;
+      padding: initial;
+    }
+  }
+
+  mx-accordion-group:not(:defined) .mx-accordions__toggle-all {
+    display: none;
+  }
+}
+
+@layer design-system.components {
+  .mx-accordion__title {
+    margin-block-end: var(--spacing-m);
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--spacing-s);
+    align-items: center;
+  }
+
+  .mx-accordions__toggle-all {
+    margin-inline-start: auto;
+  }
+
+  .mx-accordion {
+    & .mx-accordion__toggle {
+      cursor: pointer;
+      inline-size: 100%;
+    }
+
+    &:is(> h2, > h3, > h4, > h5, > h6) {
+      all: unset;
+    }
+
+    & > .mx-accordion__content {
+      display: none;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    &:is([open], [data-open="true"]) {
+      & > .mx-accordion__toggle {
+        & .mx-icon--chevron-down {
+          transform: rotate(180deg);
+        }
+      }
+
+      & > .mx-accordion__content {
+        opacity: 1;
+        display: block;
+
+        @starting-style {
+          opacity: 0;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .mx-accordion--divided {
+    border-block-end: var(--line-width, 1px) solid var(--line-colour, var(--colour-border));
+
+    & .mx-accordion__toggle {
+      padding-block: var(--vertical-padding, var(--spacing-xxs));
+      padding-inline: var(--horizontal-padding, 0);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--spacing-xxs);
+
+      & .mx-icon {
+        margin-inline-start: auto;
+      }
+    }
+
+    &:is([open], [data-open="true"]) {
+      & > .mx-accordion__content {
+        border-block-start: var(--line-width, 1px) solid var(--line-colour, var(--colour-border));
+        padding-block: var(--vertical-padding, var(--spacing-xxs));
+        padding-inline: var(--horizontal-padding, 0);
+      }
+    }
+  }
+}
+
+/**
+ * Print stylesheet
+ */
+
+@media print {
+  .mx-accordion {
+    & .mx-accordion__content {
+      display: block !important;
+    }
+  }
+}

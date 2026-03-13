@@ -1,0 +1,47 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Checked 1`] = `
+"
+<fieldset class="mx-form-item mx-fieldset">
+    
+<legend class="mx-legend">Do you like music?</legend>
+
+  
+            <div class="mx-radio">
+  <input id="radio-set-yes" type="radio" name="music" value="yes" checked="checked">
+  <label for="radio-set-yes">Yes</label>
+</div>
+
+          <div class="mx-radio">
+  <input id="radio-set-no" type="radio" name="music" value="no">
+  <label for="radio-set-no">No</label>
+</div>
+
+        
+  
+</fieldset>
+"
+`;
+
+exports[`Radio 1`] = `
+"
+<fieldset class="mx-form-item mx-fieldset">
+    
+<legend class="mx-legend">Do you like music?</legend>
+
+  
+            <div class="mx-radio">
+  <input id="radio-set-yes" type="radio" name="music" value="yes">
+  <label for="radio-set-yes">Yes</label>
+</div>
+
+          <div class="mx-radio">
+  <input id="radio-set-no" type="radio" name="music" value="no">
+  <label for="radio-set-no">No</label>
+</div>
+
+        
+  
+</fieldset>
+"
+`;

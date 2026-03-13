@@ -1,0 +1,117 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Accordion 1`] = `
+"<div class="mx-accordions">
+            <div class="mx-accordion__title">
+        
+<h2>Accordion group</h2>
+
+              </div>
+        
+<mx-accordion>
+  <details class="mx-accordion mx-accordion--divided" id="music">
+    <summary class="mx-accordion__toggle">
+      Music
+      <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="mx-accordion__content mx-rich-text mx-vertical-flow">
+      I'm baby air plant hashtag letterpress blue bottle. Cloud bread dreamcatcher everyday carry lumbersexual, iceland cardigan swag chicharrones lo-fi fanny pack affogato freegan XOXO shaman. Shoreditch cloud bread waistcoat tbh XOXO. Chillwave pour-over umami pug glossier health goth.
+    </div>
+  </details>
+</mx-accordion>
+
+      
+<mx-accordion>
+  <details class="mx-accordion mx-accordion--divided" id="performances">
+    <summary class="mx-accordion__toggle">
+      Performances
+      <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="mx-accordion__content mx-rich-text mx-vertical-flow">
+      I'm baby air plant hashtag letterpress blue bottle. Cloud bread dreamcatcher everyday carry lumbersexual, iceland cardigan swag chicharrones lo-fi fanny pack affogato freegan XOXO shaman. Shoreditch cloud bread waistcoat tbh XOXO. Chillwave pour-over umami pug glossier health goth.
+    </div>
+  </details>
+</mx-accordion>
+
+    </div>
+"
+`;
+
+exports[`Default Open 1`] = `
+"<div class="mx-accordions">
+            <div class="mx-accordion__title">
+        
+<h2>Accordion group</h2>
+
+              </div>
+        
+<mx-accordion>
+  <details class="mx-accordion mx-accordion--divided" id="music">
+    <summary class="mx-accordion__toggle">
+      Music
+      <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="mx-accordion__content mx-rich-text mx-vertical-flow">
+      I'm baby air plant hashtag letterpress blue bottle. Cloud bread dreamcatcher everyday carry lumbersexual, iceland cardigan swag chicharrones lo-fi fanny pack affogato freegan XOXO shaman. Shoreditch cloud bread waistcoat tbh XOXO. Chillwave pour-over umami pug glossier health goth.
+    </div>
+  </details>
+</mx-accordion>
+
+      
+<mx-accordion>
+  <details class="mx-accordion mx-accordion--divided" open="" id="performances-default">
+    <summary class="mx-accordion__toggle">
+      Performances (default open)
+      <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="mx-accordion__content mx-rich-text mx-vertical-flow">
+      I'm baby air plant hashtag letterpress blue bottle. Cloud bread dreamcatcher everyday carry lumbersexual, iceland cardigan swag chicharrones lo-fi fanny pack affogato freegan XOXO shaman. Shoreditch cloud bread waistcoat tbh XOXO. Chillwave pour-over umami pug glossier health goth.
+    </div>
+  </details>
+</mx-accordion>
+
+    </div>
+"
+`;
+
+exports[`Toggle All 1`] = `
+"<div class="mx-accordions">
+    <mx-accordion-group>
+            <div class="mx-accordion__title">
+        
+<h2>Accordion group</h2>
+
+                  <div class="mx-accordions__toggle-all">
+            <button data-expand="" class="mx-button mx-button--light mx-button--small" type="button">Expand all</button><button data-collapse="" class="mx-button mx-button--light mx-button--small" type="button">Collapse all</button>
+          </div>
+              </div>
+        
+<mx-accordion>
+  <details class="mx-accordion mx-accordion--divided" id="music">
+    <summary class="mx-accordion__toggle">
+      Music
+      <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="mx-accordion__content mx-rich-text mx-vertical-flow">
+      I'm baby air plant hashtag letterpress blue bottle. Cloud bread dreamcatcher everyday carry lumbersexual, iceland cardigan swag chicharrones lo-fi fanny pack affogato freegan XOXO shaman. Shoreditch cloud bread waistcoat tbh XOXO. Chillwave pour-over umami pug glossier health goth.
+    </div>
+  </details>
+</mx-accordion>
+
+      
+<mx-accordion>
+  <details class="mx-accordion mx-accordion--divided" id="performances">
+    <summary class="mx-accordion__toggle">
+      Performances
+      <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="mx-accordion__content mx-rich-text mx-vertical-flow">
+      I'm baby air plant hashtag letterpress blue bottle. Cloud bread dreamcatcher everyday carry lumbersexual, iceland cardigan swag chicharrones lo-fi fanny pack affogato freegan XOXO shaman. Shoreditch cloud bread waistcoat tbh XOXO. Chillwave pour-over umami pug glossier health goth.
+    </div>
+  </details>
+</mx-accordion>
+
+      </mx-accordion-group>
+  </div>
+"
+`;

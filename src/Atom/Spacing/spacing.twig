@@ -1,0 +1,6 @@
+{% set baseClass = "mx-spacing" %}
+{% set class = baseClass ~ '--' ~ modifier %}
+{% set attributes = (attributes ?? create_attribute()).addClass(class) %}
+<div{{ attributes }}>
+  <div>{{ class }}</div>
+</div>

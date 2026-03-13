@@ -1,0 +1,1003 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Carousel 1`] = `
+"
+<mx-carousel class="mx-carousel" role="group">
+  <div class="mx-carousel__buttons" data-buttons="">
+    <button class="mx-carousel__prev mx-button mx-button--icon-only" type="button" disabled="">
+      <span class="sr-only">previous</span>
+      <span class="mx-icon mx-icon--chevron-left"></span>
+    </button>
+    <button class="mx-carousel__next mx-button mx-button--icon-only" type="button">
+      <span class="sr-only">next</span>
+      <span class="mx-icon mx-icon--chevron-right"></span>
+    </button>
+  </div>
+  <ul class="mx-carousel__scrollable overflowing" tabindex="0">
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 1</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 2</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 3</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 4</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 5</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image but may have longer text and trigger height changes..</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 6</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 7</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 8</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 9</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 10</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 11</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+      </ul>
+  </mx-carousel>
+"
+`;
+
+exports[`Counters 1`] = `
+"
+<mx-carousel class="mx-carousel" role="group">
+  <div class="mx-carousel__buttons" data-buttons="">
+    <button class="mx-carousel__prev mx-button mx-button--icon-only" type="button" disabled="">
+      <span class="sr-only">previous</span>
+      <span class="mx-icon mx-icon--chevron-left"></span>
+    </button>
+    <button class="mx-carousel__next mx-button mx-button--icon-only" type="button">
+      <span class="sr-only">next</span>
+      <span class="mx-icon mx-icon--chevron-right"></span>
+    </button>
+  </div>
+  <ul class="mx-carousel__scrollable overflowing" tabindex="0">
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 1</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 2</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 3</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 4</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 5</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image but may have longer text and trigger height changes..</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 6</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 7</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 8</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 9</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 10</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 11</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+      </ul>
+          <ol class="mx-carousel__pagination" data-pagination="counter" hidden=""></ol>
+  </mx-carousel>
+"
+`;
+
+exports[`Loop 1`] = `
+"
+<mx-carousel class="mx-carousel" role="group" loop="">
+  <div class="mx-carousel__buttons" data-buttons="">
+    <button class="mx-carousel__prev mx-button mx-button--icon-only" type="button" disabled="">
+      <span class="sr-only">previous</span>
+      <span class="mx-icon mx-icon--chevron-left"></span>
+    </button>
+    <button class="mx-carousel__next mx-button mx-button--icon-only" type="button">
+      <span class="sr-only">next</span>
+      <span class="mx-icon mx-icon--chevron-right"></span>
+    </button>
+  </div>
+  <ul class="mx-carousel__scrollable overflowing" tabindex="0">
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 1</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 2</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 3</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 4</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 5</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image but may have longer text and trigger height changes..</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 6</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 7</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 8</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 9</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 10</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 11</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+      </ul>
+  </mx-carousel>
+"
+`;
+
+exports[`Paginated 1`] = `
+"
+<mx-carousel class="mx-carousel" role="group">
+  <div class="mx-carousel__buttons" data-buttons="">
+    <button class="mx-carousel__prev mx-button mx-button--icon-only" type="button" disabled="">
+      <span class="sr-only">previous</span>
+      <span class="mx-icon mx-icon--chevron-left"></span>
+    </button>
+    <button class="mx-carousel__next mx-button mx-button--icon-only" type="button">
+      <span class="sr-only">next</span>
+      <span class="mx-icon mx-icon--chevron-right"></span>
+    </button>
+  </div>
+  <ul class="mx-carousel__scrollable overflowing" tabindex="0">
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 1</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 2</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 3</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li>          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 4</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 5</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image but may have longer text and trigger height changes..</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 6</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 7</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 8</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 9</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 10</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+          <li inert="">          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile 11</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+</li>
+      </ul>
+          <ol class="mx-carousel__pagination" data-pagination="pagination" hidden=""></ol>
+  </mx-carousel>
+"
+`;

@@ -1,0 +1,34 @@
+@layer design-system.atoms {
+  :is(.mx-media--left, .mx-media--right, .mx-media--center) {
+    @media (--small-up) {
+      max-inline-size: 50%;
+      margin-block-end: var(--spacing-s);
+
+      &:first-child {
+        margin-block-start: 0;
+
+        & + * {
+          margin-block-start: 0 !important;
+        }
+      }
+    }
+  }
+
+  .mx-media--center {
+    margin-inline: auto;
+  }
+
+  :is(.mx-media--left, [dir="rtl"] .mx-media--right, .translated-rtl .mx-media--right) {
+    @media (--small-up) {
+      float: left;
+      margin-inline: 0 var(--spacing-m);
+    }
+  }
+
+  :is(.mx-media--right, [dir="rtl"] .mx-media--left, .translated-rtl .mx-media--left) {
+    @media (--small-up) {
+      float: right;
+      margin-inline: var(--spacing-m) 0;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Download 1`] = `
+"  
+<a class="mx-link--download" href="#">
+  
+<span class="mx-icon mx-icon--download"></span>
+
+  <span>Download (PDF 12kb)</span>
+    
+</a>
+"
+`;
+
+exports[`External 1`] = `
+"  
+<a class="mx-link--external" href="#">
+  
+  <span>Hyperlink</span>
+  <span class="sr-only">(opens in a new window)</span>  
+</a>
+"
+`;
+
+exports[`Icon Link 1`] = `
+"
+<a href="#">
+  
+<span class="mx-icon mx-icon--link"></span>
+
+  <span>Hyperlink</span>
+    
+</a>
+"
+`;
+
+exports[`Link 1`] = `
+"
+<a href="#">
+  
+  <span>Hyperlink</span>
+    
+</a>
+"
+`;
+
+exports[`More 1`] = `
+"  
+<a class="mx-link--more" href="#">
+  
+  <span>Hyperlink</span>
+    
+<span class="mx-icon mx-icon--arrow-right"></span>
+
+</a>
+"
+`;

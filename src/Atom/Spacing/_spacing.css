@@ -1,0 +1,69 @@
+@import "./_mixins.css";
+
+@layer design-system.utilities {
+  .mx-spacing--reset {
+    padding: 0 !important;
+  }
+
+  .mx-spacing--top-reset {
+    padding-block-start: 0 !important;
+  }
+
+  .mx-spacing--bottom-reset {
+    padding-block-end: 0 !important;
+  }
+
+  .mx-spacing--left-reset {
+    padding-inline-start: 0 !important;
+  }
+
+  .mx-spacing--right-reset {
+    padding-inline-end: 0 !important;
+  }
+
+  @mixin spacing xxs;
+  @mixin spacing xs;
+  @mixin spacing s;
+  @mixin spacing m;
+  @mixin spacing l;
+  @mixin spacing xl;
+  @mixin spacing xxl;
+  @mixin spacing xxxl;
+  @mixin spacing xxxxl;
+  @mixin spacing ul;
+  @mixin spacing uul;
+  @mixin spacing uuul;
+
+  .mx-margin--reset {
+    margin: 0 !important;
+  }
+
+  .mx-margin--top-reset {
+    margin-block-start: 0 !important;
+  }
+
+  .mx-margin--bottom-reset {
+    margin-block-end: 0 !important;
+  }
+
+  .mx-margin--left-reset {
+    margin-inline-start: 0 !important;
+  }
+
+  .mx-margin--right-reset {
+    margin-inline-end: 0 !important;
+  }
+
+  @mixin margin xxs;
+  @mixin margin xs;
+  @mixin margin s;
+  @mixin margin m;
+  @mixin margin l;
+  @mixin margin xl;
+  @mixin margin xxl;
+  @mixin margin xxxl;
+  @mixin margin xxxxl;
+  @mixin margin ul;
+  @mixin margin uul;
+  @mixin margin uuul;
+}

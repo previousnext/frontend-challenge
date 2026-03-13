@@ -1,0 +1,5 @@
+@define-mixin icon $name {
+  .mx-icon--$(name)::before {
+    mask-image: svg-load("./images/$(name).svg");
+  }
+}

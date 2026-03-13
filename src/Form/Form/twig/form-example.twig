@@ -1,0 +1,13 @@
+<form class="mx-vertical-flow" action="#">
+  {% include "@mixtape/form/src/input-text.twig" with { label: 'Name', placeholder: 'Jane Doe' } %}
+  {% include "@mixtape/form/src/input-text-icon.twig" with { label: 'Email', placeholder: 'me@example.com', type: 'email' } %}
+  {% include "@mixtape/form/src/input-radio.twig" %}
+  {% include "@mixtape/form/src/input-checkbox.twig" %}
+  {% include "@mixtape/form/src/select.twig" %}
+  {% include "@mixtape/form/src/textarea.twig" %}
+  {% include "@mixtape/form/src/form-error.twig" %}
+  <div class="mx-form-actions">
+    <input type="submit" class="mx-button mx-button--dark" value="Submit">
+    <input type="submit" class="mx-button" value="Save Draft">
+  </div>
+</form>

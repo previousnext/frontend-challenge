@@ -1,0 +1,60 @@
+/**
+ * Hero Banner
+ */
+
+@layer design-system.components {
+  .mx-hero-banner {
+    position: relative;
+    z-index: 1;
+
+    &.mx-hero-banner--hero {
+      min-block-size: var(--hero-height, 600px);
+      place-content: center;
+    }
+
+    & :is(h1, h2, p) {
+      inline-size: min(100%, var(--container-max-width-narrow));
+      text-wrap: balance;
+    }
+
+    & h1 {
+      overflow-wrap: anywhere;
+    }
+  }
+
+  .mx-hero-banner__inner {
+    grid-column: container;
+    display: grid;
+    grid-template-areas: "content" "aside";
+
+    @media (--large-up) {
+      grid-template-areas: "content aside";
+      grid-template-columns: var(--hero-columns, 50% 50%);
+    }
+
+    &:where(:has(.mx-hero-banner__aside)) .mx-hero-banner__content {
+      padding-inline-end: var(--gap-xl);
+    }
+  }
+
+  .mx-hero-banner__content {
+    align-self: var(--hero-align, center);
+  }
+
+  .mx-hero-banner__aside {
+    align-self: var(--hero-align, center);
+
+    &.mx-hero-banner__aside-image {
+      overflow: hidden;
+      position: relative;
+      border-radius: var(--hero-image-radius, var(--border-radius));
+    }
+
+    & img {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{% set attributes = (attributes ?? create_attribute()).addClass("mx-video") %}
+<figure{{ attributes }}>
+  <iframe
+      src="{{ src }}"
+      {% if title is not empty %} title="{{ title }}"{% endif %}
+      allowfullscreen
+  ></iframe>
+</figure>

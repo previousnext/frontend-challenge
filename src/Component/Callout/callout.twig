@@ -1,0 +1,10 @@
+{% set classes = [
+  'mx-callout',
+  'mx-vertical-flow'
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+<div{{ attributes }}>
+  {{ title }}
+  {{ content }}
+</div>

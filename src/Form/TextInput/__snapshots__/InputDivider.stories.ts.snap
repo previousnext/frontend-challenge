@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Input Divider 1`] = `
+"<div class="mx-form-item mx-form-item--inline">
+  <div class="mx-form-item">
+    <label class="mx-label mx-label--inline" for="input1">Input field</label>
+    <input class="mx-input__text" type="text" id="input1">
+  </div>
+  <div class="mx-input__divider">OR</div>
+  <div class="mx-form-item">
+    <input class="mx-input__text" type="text" id="input2" placeholder="Other input" aria-label="Other input field">
+  </div>
+</div>
+"
+`;

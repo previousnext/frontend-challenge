@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Definition List 1`] = `
+"<dl>
+      <div>
+      <dt>Some title</dt>
+      <dd>Some content</dd>
+    </div>
+      <div>
+      <dt>Another title</dt>
+      <dd>More content</dd>
+    </div>
+      <div>
+      <dt>Yet another title</dt>
+      <dd>And even more content</dd>
+    </div>
+  </dl>
+"
+`;

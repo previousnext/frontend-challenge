@@ -1,0 +1,18 @@
+{% set baseClass = 'mx-accordion' %}
+{% set classes = [
+  baseClass,
+  baseClass~'--divided',
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+<mx-accordion>
+  <details{{ attributes }}{% if id is not empty %} id="{{ id }}"{% endif %}{% if open %} open{% endif %}>
+    <summary class="mx-accordion__toggle">
+      {{ title }}
+      <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--chevron-down" aria-hidden="true"></span>
+    </summary>
+    <div class="mx-accordion__content mx-rich-text mx-vertical-flow">
+      {{ content }}
+    </div>
+  </details>
+</mx-accordion>

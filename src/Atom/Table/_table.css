@@ -1,0 +1,96 @@
+@layer design-system.defaults {
+  table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    margin: 0;
+
+    & th {
+      font-weight: var(--font-weight-bold);
+      text-align: start;
+    }
+
+    & :is(td, th) {
+      padding: var(--spacing-xxs);
+      border-block-end: var(--line-width, 1px) solid var(--line-colour, var(--colour-border));
+      vertical-align: top;
+    }
+
+    & thead :is(td, th) {
+      border-block-end-color: currentcolor;
+    }
+
+    & caption {
+      padding: var(--spacing-xxs);
+      text-align: start;
+      font-size: var(--caption-font-size, var(--font-size-xs));
+      line-height: var(--caption-line-height, var(--line-height-h));
+      caption-side: bottom;
+    }
+  }
+
+  .mx-table--flush {
+    & :is(td, th) {
+      &:first-child {
+        padding-inline-start: 0;
+      }
+
+      &:last-child {
+        padding-inline-end: 0;
+      }
+    }
+  }
+
+  .mx-table--small {
+    & :is(td, th) {
+      font-size: var(--font-size-s);
+      line-height: var(--line-height-h);
+    }
+  }
+
+  .mx-table--striped {
+    & tbody tr {
+      &:nth-child(even) {
+        & :is(td, th) {
+          background-color: var(--colour-background-alt);
+        }
+      }
+    }
+  }
+
+  .mx-table--bordered {
+    & :is(td, th) {
+      border-block-start: var(--line-width, 1px) solid var(--line-colour, var(--colour-border));
+      border-inline: var(--line-width, 1px) solid var(--line-colour, var(--colour-border));
+    }
+  }
+
+  .mx-table--responsive {
+    max-inline-size: 100%;
+
+    @media (--medium-down) {
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      box-shadow: var(--box-shadow) inset;
+
+      & table {
+        inline-size: 100%;
+        margin-block: 0;
+        margin-inline: var(--spacing-s);
+
+        & td {
+          min-inline-size: 20ch;
+        }
+      }
+    }
+  }
+}
+
+@layer design-system.utilities {
+  .mx-table--reset {
+    & :is(td, th) {
+      border: unset;
+      padding: unset;
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+/* stylelint-disable custom-property-pattern */
+
+/**
+ * Variables
+ */
+
+@property --scheme {
+  syntax: "light | dark";
+  inherits: true;
+  initial-value: token("colour.main.scheme");
+}
+
+@layer design-system.defaults {
+  :root {
+    /* Brand colors */
+    --colour-primary: token("colour.primary.colour");
+    --colour-primary-light: color-mix(in oklch, var(--colour-primary), white 90%);
+    --colour-primary-lighter: color-mix(in oklch, var(--colour-primary), white 20%);
+    --colour-primary-darker: color-mix(in oklch, var(--colour-primary), black 10%);
+    --colour-primary-scheme: token("colour.primary.scheme");
+    --colour-accent: token("colour.accent.colour");
+    --colour-accent-light: color-mix(in oklch, var(--colour-accent), white 90%);
+    --colour-accent-lighter: color-mix(in oklch, var(--colour-accent), white 20%);
+    --colour-accent-darker: color-mix(in oklch, var(--colour-accent), black 10%);
+    --colour-accent-scheme: token("colour.accent.scheme");
+
+    /* System colours */
+    --colour-scheme: token("colour.main.scheme");
+
+    color-scheme: var(--scheme);
+
+    --colour-background: light-dark(token("colour.main.bg"), token("colour.reverse.bg"));
+    --colour-background-alt: light-dark(token("colour.main.bgAlt"), token("colour.reverse.bgAlt"));
+    --colour-foreground: light-dark(token("colour.main.fg"), token("colour.reverse.fg"));
+    --colour-foreground-alt: light-dark(token("colour.main.fgAlt"), token("colour.reverse.fgAlt"));
+    --colour-border: light-dark(token("colour.main.border"), token("colour.reverse.border"));
+    --colour-link: light-dark(var(--colour-primary), var(--colour-primary-light));
+
+    /* Reverse colors */
+    --colour-foreground-reverse: light-dark(token("colour.reverse.fg"), token("colour.main.fg"));
+    --colour-background-reverse: light-dark(token("colour.reverse.bg"), token("colour.main.bg"));
+    --colour-reverse-scheme: token("colour.reverse.scheme");
+
+    /* State colours */
+    --colour-error: light-dark(
+      token("colour.error"),
+      color-mix(in oklch, token("colour.error"), white 80%)
+    );
+    --colour-success: light-dark(
+      token("colour.success"),
+      color-mix(in oklch, token("colour.success"), white 80%)
+    );
+    --colour-warning: light-dark(
+      token("colour.warning"),
+      color-mix(in oklch, token("colour.warning"), white 80%)
+    );
+    --colour-info: light-dark(
+      token("colour.info"),
+      color-mix(in oklch, token("colour.info"), white 80%)
+    );
+
+    /* Typography */
+    --font-family: token("font.family");
+    --type-ratio: token("font.size.ratio");
+    --type-ratio-small: token("font.size.ratioSmall");
+    --base-font-size: max(1rem, token("font.size.basePx"));
+    --font-size: var(--base-font-size);
+    --font-size-s: calc(var(--base-font-size) / var(--type-ratio-small));
+    --font-size-xs: calc(var(--font-size-s) / var(--type-ratio-small));
+    --font-size-sm: calc(var(--base-font-size) * var(--type-ratio-small));
+    --font-size-m: calc(var(--base-font-size) * var(--type-ratio));
+    --font-size-l: calc(var(--font-size-m) * var(--type-ratio));
+    --font-size-xl: calc(var(--font-size-l) * var(--type-ratio));
+    --font-size-xxl: calc(var(--font-size-xl) * var(--type-ratio));
+    --font-size-xxxl: calc(var(--font-size-xxl) * var(--type-ratio));
+    --font-size-diff: token("font.size.diff");
+
+    --line-height: token("font.lineHeight.main");
+    --line-height-h: token("font.lineHeight.heading");
+    --line-height-ui: token("font.lineHeight.ui");
+
+    --font-weight-normal: token("font.weight.main");
+    --font-weight-bold: token("font.weight.bold");
+
+    /* Spacing */
+    --spacing-xxxxs: token("size.spacing.xxxxs");
+    --spacing-xxxs: token("size.spacing.xxxs");
+    --spacing-xxs: token("size.spacing.xxs");
+    --spacing-xs: token("size.spacing.xs");
+    --spacing-s: token("size.spacing.s");
+    --spacing-m: token("size.spacing.m");
+    --spacing-l: token("size.spacing.l");
+    --spacing-xl: token("size.spacing.xl");
+    --spacing-xxl: token("size.spacing.xxl");
+    --spacing-xxxl: token("size.spacing.xxxl");
+    --spacing-xxxxl: token("size.spacing.xxxl");
+    --spacing-ul: token("size.spacing.ul");
+    --spacing-uul: token("size.spacing.uul");
+    --spacing-uuul: token("size.spacing.uuul");
+
+    --outline-size: token("utility.outline.width");
+    --outline-style: token("utility.outline.style");
+    --_colour-outline: token("utility.outline.colour");
+    --outline-color: light-dark(
+      var(--_colour-outline),
+      color-mix(in oklch, var(--_colour-outline), white 90%)
+    );
+
+    /* Layout */
+    --container-max-width-narrow: token("size.container.narrow");
+    --container-max-width: token("size.container.aligned");
+    --gutter-min: token("size.container.gutterMin");
+    --gutter-max: token("size.container.gutterMax");
+    --gap-s: token("size.gap.s");
+    --gap: token("size.gap.m");
+    --gap-l: token("size.gap.l");
+    --gap-xl: token("size.gap.xl");
+    --breakpoint-xs: token("breakpoint.xs");
+    --breakpoint-s: token("breakpoint.s");
+    --breakpoint-m: token("breakpoint.m");
+    --breakpoint-l: token("breakpoint.l");
+    --breakpoint-xl: token("breakpoint.xl");
+
+    /* Utility */
+    --shadow-color: token("utility.shadow.colour");
+    --shadow-size: token("utility.shadow.size");
+    --shadow-shape: 0 0 var(--shadow-size);
+    --box-shadow: var(--shadow-shape) var(--shadow-color);
+    --border-radius: token("utility.radius.m");
+    --border-radius-l: token("utility.radius.l");
+    --border-radius-round: token("utility.radius.round");
+    --ratio: token("utility.ratio");
+    --ease: cubic-bezier(0.25, 0, 0.3, 1);
+  }
+
+  @media (--medium-down) {
+    :root {
+      --section-xl: var(--spacing-xxl);
+    }
+  }
+}

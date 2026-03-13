@@ -1,0 +1,9 @@
+{% set classes = [
+  "mx-rich-text",
+  "mx-vertical-flow",
+  "mx-section--narrow"
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+<div{{ attributes }}>
+  {{ content }}
+</div>

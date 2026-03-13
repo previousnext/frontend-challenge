@@ -1,0 +1,17 @@
+{% set baseClass = 'mx-link' %}
+{% set classes = [
+  more ? baseClass~'--more' : null,
+  external ? baseClass~'--external' : null,
+  download ? baseClass~'--download' : null,
+]|join(" ")|trim() %}
+{% set attributes = (attributes ?? create_attribute()) %}
+{% if classes is not empty %}
+  {% set attributes = attributes.addClass(classes) %}
+{% endif %}
+
+<a{{ attributes }} href="{{ href }}"{% if current %} aria-current="page"{% endif %}>
+  {{ iconStart }}
+  <span{% if iconOnly %} class="sr-only"{% endif %}>{{ title }}</span>
+  {% if external %}<span class="sr-only">(opens in a new window)</span>{% endif %}
+  {{ iconEnd }}
+</a>

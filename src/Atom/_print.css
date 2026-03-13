@@ -1,0 +1,9 @@
+@media print {
+  .contextual {
+    display: none;
+  }
+
+  .mx-rich-text {
+    max-inline-size: 100%;
+  }
+}

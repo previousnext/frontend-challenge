@@ -1,0 +1,72 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "unicorn",
+    "typescript",
+    "oxc",
+    "import",
+    "react",
+    "react-perf",
+    "jsx-a11y",
+    "jest",
+    "jsdoc"
+  ],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "globals": {
+    "Drupal": "writeable",
+    "once": "writeable",
+    "Mixtape": "writeable"
+  },
+  "ignorePatterns": ["node_modules", "dist"],
+  "rules": {
+    "no-console": "error",
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
+    "import/no-unused-imports": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["tests/**/*.js", "**/*.test.js", "**/*.test.jsx"]
+      }
+    ],
+    "consistent-return": "warn",
+    "no-unused-vars": "warn",
+    "no-unassigned-import": "off",
+    "valid-jsdoc": [
+      "warn",
+      {
+        "prefer": {
+          "returns": "return",
+          "property": "prop"
+        },
+        "requireReturn": false
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.{jsx,tsx}"],
+      "rules": {
+        "consistent-return": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off"
+      }
+    },
+    {
+      "files": ["tests/jest/*.js"],
+      "rules": {
+        "import/no-unassigned-import": "off"
+      }
+    }
+  ]
+}

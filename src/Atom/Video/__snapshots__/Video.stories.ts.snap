@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Video 1`] = `
+"<figure class="mx-video">
+  <iframe src="https://www.youtube.com/embed/NpEaa2P7qZI" title="Something from youtube" allowfullscreen=""></iframe>
+</figure>
+"
+`;

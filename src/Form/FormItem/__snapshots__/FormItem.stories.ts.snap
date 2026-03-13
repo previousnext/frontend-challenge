@@ -1,0 +1,121 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Description Before 1`] = `
+"
+<div class="mx-form-item">
+    
+<label class="mx-label" for="form-item">What's your favourite music?</label>
+
+  <div class="mx-description" id="unique-0" role="tooltip">
+  Help text that provides additional information about the field.
+</div>
+
+        
+<input class="mx-input__text" id="form-item" name="unique-0" type="text" value="" placeholder="eg. Funk, Soul, Blues.." aria-describedby="unique-0">
+
+    
+  
+</div>
+"
+`;
+
+exports[`Error 1`] = `
+"
+<div class="mx-form-item">
+    
+<label class="mx-label" for="form-item">What's your favourite music?</label>
+
+  
+        
+<input class="mx-input__text error" id="form-item" name="unique-0" type="text" value="Musicals" placeholder="eg. Funk, Soul, Blues.." aria-describedby="unique-0" aria-invalid="true">
+
+    <div class="mx-description" id="help-form-item" role="tooltip">
+  Help text that provides additional information about the field.
+</div>
+
+  <div class="mx-error-message" id="status-form-item" role="tooltip">
+  Oops, you made a mistake.
+</div>
+
+</div>
+"
+`;
+
+exports[`Fieldset 1`] = `
+"
+<fieldset class="mx-form-item mx-fieldset">
+    
+<legend class="mx-legend">What's your favourite music?</legend>
+
+  
+        
+<input class="mx-input__text" id="form-item" name="unique-0" type="text" value="" aria-label="Visually hidden label" placeholder="eg. Funk, Soul, Blues.." aria-describedby="unique-0">
+
+    <div class="mx-description" id="unique-0" role="tooltip">
+  Help text that provides additional information about the field.
+</div>
+
+  
+</fieldset>
+"
+`;
+
+exports[`Form Item 1`] = `
+"
+<div class="mx-form-item">
+    
+<label class="mx-label" for="form-item">What's your favourite music?</label>
+
+  
+        
+<input class="mx-input__text" id="form-item" name="unique-0" type="text" value="" placeholder="eg. Funk, Soul, Blues.." aria-describedby="unique-0">
+
+    <div class="mx-description" id="unique-0" role="tooltip">
+  Help text that provides additional information about the field.
+</div>
+
+  
+</div>
+"
+`;
+
+exports[`Required 1`] = `
+"
+<div class="mx-form-item">
+    
+<label class="mx-label" for="form-item">What's your favourite music?</label>
+
+  
+        
+<input class="mx-input__text" id="form-item" name="unique-0" type="text" value="Musicals" placeholder="eg. Funk, Soul, Blues.." aria-describedby="unique-0" required="">
+
+    <div class="mx-description" id="unique-0" role="tooltip">
+  Help text that provides additional information about the field.
+</div>
+
+  
+</div>
+"
+`;
+
+exports[`Success 1`] = `
+"
+<div class="mx-form-item">
+    
+<label class="mx-label" for="form-item">What's your favourite music?</label>
+
+  
+        
+<input class="mx-input__text success" id="form-item" name="unique-0" type="text" value="Jazz" placeholder="eg. Funk, Soul, Blues.." aria-describedby="unique-0">
+
+    <div class="mx-description" id="help-form-item" role="tooltip">
+  Help text that provides additional information about the field.
+</div>
+
+  <div class="mx-success-message" id="status-form-item" role="tooltip">
+  Congratulations, you are correct!
+</div>
+
+</div>
+"
+`;

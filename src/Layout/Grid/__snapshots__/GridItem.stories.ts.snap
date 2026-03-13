@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Breakpoints 1`] = `
+"    
+  <div class="mx-grid-item__span-sm-2 mx-grid-item__span-lg-4">
+    <span>item 1</span>
+  </div>
+"
+`;
+
+exports[`Grid Item 1`] = `
+"
+  <span>item 1</span>
+"
+`;

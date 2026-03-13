@@ -1,0 +1,21 @@
+{% set classes = [
+  'mx-input__textarea',
+  status == "invalid" ? "error" : null,
+  status == "valid" ? "success" : null,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% if hasDescription or status != "default" %}
+  {% set helpers = [
+    hasDescription ? "help-"~ id : null,
+    status != "default" ?  "status-"~ id : null,
+  ]|join(" ")|trim() %}
+{% endif %}
+
+<textarea{{ attributes }}
+    id="{{ id }}"
+    name="{{ name }}"
+    {% if label %} aria-label="{{ label }}"{% endif %}
+    {% if helpers is not empty %} aria-describedby="{{ helpers }}"{% endif %}
+    {% if status == "invalid" %} aria-invalid="true"{% endif %}
+    {% if required %} required{% endif %}
+></textarea>

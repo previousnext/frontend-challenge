@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Message 1`] = `
+"<div class="mx-error-message" id="status-message" role="tooltip">
+  Help text that provides additional information about the field.
+</div>
+"
+`;
+
+exports[`Success 1`] = `
+"<div class="mx-success-message" id="status-message" role="tooltip">
+  Help text that provides additional information about the field.
+</div>
+"
+`;

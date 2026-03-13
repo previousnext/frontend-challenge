@@ -1,0 +1,73 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Link List 1`] = `
+"
+
+<ul class="mx-link-list">
+      <li>
+<a href="#">
+  
+  <span>Music</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+      <li>
+<a href="#">
+  
+  <span>Performances</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+      <li>
+<a href="#">
+  
+  <span>Get involved</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+  </ul>
+"
+`;
+
+exports[`With Title 1`] = `
+"
+                  
+<h2 class="mx-heading--m">Popular links</h2>
+
+<ul class="mx-link-list">
+      <li>
+<a href="#">
+  
+  <span>Music</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+      <li>
+<a href="#">
+  
+  <span>Performances</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+      <li>
+<a href="#">
+  
+  <span>Get involved</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+  </ul>
+"
+`;

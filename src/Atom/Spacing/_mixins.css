@@ -1,0 +1,44 @@
+/* stylelint-disable custom-property-pattern */
+@define-mixin spacing $size {
+  .mx-spacing--$(size) {
+    padding: var(--spacing-$(size));
+  }
+
+  .mx-spacing--top-$(size) {
+    padding-block-start: var(--spacing-$(size));
+  }
+
+  .mx-spacing--bottom-$(size) {
+    padding-block-end: var(--spacing-$(size));
+  }
+
+  .mx-spacing--left-$(size) {
+    padding-inline-start: var(--spacing-$(size));
+  }
+
+  .mx-spacing--right-$(size) {
+    padding-inline-end: var(--spacing-$(size));
+  }
+}
+
+@define-mixin margin $size {
+  .mx-margin--$(size) {
+    margin: var(--spacing-$(size));
+  }
+
+  .mx-margin--top-$(size) {
+    margin-block-start: var(--spacing-$(size));
+  }
+
+  .mx-margin--bottom-$(size) {
+    margin-block-end: var(--spacing-$(size));
+  }
+
+  .mx-margin--left-$(size) {
+    margin-inline-start: var(--spacing-$(size));
+  }
+
+  .mx-margin--right-$(size) {
+    margin-inline-end: var(--spacing-$(size));
+  }
+}

@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Select 1`] = `
+"  
+<select class="mx-input__select" id="form-input-select" name="unique-0" aria-label="Visually hidden label" aria-describedby="unique-0">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+  </select>
+"
+`;

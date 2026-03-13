@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Flow 1`] = `
+"<section class="mx-section--flow">
+  <p>first section has top and bottom spacing</p>
+</section>
+<section class="mx-section--flow">
+  <p>section with normal flow</p>
+</section>
+<section class="mx-section--flow">
+  <p>section with normal flow</p>
+</section>
+<section class="mx-section--group mx-background--alt">
+  <p>certain sections can be</p>
+</section>
+<section class="mx-section--group mx-background--alt">
+  <p>grouped togther as siblings</p>
+</section>
+<section class="mx-section--group mx-background--alt">
+  <p>with their own spacing rules</p>
+</section>
+<section class="mx-section--flow">
+  <p>section on it's own has top and bottom spacing</p>
+</section>
+<section class="mx-section--group mx-background--alt">
+  <p>groups can be combined with flow</p>
+</section>
+<section class="mx-section--flow mx-section--group mx-background--alt">
+  <p>for standard spacing</p>
+</section>
+<section class="mx-section--flow">
+  <p>section after group own has top and bottom spacing</p>
+</section>
+<section class="mx-section--flow">
+  <p>section with normal flow</p>
+</section>
+<section class="mx-section--flow mx-background--alt">
+  <p>section with background that breaks the flow, also has top and bottom spacing</p>
+</section>
+<section class="mx-section--flow">
+  <p>section after background own has top and bottom spacing</p>
+</section>
+<section class="mx-section--flow">
+  <p>section with normal flow</p>
+</section>
+<section class="mx-section--group">
+  <p>groups can be used normally for larger spacing</p>
+</section>
+<section class="mx-section--group mx-background--alt">
+  <p>adding a background breaks the grouping</p>
+</section>
+<section class="mx-section--group mx-background--alt">
+  <p>into a new group</p>
+</section>
+"
+`;

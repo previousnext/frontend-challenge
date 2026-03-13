@@ -1,0 +1,83 @@
+@layer design-system.defaults {
+  :is(
+    .mx-headline,
+    h1,
+    .mx-heading--xxl,
+    h2,
+    .mx-heading--xl,
+    h3,
+    .mx-heading--l,
+    h4,
+    .mx-heading--m,
+    h5,
+    .mx-heading--s,
+    h6,
+    .mx-heading--xs
+  ) {
+    font-family: var(--heading-font-family, var(--font-family));
+    line-height: var(--line-height-h);
+    font-size: var(--heading-font-size, var(--font-size));
+    font-weight: var(--heading-font-weight, var(--font-weight-bold));
+    text-wrap: balance;
+  }
+
+  @supports (font-size: 1cqi) {
+    :is(
+      .mx-headline,
+      h1,
+      .mx-heading--xxl,
+      h2,
+      .mx-heading--xl,
+      h3,
+      .mx-heading--l,
+      h4,
+      .mx-heading--m,
+      h5,
+      .mx-heading--s
+    ) {
+      --font-min: calc(
+        var(--heading-font-size) - var(--heading-font-size) * var(--font-size-diff, 0.3)
+      );
+
+      font-size: clamp(
+        max(var(--base-font-size), var(--font-min)),
+        var(--font-min) + 1cqi,
+        var(--heading-font-size)
+      );
+    }
+  }
+
+  .mx-headline {
+    --heading-font-size: var(--font-size-xxxl);
+  }
+
+  h1,
+  .mx-heading--xxl {
+    --heading-font-size: var(--font-size-xxl);
+  }
+
+  h2,
+  .mx-heading--xl {
+    --heading-font-size: var(--font-size-xl);
+  }
+
+  h3,
+  .mx-heading--l {
+    --heading-font-size: var(--font-size-l);
+  }
+
+  h4,
+  .mx-heading--m {
+    --heading-font-size: var(--font-size-m);
+  }
+
+  h5,
+  .mx-heading--s {
+    --heading-font-size: var(--base-font-size);
+  }
+
+  h6,
+  .mx-heading--xs {
+    --heading-font-size: var(--font-size-s);
+  }
+}

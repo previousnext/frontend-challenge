@@ -1,0 +1,123 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Hero Banner 1`] = `
+"      
+<div class="mx-hero-banner">
+  <div class="mx-hero-banner__inner">
+    <div class="mx-hero-banner__content mx-vertical-flow-flex mx-section--xl">
+      
+<h1>Hero banner title</h1>
+
+              <p class="mx-text--lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+      
+    </div>
+          <div class="mx-hero-banner__aside mx-hero-banner__aside-image">
+        <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles">
+</picture>
+
+      </div>
+      </div>
+</div>
+"
+`;
+
+exports[`Highlight 1`] = `
+"            
+<div class="mx-hero-banner mx-hero-banner--hero mx-background--primary">
+  <div class="mx-hero-banner__inner">
+    <div class="mx-hero-banner__content mx-vertical-flow-flex mx-section--xl">
+      
+<h1>Hero banner title</h1>
+
+              <p class="mx-text--lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+        
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+    </div>
+          <div class="mx-hero-banner__aside mx-hero-banner__aside-image">
+        <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles">
+</picture>
+
+      </div>
+      </div>
+</div>
+"
+`;
+
+exports[`With Link List 1`] = `
+"      
+<div class="mx-hero-banner">
+  <div class="mx-hero-banner__inner">
+    <div class="mx-hero-banner__content mx-vertical-flow-flex mx-section--xl">
+      
+<h1>Hero banner title</h1>
+
+              <p class="mx-text--lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+      
+    </div>
+          <div class="mx-hero-banner__aside mx-section--xl">
+        
+                  
+<h2 class="mx-heading--m">Popular links</h2>
+
+<ul class="mx-link-list">
+      <li>
+<a href="#">
+  
+  <span>Link one</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+      <li>
+<a href="#">
+  
+  <span>Link two</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+      <li>
+<a href="#">
+  
+  <span>Link three</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+  </ul>
+
+      </div>
+      </div>
+</div>
+"
+`;
+
+exports[`Without Image 1`] = `
+"      
+<div class="mx-hero-banner">
+  <div class="mx-hero-banner__inner">
+    <div class="mx-hero-banner__content mx-vertical-flow-flex mx-section--xl">
+      
+<h1>Hero banner title</h1>
+
+              <p class="mx-text--lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+      
+    </div>
+      </div>
+</div>
+"
+`;

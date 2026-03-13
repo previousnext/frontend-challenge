@@ -1,0 +1,18 @@
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+!/packages/react/src/components/Icon/
+Thumbs.db
+
+# Development files #
+######################
+node_modules
+.map
+.idea
+
+# Build files #
+######################
+*storybook.log
+dist

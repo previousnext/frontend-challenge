@@ -1,0 +1,7 @@
+<div class="mx-form-item">
+  <label class="mx-label" for="input{{ id }}">{{ label|default('Input text field') }}</label>
+  <span class="mx-input--icon mx-icon mx-icon--{{ icon|default('email') }}">
+    <input class="mx-input__text" type="{{ type|default('text') }}" id="input{{ id }}" aria-describedby="input{{ id }}Help" placeholder="{{ placeholder }}">
+  </span>
+  <div class="mx-description" id="input{{ id }}Help" role="tooltip">{{ description|default('Help text that provides additional information about the field.') }}</div>
+</div>

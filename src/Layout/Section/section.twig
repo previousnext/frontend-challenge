@@ -1,0 +1,25 @@
+{% set baseClass = 'mx-section' %}
+{% set classes = [
+    background ? 'mx-background--'~background : null
+] %}
+{% for modifier in modifiers %}
+    {% set classes = classes|merge([baseClass~"--"~modifier]) %}
+{% endfor %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set innerAttributes = (innerAttributes ?? create_attribute()).addClass(['mx-container', 'mx-vertical-flow']) %}
+
+<{{ as|default('div') }}{{ attributes }}>
+  {% if container %}
+    <div{{ innerAttributes }}>
+  {% endif %}
+    {% if title is not empty or link is not empty %}
+      <div class="mx-section__header">
+      {{ title }}
+      {{ link }}
+      </div>
+    {% endif %}
+    {{ content }}
+  {% if container %}
+    </div>
+  {% endif %}
+</{{ as|default('div') }}>

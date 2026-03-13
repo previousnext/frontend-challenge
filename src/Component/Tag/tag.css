@@ -1,0 +1,58 @@
+/**
+ * Tag
+ */
+
+@layer design-system.components {
+  .mx-tag {
+    display: inline-flex;
+    inline-size: fit-content;
+    padding-inline: var(--horizontal-padding, var(--spacing-xxxs));
+    background: var(--tag-background, var(--background, var(--colour-background)));
+    color: var(--tag-foreground, var(--foreground, var(--colour-foreground)));
+    text-transform: uppercase;
+    font-weight: var(--font-weight, var(--font-weight-bold));
+    font-size: var(--tag-font-size, var(--font-size-xs));
+    line-height: var(--line-height, 2);
+    border-radius: var(--border-radius);
+    border: var(--line-width, 1px) solid var(--line-colour, currentcolor);
+    text-decoration: none;
+    overflow: hidden;
+
+    &:has(input:focus) {
+      outline: var(--outline-size, 2px) var(--outline-style, solid)
+        var(--outline-color, currentcolor);
+      outline-offset: var(--outline-size, 2px);
+    }
+
+    & input {
+      position: absolute;
+      inset-block-start: -100px;
+      inset-inline-start: -100px;
+    }
+
+    & label {
+      font-size: inherit;
+      color: inherit;
+      margin: 0;
+    }
+
+    &:is(a:hover, :has(input:checked)) {
+      --tag-foreground: var(--link-colour, var(--colour-primary));
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .mx-tags {
+    padding-inline: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: var(--tags-gap, var(--spacing-s));
+    overflow: clip;
+    overflow-clip-margin: var(--spacing-xxxs);
+  }
+}

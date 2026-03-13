@@ -1,0 +1,86 @@
+@layer design-system.utilities {
+  .stack {
+    display: grid;
+    grid-template-areas: "stack";
+
+    & > * {
+      grid-area: stack;
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .place--center {
+    place-content: center;
+  }
+
+  .place--end {
+    place-content: end;
+  }
+
+  .place--start {
+    place-content: start;
+  }
+
+  .align--center {
+    margin-inline: auto;
+  }
+
+  .align--left {
+    margin-inline-end: auto;
+  }
+
+  .align--right {
+    margin-inline-start: auto;
+  }
+
+  .align--bottom {
+    margin-block-start: auto;
+  }
+
+  .align--top {
+    margin-block-end: auto;
+  }
+
+  .order--start {
+    order: -1;
+  }
+
+  .order--1 {
+    order: 1;
+  }
+
+  .order--2 {
+    order: 2;
+  }
+
+  .order--3 {
+    order: 3;
+  }
+
+  .gap--s {
+    gap: var(--gap-s);
+  }
+
+  .gap--m {
+    gap: var(--gap);
+  }
+
+  .gap--l {
+    gap: var(--gap-l);
+  }
+
+  .gap--xl {
+    gap: var(--gap-xl);
+  }
+
+  .gap--section-l {
+    gap: var(--section-l, var(--spacing-xl));
+  }
+
+  .gap--section-xl {
+    gap: var(--section-xl, var(--spacing-uul));
+  }
+}

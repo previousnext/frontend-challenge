@@ -1,0 +1,35 @@
+/* Breakpoints */
+@custom-media --x-small-up (width >= token("breakpoint.xs"));
+@custom-media --x-small-down (width < token("breakpoint.xs"));
+@custom-media --x-small-to-small (token("breakpoint.xs") <= width < token("breakpoint.s"));
+@custom-media --small-up (width >= token("breakpoint.s"));
+@custom-media --small-down (width < token("breakpoint.s"));
+@custom-media --small-to-medium (token("breakpoint.s") <= width < token("breakpoint.m"));
+@custom-media --medium-up (width >= token("breakpoint.m"));
+@custom-media --medium-down (width < token("breakpoint.m"));
+@custom-media --medium-to-large (token("breakpoint.m") <= width < token("breakpoint.l"));
+@custom-media --large-up (width >= token("breakpoint.l"));
+@custom-media --large-down (width < token("breakpoint.l"));
+@custom-media --large-to-x-large (token("breakpoint.l") <= width < token("breakpoint.xl"));
+@custom-media --x-large-up (width >= token("breakpoint.xl"));
+@custom-media --x-large-down (width < token("breakpoint.xl"));
+
+/* Specific breakpoint for global & dropdown navigation */
+@custom-media --global-nav-up (width >= token("breakpoint.globalNav"));
+@custom-media --global-nav-down (width < token("breakpoint.globalNav"));
+@custom-media --collapse-card-up (width >= token("breakpoint.collapsedCard"));
+@custom-media --collapse-card-down (token("breakpoint.xxs") < width < token("breakpoint.collapsedCard"));
+
+/* Util media queries */
+@custom-media --touch (hover: none);
+@custom-media --mouse (hover);
+@custom-media --dark (prefers-color-scheme: dark);
+@custom-media --light (prefers-color-scheme: light);
+@custom-media --use-motion (prefers-reduced-motion: no-preference);
+@custom-media --reduce-motion (prefers-reduced-motion: reduce);
+@custom-media --use-data (prefers-reduced-data: no-preference);
+@custom-media --reduce-data (prefers-reduced-data: reduce);
+@custom-media --high-contrast (prefers-contrast: more);
+@custom-media --low-contrast (prefers-contrast: less);
+@custom-media --portrait (orientation: portrait);
+@custom-media --landscape (orientation: landscape);

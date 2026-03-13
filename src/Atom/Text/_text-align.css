@@ -1,0 +1,13 @@
+@layer design-system.utilities {
+  .mx-text--left {
+    text-align: start;
+  }
+
+  .mx-text--right {
+    text-align: end;
+  }
+
+  .mx-text--center {
+    text-align: center;
+  }
+}

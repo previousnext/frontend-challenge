@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Headings 1`] = `
+"
+<h2>Heading</h2>
+"
+`;
+
+exports[`Resized 1`] = `
+"                  
+<h2 class="mx-heading--m">Heading</h2>
+"
+`;

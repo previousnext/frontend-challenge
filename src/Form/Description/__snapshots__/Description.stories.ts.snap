@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Description 1`] = `
+"<div class="mx-description" id="help-description" role="tooltip">
+  Help text that provides additional information about the field.
+</div>
+"
+`;

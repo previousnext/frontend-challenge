@@ -1,0 +1,105 @@
+@import "_layout-utils.css";
+
+@layer design-system.utilities {
+  .hidden,
+  .visually-hidden,
+  .sr-only {
+    clip-path: inset(50%);
+    inline-size: 1px;
+    block-size: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  .visually-hidden.visually-hidden--focussable:focus,
+  .sr-only.sr-only--focussable:focus {
+    clip-path: none;
+    position: revert !important;
+    margin: revert;
+    padding: revert;
+    block-size: revert;
+    inline-size: revert;
+    overflow: revert;
+    white-space: revert;
+  }
+
+  [hidden] {
+    display: none;
+  }
+
+  /* Prevent scrolling on the body. */
+  .body--scroll-lock,
+  .body-dialog--open {
+    overflow: hidden;
+    position: fixed;
+    inline-size: 100vw;
+  }
+}
+
+/**
+ * Responsive utility class
+ */
+
+@layer design-system.utilities {
+  .mobile-only {
+    @media (--large-up) {
+      display: none;
+    }
+  }
+
+  .desktop-only {
+    @media (--large-down) {
+      display: none;
+    }
+  }
+
+  .print-only {
+    display: none !important;
+
+    @media print {
+      display: block !important;
+    }
+  }
+
+  .screen-only {
+    @media print {
+      display: none !important;
+    }
+  }
+}
+
+/**
+ * Skeleton and loading UI.
+ */
+@layer design-system.utilities {
+  .skeleton {
+    --background: hsl(0deg 0% 0% / 10%);
+    --opacity-low: 0.5;
+    --opacity-high: 0.75;
+    --duration: 1500ms;
+
+    animation: pulse var(--duration) ease infinite;
+  }
+
+  .skeleton--bg {
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    z-index: -1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: var(--opacity-low);
+  }
+
+  75% {
+    opacity: var(--opacity-high);
+  }
+
+  100% {
+    opacity: var(--opacity-low);
+  }
+}

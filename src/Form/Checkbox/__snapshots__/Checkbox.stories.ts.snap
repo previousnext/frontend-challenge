@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Checkbox 1`] = `
+"
+<div class="mx-checkbox">
+  <input id="single-checkbox" type="checkbox" name="terms" value="agree">
+  <label for="single-checkbox">I agree to the terms and conditions.</label>
+</div>
+"
+`;
+
+exports[`Checked 1`] = `
+"
+<div class="mx-checkbox">
+  <input id="single-checkbox" type="checkbox" name="terms" value="agree" checked="checked">
+  <label for="single-checkbox">I agree to the terms and conditions.</label>
+</div>
+"
+`;

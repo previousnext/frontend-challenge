@@ -1,0 +1,9 @@
+{% set classes = ['mx-link-list'] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+{{ title }}
+<ul{{ attributes }}>
+  {% for item in items %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>

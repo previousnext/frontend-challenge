@@ -1,0 +1,97 @@
+/**
+ * Carousel.
+ */
+
+@layer design-system.components.carousel {
+  .mx-carousel {
+    display: grid;
+    gap: var(--vertical-gap, var(--gap));
+  }
+
+  .mx-carousel__scrollable {
+    list-style: none;
+    padding-inline: 0;
+    scroll-padding-inline: var(--outline-size, 2px);
+    display: grid;
+    gap: var(--horizontal-gap, var(--gap));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(var(--inline-size, 25ch), 1fr);
+    overflow: auto hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--scrollbar-color, var(--line-colour, var(--colour-border)) transparent);
+    scrollbar-width: thin;
+
+    & > li {
+      display: grid;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+
+      &[inert] {
+        opacity: 0.3;
+      }
+
+      & .mx-container {
+        inline-size: 100%;
+        display: grid;
+      }
+    }
+
+    &.overflowing:not(.no-bar) {
+      padding-block-end: var(--scrollbar-gap, var(--gap));
+    }
+
+    &.no-bar {
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .mx-carousel__buttons {
+    &:not([hidden]) {
+      display: flex;
+      gap: var(--gap-s);
+    }
+
+    & button[disabled] {
+      opacity: 0.5;
+    }
+  }
+
+  .mx-carousel__pagination {
+    list-style: none;
+    padding-inline: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xxxs);
+
+    &[data-pagination="counter"] {
+      --border-radius: var(--border-radius-round);
+      --indent: 200%;
+    }
+
+    & button {
+      border-radius: var(--border-radius);
+      border: var(--line-width, 2px) solid var(--line-colour, var(--colour-border));
+      background-color: var(--background, var(--colour-background));
+      color: var(--foreground, var(--colour-foreground));
+      min-block-size: 2em;
+      min-inline-size: 2em;
+      font-family: inherit;
+      text-align: center;
+      cursor: pointer;
+      overflow: hidden;
+      text-indent: var(--indent, unset);
+
+      &[disabled] {
+        --background: var(--active-background, var(--colour-border));
+
+        cursor: not-allowed;
+      }
+    }
+  }
+}

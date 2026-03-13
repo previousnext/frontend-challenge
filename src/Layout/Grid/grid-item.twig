@@ -1,0 +1,18 @@
+{% set classes = [] %}
+{% for modifier in modifiers %}
+  {% set classes = classes|merge(["mx-grid-item__span-"~modifier]) %}
+{% endfor %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set as = as|default("div") %}
+
+{% if container %}
+  <{{ as }}{{ attributes.addClass("mx-container") }}>
+    {{ item }}
+  </{{ as }}>
+{% elseif classes is not empty or as != "div" %}
+  <{{ as }}{{ attributes }}>
+    {{ item }}
+  </{{ as }}>
+{% else %}
+  {{ item }}
+{% endif %}

@@ -1,0 +1,31 @@
+{% set baseClass = 'mx-section' %}
+{% set classes = [
+  baseClass,
+  'mx-page',
+  background ? 'mx-background--'~background : null
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set innnerClasses = [
+  container ? 'mx-container' : null
+] %}
+{% for modifier in modifiers %}
+  {% set innnerClasses = innnerClasses|merge([baseClass~"--"~modifier]) %}
+{% endfor %}
+{% set innerAttributes = (innerAttributes ?? create_attribute()).addClass(innnerClasses) %}
+
+<{{ as}}{{ attributes }}>
+{% if image is not empty %}
+  <figure class="mx-background--image mx-section--full" aria-hidden="true">
+    {{ image }}
+  </figure>
+{% endif %}
+  <div{{ innerAttributes }}>
+    {% if title is not empty or link is not empty %}
+      <div class="mx-section__header">
+        {{ title }}
+        {{ link }}
+      </div>
+    {% endif %}
+    {{ content }}
+  </div>
+</{{ as }}>

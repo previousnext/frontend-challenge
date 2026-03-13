@@ -1,0 +1,22 @@
+{% set baseClass = "mx-form-item" %}
+{% set classes = [
+  baseClass,
+  as == "fieldset" ? 'mx-fieldset' : null,
+  inline ? baseClass~"--inline" : null,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set as = as|default("div") %}
+
+<{{ as }}{{ attributes }}>
+  {{ label }}
+  {{ descriptionStart }}
+  {% if fields[0] is not empty %}
+    {% for field in fields %}
+      {{ field }}
+    {% endfor %}
+  {% else %}
+    {{ fields }}
+  {% endif %}
+  {{ descriptionEnd }}
+  {{ status }}
+</{{ as }}>

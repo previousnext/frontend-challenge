@@ -1,0 +1,83 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Breakpoints 1`] = `
+"    
+<div class="mx-grid mx-grid--cols-sm-2 mx-grid--cols-lg-4">
+  
+  <span>item 1</span>
+
+  
+  <span>item 2</span>
+
+  
+  <span>item 3</span>
+
+  
+  <span>item 4</span>
+
+  
+  <span>item 5</span>
+
+  
+  <span>item 6</span>
+
+</div>
+"
+`;
+
+exports[`Grid 1`] = `
+"
+<div class="mx-grid">
+  
+  <span>item 1</span>
+
+  
+  <span>item 2</span>
+
+  
+  <span>item 3</span>
+
+  
+  <span>item 4</span>
+
+  
+  <span>item 5</span>
+
+  
+  <span>item 6</span>
+
+</div>
+"
+`;
+
+exports[`List 1`] = `
+"  
+<ul class="mx-grid mx-grid--cols-sm-2">
+  
+  <li>
+    list item 1
+  </li>
+
+  
+  <li>
+    list item 2
+  </li>
+
+</ul>
+"
+`;
+
+exports[`Span 1`] = `
+"    
+<div class="mx-grid mx-grid--cols-sm-2 mx-grid--cols-md-3">
+  
+  <span>item 1</span>
+
+    
+  <div class="mx-grid-item__span-md-2">
+    item 2, span 2
+  </div>
+
+</div>
+"
+`;

@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Inline 1`] = `
+"  
+<label class="mx-label mx-label--inline" for="label">A form label</label>
+"
+`;
+
+exports[`Label 1`] = `
+"  
+<label class="mx-label" for="label">A form label</label>
+"
+`;
+
+exports[`Legend 1`] = `
+"  
+<legend class="mx-legend" for="label">A fieldset legend</legend>
+"
+`;

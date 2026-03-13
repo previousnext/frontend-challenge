@@ -1,0 +1,6 @@
+@layer design-system.defaults {
+  blockquote {
+    padding-inline-start: var(--line-gap, var(--gap));
+    border-inline-start: var(--line-width, 6px) solid var(--line-colour, var(--colour-border));
+  }
+}

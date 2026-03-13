@@ -1,0 +1,53 @@
+@layer design-system.defaults {
+  a[href] {
+    color: var(--link-colour, var(--colour-link));
+    text-decoration: underline;
+    text-decoration-thickness: max(0.08em, 1px);
+    text-decoration-skip-ink: auto;
+
+    &:hover,
+    &:active {
+      text-underline-offset: 0.2em;
+      text-decoration-thickness: max(0.09em, 2px);
+    }
+  }
+
+  .mx-link--external {
+    margin-inline-end: var(--spacing-xxxs);
+    display: inline-flex;
+    gap: var(--spacing-xxxs);
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      mask-image: svg-load("../Icon/images/external-link.svg");
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      block-size: var(--spacing-s);
+      inline-size: var(--spacing-s);
+      background-color: currentcolor;
+    }
+  }
+
+  .mx-link--more {
+    font-weight: var(--font-weight-bold);
+    display: inline-flex;
+
+    &:hover .mx-icon {
+      transform: translateX(3px);
+    }
+  }
+
+  .mx-link--download {
+    &:hover .mx-icon {
+      transform: translateY(3px);
+    }
+  }
+
+  a:where([href]):has(.mx-icon) {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xxs);
+  }
+}

@@ -1,0 +1,48 @@
+{% set baseClass = 'mx-card' %}
+{% set classes = [
+  baseClass,
+  collapse ? baseClass~"--collapse" : null,
+] %}
+{% set background = background ? "mx-background--"~background : null %}
+{% for modifier in modifiers %}
+  {% if modifier == "dark" %}
+    {% set background = 'mx-background--reverse' %}
+  {% elseif modifier == "light" %}
+    {% set background = 'mx-background--alt' %}
+  {% elseif modifier == "supplementary" %}
+    {% set background = 'mx-background--primary' %}
+  {% else %}
+    {% set classes = classes|merge([baseClass~"--"~modifier]) %}
+  {% endif %}
+{% endfor %}
+{% if background is not empty %}
+  {% set classes = classes|merge([background]) %}
+{% endif %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+<div class="mx-container">
+<article{{ attributes }}>
+  {% if icon is not empty %}
+    <div class="mx-card__icon">
+      {{ icon }}
+    </div>
+  {% endif %}
+  <div class="mx-card__content mx-vertical-flow-flex">
+    {{ tags }}
+    {% if date is not empty %}
+      <div class="mx-text--s">{{ date }}</div>
+    {% endif %}
+    {{ title }}
+    {% if content is not empty %}
+      <div class="mx-text--lede mx-vertical-flow-flex">{{ content }}</div>
+    {% endif %}
+    {{ linkList }}
+    {{ link }}
+  </div>
+  {% if image is not empty %}
+    <figure class="mx-card__media">
+      {{ image }}
+    </figure>
+  {% endif %}
+</article>
+</div>

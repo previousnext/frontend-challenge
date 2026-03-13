@@ -1,0 +1,36 @@
+import {
+  Meta,
+  Primary,
+  Controls,
+  IconGallery,
+  IconItem,
+  Stories,
+} from "@storybook/addon-docs/blocks"
+import * as IconStories from "./Icon.stories"
+import { Icons } from "../../enums"
+
+<Meta of={IconStories} />
+
+# Icon set
+
+SVG icon classes are available (as a css image mask).
+
+<IconGallery>
+  {Object.values(Icons).map(name => (
+    <IconItem name={name} key={name}>
+      <span className={`mx-icon mx-icon--${name}`} />
+    </IconItem>
+  ))}
+</IconGallery>
+
+---
+
+# Icon
+
+An icon atom that is used by other components.
+
+<Primary />
+
+<Controls />
+
+<Stories />

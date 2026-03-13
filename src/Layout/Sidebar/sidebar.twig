@@ -1,0 +1,31 @@
+{% set baseClass = 'mx-grid--sidebar' %}
+{% set classes = [
+  baseClass,
+  order ? "mx-grid--"~order : null,
+] %}
+{% for modifier in modifiers %}
+  {% set classes = classes|merge(["mx-section--"~modifier]) %}
+{% endfor %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set sidebarAttributes = (sidebarAttributes ?? create_attribute()).addClass('mx-vertical-flow-grid') %}
+{% set contentAttributes = (contentAttributes ?? create_attribute()).addClass('js-content', 'mx-vertical-flow-grid') %}
+
+{% if sidebarContent is not empty %}
+  {% set sidebar %}
+    <aside {{ sidebarAttributes }}>
+      {{ sidebarContent }}
+    </aside>
+  {% endset %}
+{% endif %}
+
+<div {{ attributes }}>
+  {% if sidebar is not empty and before %}
+    {{ sidebar }}
+  {% endif %}
+  <section {{ contentAttributes }}>
+    {{ content }}
+  </section>
+  {% if sidebar is not empty and not before %}
+    {{ sidebar }}
+  {% endif %}
+</div>

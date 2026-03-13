@@ -1,0 +1,60 @@
+/**
+ * Buttons
+ */
+
+@layer design-system.atoms {
+  .mx-button--dark {
+    --line-colour: var(--button-dark-bg, var(--colour-link));
+    --background: var(--button-dark-bg, var(--colour-link));
+    --foreground: var(--button-dark-fg, var(--colour-foreground-reverse));
+
+    &.mx-button--outline {
+      --background: transparent;
+      --foreground: var(--button-dark-bg, var(--colour-link));
+    }
+  }
+
+  .mx-button--light {
+    --line-colour: var(--button-light-bg, transparent);
+    --background: var(--button-light-bg, transparent);
+    --foreground: var(--button-light-fg, var(--link-colour, var(--colour-link)));
+
+    text-decoration-line: underline;
+
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+
+  .mx-button--accent {
+    --line-colour: var(--button-light-bg, var(--colour-accent));
+    --background: var(--button-light-bg, var(--colour-accent));
+
+    &.mx-button--outline {
+      --background: transparent;
+      --foreground: var(--button-light-bg, var(--colour-accent));
+    }
+  }
+
+  .mx-button--destructive {
+    --line-colour: var(--colour-error);
+    --background: var(--colour-error);
+    --foreground: var(--colour-foreground-reverse);
+
+    &.mx-button--outline {
+      --background: transparent;
+      --foreground: var(--colour-error);
+    }
+  }
+
+  .mx-button--white {
+    --line-colour: var(--colour-foreground-reverse);
+    --background: var(--colour-foreground-reverse);
+    --foreground: var(--colour-foreground);
+
+    &.mx-button--outline {
+      --background: transparent;
+      --foreground: var(--colour-foreground-reverse);
+    }
+  }
+}

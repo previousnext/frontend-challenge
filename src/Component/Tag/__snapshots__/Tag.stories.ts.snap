@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Checkbox 1`] = `
+"
+<ul class="mx-tags">
+      <li>
+                  <div class="mx-tag">
+            <input type="checkbox" id="music" name="tag" value="music">
+            <label for="music">Music</label>
+          </div>
+            </li>
+      <li>
+                  <div class="mx-tag">
+            <input type="checkbox" id="news" name="tag" value="news">
+            <label for="news">News</label>
+          </div>
+            </li>
+  </ul>
+"
+`;
+
+exports[`Link 1`] = `
+"
+<ul class="mx-tags">
+      <li>
+                    <a class="mx-tag" href="#0">Music</a>
+            </li>
+      <li>
+                    <a class="mx-tag" href="#0">News</a>
+            </li>
+  </ul>
+"
+`;
+
+exports[`Tag 1`] = `
+"
+<ul class="mx-tags">
+      <li>
+                    <span class="mx-tag">Music</span>
+            </li>
+      <li>
+                    <span class="mx-tag">News</span>
+            </li>
+  </ul>
+"
+`;

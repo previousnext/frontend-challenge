@@ -1,0 +1,15 @@
+{% set baseClass = "mx-form" %}
+{% set classes = [
+  baseClass,
+  baseClass~"--inline-button"
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set name = name ?? "search-form" %}
+
+<form{{ attributes }} role="search" action="{{ action }}">
+  <input class="mx-input__text " id="{{ id }}" name={{ name }} type="search" value="" aria-label="Search by keywords" placeholder="Keywords..." />
+  <button class="mx-button mx-button--icon-only" type="submit">
+    <span class="mx-icon mx-icon--search"></span>
+    <span class="sr-only">Search</span>
+  </button>
+</form>

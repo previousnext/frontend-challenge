@@ -1,0 +1,300 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Block Link 1`] = `
+"        
+<div class="mx-container">
+<article class="mx-card mx-card--block">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Card title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+      <figure class="mx-card__media">
+      <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles" height="418" width="558">
+</picture>
+
+    </figure>
+  </article>
+</div>
+"
+`;
+
+exports[`Card 1`] = `
+"
+<div class="mx-container">
+<article class="mx-card">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Card title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+      <figure class="mx-card__media">
+      <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles" height="418" width="558">
+</picture>
+
+    </figure>
+  </article>
+</div>
+"
+`;
+
+exports[`Collapse 1`] = `
+"
+<div class="mx-container">
+<article class="mx-card mx-card--collapse">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+          <div class="mx-text--s">25 May 2025</div>
+        
+<h3>Card title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+      <figure class="mx-card__media">
+      <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles" height="418" width="558">
+</picture>
+
+    </figure>
+  </article>
+</div>
+"
+`;
+
+exports[`Date 1`] = `
+"
+<div class="mx-container">
+<article class="mx-card">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+          <div class="mx-text--s">25 May 2025</div>
+        
+<h3>Card title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+      <figure class="mx-card__media">
+      <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles" height="418" width="558">
+</picture>
+
+    </figure>
+  </article>
+</div>
+"
+`;
+
+exports[`Icon Tile 1`] = `
+"          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+      <div class="mx-card__icon">
+      
+<span class="mx-icon mx-icon--heart-selected"></span>
+
+    </div>
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+"
+`;
+
+exports[`Reverse 1`] = `
+"        
+<div class="mx-container">
+<article class="mx-card mx-card--reversed">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Card title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+      <figure class="mx-card__media">
+      <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles" height="418" width="558">
+</picture>
+
+    </figure>
+  </article>
+</div>
+"
+`;
+
+exports[`Tile 1`] = `
+"          
+<div class="mx-container">
+<article class="mx-card mx-card--block mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Tile title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+  </article>
+</div>
+"
+`;
+
+exports[`With Link List 1`] = `
+"
+<div class="mx-container">
+<article class="mx-card">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Card title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+        
+
+<ul class="mx-link-list">
+      <li>
+<a href="#">
+  
+  <span>Link one</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+      <li>
+<a href="#">
+  
+  <span>Link two</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+      <li>
+<a href="#">
+  
+  <span>Link three</span>
+    
+<span class="mx-icon mx-icon--chevron-right"></span>
+
+</a>
+</li>
+  </ul>
+
+    
+  </div>
+      <figure class="mx-card__media">
+      <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles" height="418" width="558">
+</picture>
+
+    </figure>
+  </article>
+</div>
+"
+`;
+
+exports[`With Tags 1`] = `
+"
+<div class="mx-container">
+<article class="mx-card">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+<ul class="mx-tags">
+      <li>
+                    <span class="mx-tag">Music</span>
+            </li>
+      <li>
+                    <span class="mx-tag">News</span>
+            </li>
+  </ul>
+
+        
+<h3>Card title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+        
+      
+<a class="mx-link--more" href="#">
+  
+  <span>Find out more</span>
+    
+</a>
+
+  </div>
+      <figure class="mx-card__media">
+      <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles" height="418" width="558">
+</picture>
+
+    </figure>
+  </article>
+</div>
+"
+`;

@@ -1,0 +1,70 @@
+/**
+ * Buttons
+ */
+
+@layer design-system.atoms {
+  .mx-button {
+    --outline-offset: 1px;
+
+    display: inline-flex;
+    inline-size: fit-content;
+    gap: var(--button-gap, var(--spacing-s));
+    font-size: var(--button-font-size, var(--font-size));
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family);
+    line-height: var(--line-height-ui);
+    border: var(--line-width, 2px) solid var(--line-colour, currentcolor);
+    border-radius: var(--radius, var(--border-radius-l));
+    padding-block: var(--vertical-padding, var(--spacing-xxs));
+    padding-inline: var(--horizontal-padding, var(--spacing-m));
+    background-color: var(--background, var(--colour-background));
+    color: var(--foreground, var(--colour-foreground));
+    text-decoration-line: none;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration-line: none;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.3;
+    }
+  }
+
+  .mx-button--full-width {
+    inline-size: 100%;
+    justify-content: center;
+  }
+
+  .mx-button--large {
+    --vertical-padding: var(--spacing-s);
+    --horizontal-padding: var(--spacing-l);
+  }
+
+  .mx-button--small {
+    --button-font-size: var(--font-size-s);
+    --vertical-padding: var(--spacing-xxxs);
+    --horizontal-padding: var(--spacing-s);
+  }
+
+  .mx-button--icon-only {
+    inline-size: var(--spacing-xl);
+    block-size: var(--spacing-xl);
+    padding: 0;
+    border-radius: var(--border-radius-round);
+    overflow: hidden;
+    flex-wrap: wrap;
+
+    &::before,
+    &::after {
+      --icon-size: 100%;
+
+      mask-size: var(--spacing-s);
+    }
+
+    &:has(.mx-icon) {
+      place-content: center;
+    }
+  }
+}
