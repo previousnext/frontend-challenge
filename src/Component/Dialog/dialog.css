@@ -1,0 +1,64 @@
+/**
+ * Dialog
+ */
+
+@layer design-system.defaults {
+  dialog {
+    position: relative;
+  }
+
+  :is(mx-dialog) {
+    display: block;
+  }
+}
+
+@layer design-system.components {
+  .mx-dialog__title {
+    margin-block-end: var(--spacing-m);
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--spacing-s);
+    align-items: center;
+  }
+
+  .mx-dialog {
+    & .mx-dialog__toggle {
+      cursor: pointer;
+      inline-size: 100%;
+    }
+
+    &:is(> h2, > h3, > h4, > h5, > h6) {
+      all: unset;
+    }
+
+    & > .mx-dialog__content {
+      display: none;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    &:is([open], [data-open="true"]) {
+      & > .mx-dialog__content {
+        opacity: 1;
+        display: block;
+
+        @starting-style {
+          opacity: 0;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Print stylesheet
+ */
+
+@media print {
+  .mx-dialog {
+    & .mx-dialog__content {
+      display: block !important;
+    }
+  }
+}

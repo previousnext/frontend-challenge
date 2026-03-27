@@ -1,0 +1,17 @@
+{% set baseClass = 'mx-dialog' %}
+{% set classes = [
+  baseClass,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+<mx-dialog>
+  {# uses HTML Dialog Element #}
+  <button command="show-modal" commandfor="mx-dialog__element">Open dialog</button>
+
+  <dialog{{ attributes }} id="mx-dialog__element">
+    <h2>{{ title }}</h2>
+    {{ content }}
+
+    <button commandfor="mx-dialog__element" command="close">Close</button>
+  </dialog>
+</mx-dialog>
