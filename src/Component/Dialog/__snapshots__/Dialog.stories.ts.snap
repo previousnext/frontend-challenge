@@ -1,0 +1,69 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Dialog 1`] = `
+"
+
+<mx-dialog class="mx-dialog__card mx-container">
+  <article class="mx-background--box mx-vertical-flow">
+    <div class="mx-dialog__toggle mx-horizontal-flow-flex">
+      <h2>
+</h2><h2>Closed state 'Dialog card' element title</h2>
+
+      <button aria-label="Open dialog" class="mx-icon mx-button mx-button--icon-only mx-icon--expand mx-icon--color-brand">
+        Open
+      </button>
+    <div class="dialog__card--content mx-rich-text">
+      <p>This is the default story content text inside the dialog card part 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div></article>
+
+
+  <div class="mx-dialog__element mx-background--box mx-section--m mx-vertical-flow" data-state="closed" id="open">
+    <div class="mx-dialog__content mx-rich-text mx-vertical-flow mx-background--box">
+      <div class="mx-dialog__element__close mx-horizontal-flow-flex">
+        
+<h2>This is the open Custom 'Dialog' Element title</h2>
+
+        <button aria-label="Close dialog" class="mx-icon mx-button mx-button--icon-only mx-icon--close mx-icon--color-brand">Close
+        </button>
+      </div>
+      <div class="mx-text--l mx-vertical-flow-flex"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Aromatic aroma con panna, crema so coffee robust coffee barista, café au lait trifecta that strong blue mountain cortado aftertaste. Aroma extraction french press, skinny sweet, blue mountain cup roast barista, beans, extra cappuccino mug crema strong. Americano caffeine white, con panna saucer sit, con panna eu, carajillo aftertaste kopi-luwak, body aftertaste cup single origin café au lait saucer</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+    </div>
+  </div>
+</mx-dialog>
+"
+`;
+
+exports[`State Open 1`] = `
+"
+
+<mx-dialog class="mx-dialog__card mx-container">
+  <article class="mx-background--box mx-vertical-flow">
+    <div class="mx-dialog__toggle mx-horizontal-flow-flex">
+      <h2>
+</h2><h2>Closed state 'Dialog card' element title</h2>
+
+      <button aria-label="Open dialog" class="mx-icon mx-button mx-button--icon-only mx-icon--expand mx-icon--color-brand">
+        Open
+      </button>
+    <div class="dialog__card--content mx-rich-text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div></article>
+
+
+  <div class="mx-dialog__element mx-background--box mx-section--m mx-vertical-flow" id="open-dialog" data-state="open">
+    <div class="mx-dialog__content mx-rich-text mx-vertical-flow mx-background--box">
+      <div class="mx-dialog__element__close mx-horizontal-flow-flex">
+        
+<h2>This is the open Custom 'Dialog' Element title</h2>
+
+        <button aria-label="Close dialog" class="mx-icon mx-button mx-button--icon-only mx-icon--close mx-icon--color-brand">Close
+        </button>
+      </div>
+      <div class="mx-text--l mx-vertical-flow-flex"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+    </div>
+  </div>
+</mx-dialog>
+"
+`;
