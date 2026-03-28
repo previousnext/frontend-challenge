@@ -94,13 +94,17 @@ The dialog should:
   - [x] whether to use dialog element
     - https://caniuse.com/?search=dialog
     - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog > Global 96.86%
+
   - [] or latest popover with polyfills for browsers not yet compatible.
   - [x] But suggestion is to use TypeScript, so will do a more manual custom dialog
 
-- Any trade-offs or decisions you'd approach differently with more time
+- [x] Any trade-offs or decisions you'd approach differently with more time
+  - Get more familiar with the available utility styles and colours and spacing css vars.
+  - Read the Function docs!
+  - Investigate and Fix the other Failed tests
+
 - [x] Anything you noticed in the existing codebase you'd flag in a code review
-  - The format/linter changes semi quotes back to double quotes
-  - I'd get more familiar with the available utility styles and colours and spacing css vars.
+  - The format/linter changes single quotes back to double quotes (but "semi": false, inoxfmtrc.json)
   - NPM packages security audit - 1 critical package
 
 - [x] include a README (this):
