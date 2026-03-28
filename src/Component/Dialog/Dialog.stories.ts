@@ -3,13 +3,17 @@ import Component from "./dialog.twig"
 import Heading from "../../Atom/Heading/heading.twig"
 import "./Elements/Dialog"
 import "./dialog.css"
+import "../Card/card.css"
 import { Heading as HeadingType, HeadingTypes, WysiwygText } from "@pnx-mixtape/ids-shape"
 
 export type Dialog = {
   title?: HeadingType
   content: WysiwygText
+  dialogTitle: HeadingType
+  dialogContent: WysiwygText
   state?: boolean
   id?: string
+  toggleText?: string
 }
 
 const meta: Meta<Dialog> = {
@@ -17,7 +21,11 @@ const meta: Meta<Dialog> = {
   component: Component,
   args: {
     title: Heading({
-      title: "This is a HTML Dialog Element",
+      title: "Closed state 'Dialog card' element title",
+      as: HeadingTypes.TWO,
+    }),
+    dialogTitle: Heading({
+      title: "This is the open Custom 'Dialog' Element title",
       as: HeadingTypes.TWO,
     }),
   },
@@ -28,6 +36,15 @@ const meta: Meta<Dialog> = {
       control: "text",
     },
     content: {
+      description: "Add text for the initial Dialog card",
+      control: "text",
+    },
+    dialogTitle: {
+      description:
+        "Optional [Heading](/?path=/docs/atom-heading--docs) component, displayed above the Dialog.",
+      control: "text",
+    },
+    dialogContent: {
       description: "Add text for the dialog 1",
       control: "text",
     },
@@ -39,7 +56,8 @@ type Story = StoryObj<Dialog>
 
 export const Dialog: Story = {
   args: {
-    content: "hi there",
+    content: "This is the default story content text inside the dialog card part 1",
+    dialogContent: "This is the default story content text inside the dialog part 2",
   },
 }
 
@@ -47,6 +65,5 @@ export const DefaultOpen: Story = {
   args: {
     ...meta.args,
     state: true,
-    content: "This is the default story content text 2",
   },
 }

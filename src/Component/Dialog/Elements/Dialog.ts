@@ -16,11 +16,15 @@ export default class Dialog extends HTMLElement {
   }
 
   connectedCallback(): void {
-    if (!this.dialogElement || !this.trigger) return
+    if (!this.dialogElement || !this.trigger || !this.closer) return
 
     const { signal }: AbortController = this.controller
 
     document.addEventListener("click", this.handleToggle, {
+      signal,
+    })
+
+    document.addEventListener("click", this.handleClose, {
       signal,
     })
 

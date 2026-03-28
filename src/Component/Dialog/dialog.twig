@@ -4,19 +4,30 @@
 ] %}
 {% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
 
-<mx-dialog class="mx-dialog__card">
-  <button class="mx-dialog__toggle">
-     Toggle dialog
-     <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--expand" aria-hidden="true"></span>
-  </button>
 
-  <div{{ attributes }}{% if id is not empty %} id="{{ id }}"{% endif %} data-state="closed">
-    <div class="mx-dialog__content mx-rich-text mx-vertical-flow">
-      {{ title }}
-      {{ content }}
-
-      <button class="mx-dialog__element__close">Close</button>
+<mx-dialog class="mx-dialog__card mx-container">
+  <article class="mx-background--box mx-vertical-flow">
+    <div class="mx-dialog__toggle mx-horizontal-flow-flex">
+      <h2>{{title}}</h2>
+      <button aria-label="Open dialog">
+        <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--expand" aria-hidden="true">Open</span>
+      </button
     </div>
+    <div class="dialog__card--content mx-rich-text">
+    {{content}}
+    </div>
+  </article>
 
+
+  <div{{ attributes.addClass("mx-background--box","mx-section--m","mx-vertical-flow") }}{% if id is not empty %} id="{{ id }}"{% endif %} data-state="closed">
+    <div class="mx-dialog__content mx-rich-text mx-vertical-flow mx-background--box">
+      <div class="mx-dialog__element__close mx-horizontal-flow-flex">
+        {{ dialogTitle }}
+        <button aria-label="Close dialog">
+          <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--close" aria-hidden="true">Close</span>
+        </button>
+      </div>
+      <div class="mx-text--l mx-vertical-flow-flex">{{ dialogContent }}</div>
+    </div>
   </div>
 </mx-dialog>

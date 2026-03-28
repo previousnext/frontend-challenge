@@ -13,6 +13,18 @@
 }
 
 @layer design-system.components {
+  /* start to look at making body not scroll when Dialog is open */
+  body:has(.mx-dialog__card .mx-dialog__element[data-state="open"]) {
+    overflow-y: hidden;
+  }
+  .mx-dialog__card {
+    margin-block-end: var(--spacing-l);
+    article {
+      width: 100%;
+      padding: var(--spacing-l);
+    }
+  }
+
   .mx-dialog__title {
     margin-block-end: var(--spacing-m);
     display: flex;
@@ -21,34 +33,49 @@
     align-items: center;
   }
 
+  .mx-dialog__element__close,
   .mx-dialog__toggle {
     cursor: pointer;
     inline-size: auto;
-    appearance: none;
+    justify-content: space-between;
   }
 
   .mx-dialog__element {
-    & &:is(> h2, > h3, > h4, > h5, > h6) {
-      all: unset;
-    }
-
-    > .mx-dialog__content {
-      display: none;
-      opacity: 0;
-      overflow: hidden;
-    }
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+    height: 1px;
 
     &[data-state="open"] {
-      background: red;
+      position: fixed;
+      opacity: 1;
+      display: block;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 10;
 
-      .mx-dialog__content {
+      @starting-style {
+        opacity: 0;
+        display: block;
+        bottom: 0;
+        position: fixed;
         opacity: 1;
         display: block;
+        inset: 0;
+        width: 50%;
+      }
+      .mx-dialog__content {
+        --scheme: var(--alt-scheme, var(--colour-scheme));
+        --background: var(--colour-background-alt);
 
-        @starting-style {
-          opacity: 0;
-          display: block;
-        }
+        background-color: var(--background);
+        margin: auto;
+        inset: 2rem;
+        position: absolute;
+        z-index: 20;
+        padding: 2rem;
       }
     }
   }
