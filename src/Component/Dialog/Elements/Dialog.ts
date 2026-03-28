@@ -29,10 +29,6 @@ export default class Dialog extends HTMLElement {
         this.handleClose()
       }
     })
-
-    this.handleHash()
-
-    document.addEventListener("hashchange", this.handleHash, { signal })
   }
 
   disconnectedCallback(): void {
@@ -54,13 +50,6 @@ export default class Dialog extends HTMLElement {
 
   handleClose = (): void => {
     this.dialogElement.setAttribute("data-state", "closed")
-  }
-
-  handleHash = (): void => {
-    const { hash }: Location = window.location
-    if (hash && hash === `#${this.dialogElement?.id}`) {
-      this.handleOpen()
-    }
   }
 
   get dialogElement(): HTMLElement | null {
