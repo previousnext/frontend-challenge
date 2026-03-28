@@ -1,0 +1,109 @@
+/**
+ * Dialog
+ */
+
+@layer design-system.defaults {
+  dialog {
+    position: relative;
+  }
+
+  :is(mx-dialog) {
+    display: block;
+  }
+}
+
+@layer design-system.components {
+  /* start to look at making body not scroll when Dialog is open */
+  body:has(.mx-dialog__card .mx-dialog__element[data-state="open"]) {
+    overflow-y: hidden;
+  }
+
+  .mx-dialog__card {
+    margin-block-end: var(--spacing-l);
+
+    & article {
+      inline-size: 100%;
+      padding: var(--spacing-l);
+    }
+
+    & button {
+      mask-size: var(--spacing-l);
+      appearance: none;
+      border: none;
+      background-color: var(--colour-primary-light);
+      display: block;
+    }
+
+    &:has(.mx-dialog__element[data-state="open"]) {
+      --line-colour: tranparent;
+
+      border: 0;
+    }
+  }
+
+  .mx-dialog__title {
+    margin-block-end: var(--spacing-m);
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--spacing-s);
+    align-items: center;
+  }
+
+  .mx-dialog__element__close,
+  .mx-dialog__toggle {
+    cursor: pointer;
+    inline-size: auto;
+    justify-content: space-between;
+  }
+
+  .mx-dialog__element {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+    block-size: 1px;
+
+    &[data-state="open"] {
+      position: fixed;
+      opacity: 1;
+      display: block;
+      inset: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      background-color: rgb(0 0 0 / 70%);
+      z-index: 10;
+
+      @starting-style {
+        opacity: 0;
+        display: block;
+        inset-block-end: 0;
+        inline-size: 5%;
+        block-size: 1px;
+      }
+
+      & .mx-dialog__content {
+        --scheme: var(--alt-scheme, var(--colour-scheme));
+        --background: var(--colour-background-alt);
+
+        background-color: var(--background);
+        margin: auto;
+        inset: 2rem;
+        position: absolute;
+        z-index: 20;
+        padding: 2rem;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+/**
+ * Print stylesheet
+ */
+
+@media print {
+  .mx-dialog {
+    & .mx-dialog__content {
+      display: block !important;
+    }
+  }
+}

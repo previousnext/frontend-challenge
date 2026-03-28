@@ -1,0 +1,33 @@
+{% set baseClass = 'mx-dialog__element' %}
+{% set classes = [
+  baseClass,
+] %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+
+{% set dialogState = state ? "open" : "closed"%}
+
+<mx-dialog class="mx-dialog__card mx-container">
+  <article class="mx-background--box mx-vertical-flow">
+    <div class="mx-dialog__toggle mx-horizontal-flow-flex">
+      <h2>{{title}}</h2>
+      <button aria-label="Open dialog" class="mx-icon mx-button mx-button--icon-only mx-icon--expand mx-icon--color-brand">
+        Open
+      </button
+    </div>
+    <div class="dialog__card--content mx-rich-text">
+      {{content}}
+    </div>
+  </article>
+
+
+  <div{{ attributes.addClass("mx-background--box","mx-section--m","mx-vertical-flow") }}{% if id is not empty %} id="{{ id }}"{% endif %} data-state={{dialogState}}>
+    <div class="mx-dialog__content mx-rich-text mx-vertical-flow mx-background--box">
+      <div class="mx-dialog__element__close mx-horizontal-flow-flex">
+        {{ dialogTitle }}
+        <button aria-label="Close dialog" class="mx-icon mx-button mx-button--icon-only mx-icon--close mx-icon--color-brand">Close
+        </button>
+      </div>
+      <div class="mx-text--l mx-vertical-flow-flex">{{ dialogContent }}</div>
+    </div>
+  </div>
+</mx-dialog>
