@@ -28,6 +28,11 @@ const meta: Meta<Dialog> = {
       title: "This is the open Custom 'Dialog' Element title",
       as: HeadingTypes.TWO,
     }),
+    content:
+      "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+    dialogContent:
+      "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+    state: false,
   },
   argTypes: {
     title: {
@@ -36,8 +41,11 @@ const meta: Meta<Dialog> = {
       control: "text",
     },
     content: {
-      description: "Add text for the initial Dialog card",
+      description: "Content.",
       control: "text",
+      type: {
+        name: "string",
+      },
     },
     dialogTitle: {
       description:
@@ -45,8 +53,18 @@ const meta: Meta<Dialog> = {
       control: "text",
     },
     dialogContent: {
-      description: "Add text for the dialog 1",
+      description: "Content.",
       control: "text",
+      type: {
+        name: "string",
+      },
+    },
+    state: {
+      description: "Dialog open or closed",
+      control: "boolean",
+      table: {
+        defaultValue: { summary: "closed" },
+      },
     },
   },
 }
@@ -56,14 +74,20 @@ type Story = StoryObj<Dialog>
 
 export const Dialog: Story = {
   args: {
-    content: "This is the default story content text inside the dialog card part 1",
-    dialogContent: "This is the default story content text inside the dialog part 2",
+    content:
+      "<p>This is the default story content text inside the dialog card part 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+    dialogContent:
+      "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Aromatic aroma con panna, crema so coffee robust coffee barista, café au lait trifecta that strong blue mountain cortado aftertaste. Aroma extraction french press, skinny sweet, blue mountain cup roast barista, beans, extra cappuccino mug crema strong. Americano caffeine white, con panna saucer sit, con panna eu, carajillo aftertaste kopi-luwak, body aftertaste cup single origin café au lait saucer</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
   },
 }
 
-export const DefaultOpen: Story = {
+/**
+ * Open by default dialog.
+ */
+export const StateOpen: Story = {
   args: {
     ...meta.args,
     state: true,
+    id: "open-dialog",
   },
 }

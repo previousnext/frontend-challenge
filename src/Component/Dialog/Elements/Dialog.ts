@@ -16,16 +16,18 @@ export default class Dialog extends HTMLElement {
   }
 
   connectedCallback(): void {
-    if (!this.dialogElement || !this.trigger || !this.closer) return
+    if (!this.dialogElement || !this.openTrigger || !this.closerTigger) return
 
     const { signal }: AbortController = this.controller
 
-    document.addEventListener("click", this.handleToggle, {
+    document.addEventListener("click", this.handleClick, {
       signal,
     })
 
-    document.addEventListener("click", this.handleClose, {
-      signal,
+    document.addEventListener("keydown", event => {
+      if (event.code === "Escape") {
+        this.handleClose()
+      }
     })
 
     this.handleHash()
@@ -37,25 +39,27 @@ export default class Dialog extends HTMLElement {
     this.controller.abort()
   }
 
-  handleToggle = (): void => {
-    if (!this.dialogElement) return
-
-    // This was temporary - wanted to make a open close function.
-    if (this.dialogElement.dataset.state === "closed") {
-      this.dialogElement.setAttribute("data-state", "open")
-    } else {
-      this.dialogElement.setAttribute("data-state", "closed")
+  handleClick = ({ target }) => {
+    if (target === this.openTrigger) {
+      this.handleOpen()
+    }
+    if (target === this.closerTigger) {
+      this.handleClose()
     }
   }
 
+  handleOpen = (): void => {
+    this.dialogElement.setAttribute("data-state", "open")
+  }
+
   handleClose = (): void => {
-    if (!this.closer) return
+    this.dialogElement.setAttribute("data-state", "closed")
   }
 
   handleHash = (): void => {
     const { hash }: Location = window.location
     if (hash && hash === `#${this.dialogElement?.id}`) {
-      this.handleToggle()
+      this.handleOpen()
     }
   }
 
@@ -69,28 +73,28 @@ export default class Dialog extends HTMLElement {
     return dialogElement
   }
 
-  get trigger(): HTMLElement | null {
-    const trigger: HTMLElement | null = this.querySelector(".mx-dialog__toggle")
+  get openTrigger(): HTMLElement | null {
+    const trigger: HTMLElement | null = this.querySelector(".mx-dialog__toggle button")
 
     if (!trigger) {
-      throw new Error(`${this.localName} must contain an element with class="mx-dialog__toggle">.`)
+      throw new Error(`${this.localName} must contain an element with .mx-dialog__toggle>.`)
     }
     return trigger
   }
 
-  get closer(): HTMLElement | null {
-    const closer: HTMLElement | null = this.querySelector(".mx-dialog__element__close")
+  get closerTigger(): HTMLElement | null {
+    const trigger: HTMLElement | null = this.querySelector(".mx-dialog__element__close button")
 
-    if (!closer) {
+    if (!trigger) {
       throw new Error(
-        `${this.localName} must contain an element with class="mx-dialog__element__close">.`,
+        `${this.localName} must contain an element with class mx-dialog__element__close>.`,
       )
     }
-    return closer
+    return trigger
   }
 
   generatedId = (): string => {
-    const string: string | undefined = this.trigger?.textContent?.trim()
+    const string: string | undefined = this.openTrigger?.textContent?.trim()
     return !string ? "" : makeAnchor(string)
   }
 }

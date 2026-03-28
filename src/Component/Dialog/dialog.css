@@ -23,6 +23,20 @@
       width: 100%;
       padding: var(--spacing-l);
     }
+
+    button {
+      mask-size: var(--spacing-l);
+      appearance: none;
+      border: none;
+      background-color: transparent;
+      display: block;
+    }
+
+    &:has(.mx-dialog__element[data-state="open"]) {
+      --line-colour: tranparent;
+
+      border: 0;
+    }
   }
 
   .mx-dialog__title {
@@ -53,18 +67,15 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.7);
       z-index: 10;
 
       @starting-style {
         opacity: 0;
         display: block;
         bottom: 0;
-        position: fixed;
-        opacity: 1;
-        display: block;
-        inset: 0;
-        width: 50%;
+        width: 5%;
+        height: 1px;
       }
       .mx-dialog__content {
         --scheme: var(--alt-scheme, var(--colour-scheme));
@@ -76,6 +87,7 @@
         position: absolute;
         z-index: 20;
         padding: 2rem;
+        overflow-y: auto;
       }
     }
   }
@@ -87,7 +99,7 @@
 
 @media print {
   .mx-dialog {
-    & .mx-dialog__content {
+    .mx-dialog__content {
       display: block !important;
     }
   }
