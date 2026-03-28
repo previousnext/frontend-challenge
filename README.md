@@ -59,31 +59,34 @@ Deciding to move on...
 - [x] Iterate
   - [x] Test assumptions
   - [x] Create storybook component
-  - [] Style a Story.
-  - [] Add modifiers for Dialog storybook component
+  - [x] Style a Story.
+  - [x] Check Accessibility
+  - [x] Add modifiers for Dialog storybook component
   - [] Make a Story with multiple dialogs to test open / close of each on a page.
   - [] Style dialogs on a page and ::backdrop.
-  - [ ] Write tests + docs
-  - [ ] commits
+  - [ ] update snapshots & Write interaction tests
+  - [x] docs
+  - [x] commits
 
 ## Requirement checklist
 
 The dialog should:
 
-- [] Open and close correctly
+- [x] Open and close correctly
 - [x] Avoid using any external UI libraries - we'd like to see your own implementation
-- [] Be keyboard accessible - including Escape to close, and correct focus management when opening and closing
-- [x] Follow the existing component patterns, naming conventions, and file structure in the codebase
-- [1/2] Be written in TypeScript << GOT STUCK HERE on the open closer functions >>
+- [x] Be keyboard accessible - including Escape to close,
+- [ ] And correct focus management when opening and closing
+- [1/2] Follow the existing component patterns, naming conventions, and file structure in the codebase
+- [x] Be written in TypeScript << GOT STUCK HERE on the open / closer functions >>
 
 - [] Mobile behaviour and breakpoints
-- [] I'd want to fix main background, so scroll only affects the content of the dialog when open
+- [x] I'd want to fix main background, so scroll only affects the content of the dialog when open
 - [] Animation and transition behaviour
-- [] How the trigger element is handled
+- [x] How the trigger element is handled
 
-- [] Run tests, linters
-- [] Docs
-- [] Commit
+- [x] Run tests, linters
+- [x] Docs
+- [x] Commit
 
 ## Submission
 
@@ -95,9 +98,10 @@ The dialog should:
   - [x] But suggestion is to use TypeScript, so will do a more manual custom dialog
 
 - Any trade-offs or decisions you'd approach differently with more time
-
 - [x] Anything you noticed in the existing codebase you'd flag in a code review
-      -- NPM packages security audit - 1 critical package
+  - The format/linter changes semi quotes back to double quotes
+  - I'd get more familiar with the available utility styles and colours and spacing css vars.
+  - NPM packages security audit - 1 critical package
 
 - [x] include a README (this):
 
