@@ -1,17 +1,22 @@
-{% set baseClass = 'mx-dialog' %}
+{% set baseClass = 'mx-dialog__element' %}
 {% set classes = [
   baseClass,
 ] %}
 {% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
 
-<mx-dialog>
-  {# uses HTML Dialog Element #}
-  <button command="show-modal" commandfor="mx-dialog__element">Open dialog</button>
+<mx-dialog class="mx-dialog__card">
+  <button class="mx-dialog__toggle">
+     Toggle dialog
+     <span class="mx-button mx-icon mx-button--small mx-button--icon-only mx-icon--expand" aria-hidden="true"></span>
+  </button>
 
-  <dialog{{ attributes }} id="mx-dialog__element">
-    <h2>{{ title }}</h2>
-    {{ content }}
+  <div{{ attributes }}{% if id is not empty %} id="{{ id }}"{% endif %} data-state="closed">
+    <div class="mx-dialog__content mx-rich-text mx-vertical-flow">
+      {{ title }}
+      {{ content }}
 
-    <button commandfor="mx-dialog__element" command="close">Close</button>
-  </dialog>
+      <button class="mx-dialog__element__close">Close</button>
+    </div>
+
+  </div>
 </mx-dialog>

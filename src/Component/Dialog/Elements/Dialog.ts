@@ -16,16 +16,16 @@ export default class Dialog extends HTMLElement {
   }
 
   connectedCallback(): void {
-    if (!this.dialog || !this.trigger) return
+    if (!this.dialogElement || !this.trigger) return
 
     const { signal }: AbortController = this.controller
-    document.addEventListener("beforeprint", this.handleOpen, {
+
+    document.addEventListener("click", this.handleToggle, {
       signal,
     })
-    document.addEventListener("afterprint", this.handleClose, {
-      signal,
-    })
+
     this.handleHash()
+
     document.addEventListener("hashchange", this.handleHash, { signal })
   }
 
@@ -33,38 +33,56 @@ export default class Dialog extends HTMLElement {
     this.controller.abort()
   }
 
-  handleOpen = (): void => {
-    if (!this.dialog) return
-    this.dialog.open = true
+  handleToggle = (): void => {
+    if (!this.dialogElement) return
+
+    // This was temporary - wanted to make a open close function.
+    if (this.dialogElement.dataset.state === "closed") {
+      this.dialogElement.setAttribute("data-state", "open")
+    } else {
+      this.dialogElement.setAttribute("data-state", "closed")
+    }
   }
 
   handleClose = (): void => {
-    if (!this.dialog) return
-    this.dialog.open = false
+    if (!this.closer) return
   }
 
   handleHash = (): void => {
     const { hash }: Location = window.location
-    if (hash && hash === `#${this.dialog?.id}`) {
-      this.handleOpen()
+    if (hash && hash === `#${this.dialogElement?.id}`) {
+      this.handleToggle()
     }
   }
 
-  get dialog(): HTMLDialogElement | null {
-    const dialog: HTMLDialogElement | null = this.querySelector("dialog")
-    if (!dialog) {
-      throw new Error(`${this.localName} must contain a <dialog> element.`)
+  get dialogElement(): HTMLElement | null {
+    const dialogElement: HTMLElement | null = this.querySelector(".mx-dialog__element")
+
+    if (!dialogElement) {
+      throw new Error(`${this.localName} must contain an element with .mx-dialog__element class.`)
     }
-    dialog.id = dialog.id || this.generatedId()
-    return dialog
+    dialogElement.id = dialogElement.id || this.generatedId()
+    return dialogElement
   }
 
   get trigger(): HTMLElement | null {
-    const trigger: HTMLElement | null = this.querySelector("summary")
+    const trigger: HTMLElement | null = this.querySelector(".mx-dialog__toggle")
+
     if (!trigger) {
-      throw new Error(`${this.localName} must contain a <summary> element.`)
+      throw new Error(`${this.localName} must contain an element with class="mx-dialog__toggle">.`)
     }
     return trigger
+  }
+
+  get closer(): HTMLElement | null {
+    const closer: HTMLElement | null = this.querySelector(".mx-dialog__element__close")
+
+    if (!closer) {
+      throw new Error(
+        `${this.localName} must contain an element with class="mx-dialog__element__close">.`,
+      )
+    }
+    return closer
   }
 
   generatedId = (): string => {

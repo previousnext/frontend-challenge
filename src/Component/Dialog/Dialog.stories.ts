@@ -7,9 +7,8 @@ import { Heading as HeadingType, HeadingTypes, WysiwygText } from "@pnx-mixtape/
 
 export type Dialog = {
   title?: HeadingType
-  toggleAll?: boolean
   content: WysiwygText
-  open?: boolean
+  state?: boolean
   id?: string
 }
 
@@ -21,7 +20,6 @@ const meta: Meta<Dialog> = {
       title: "This is a HTML Dialog Element",
       as: HeadingTypes.TWO,
     }),
-    content: "This is the default story content text",
   },
   argTypes: {
     title: {
@@ -30,7 +28,7 @@ const meta: Meta<Dialog> = {
       control: "text",
     },
     content: {
-      description: "Add text for the dialog",
+      description: "Add text for the dialog 1",
       control: "text",
     },
   },
@@ -39,17 +37,16 @@ const meta: Meta<Dialog> = {
 export default meta
 type Story = StoryObj<Dialog>
 
-export const Dialog: Story = {}
+export const Dialog: Story = {
+  args: {
+    content: "hi there",
+  },
+}
 
 export const DefaultOpen: Story = {
   args: {
     ...meta.args,
-    content: "This is the default story content text",
-  },
-}
-
-export const ToggleAll: Story = {
-  args: {
-    toggleAll: true,
+    state: true,
+    content: "This is the default story content text 2",
   },
 }

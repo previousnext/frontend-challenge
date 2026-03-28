@@ -59,7 +59,10 @@ Deciding to move on...
 - [x] Iterate
   - [x] Test assumptions
   - [x] Create storybook component
+  - [] Style a Story.
+  - [] Add modifiers for Dialog storybook component
   - [] Make a Story with multiple dialogs to test open / close of each on a page.
+  - [] Style dialogs on a page and ::backdrop.
   - [ ] Write tests + docs
   - [ ] commits
 
@@ -68,10 +71,10 @@ Deciding to move on...
 The dialog should:
 
 - [] Open and close correctly
-- [] Avoid using any external UI libraries - we'd like to see your own implementation
+- [x] Avoid using any external UI libraries - we'd like to see your own implementation
 - [] Be keyboard accessible - including Escape to close, and correct focus management when opening and closing
-- [] Follow the existing component patterns, naming conventions, and file structure in the codebase
-- [] Be written in TypeScript
+- [x] Follow the existing component patterns, naming conventions, and file structure in the codebase
+- [1/2] Be written in TypeScript << GOT STUCK HERE on the open closer functions >>
 
 - [] Mobile behaviour and breakpoints
 - [] I'd want to fix main background, so scroll only affects the content of the dialog when open

@@ -21,24 +21,27 @@
     align-items: center;
   }
 
-  .mx-dialog {
-    & .mx-dialog__toggle {
-      cursor: pointer;
-      inline-size: 100%;
-    }
+  .mx-dialog__toggle {
+    cursor: pointer;
+    inline-size: auto;
+    appearance: none;
+  }
 
-    &:is(> h2, > h3, > h4, > h5, > h6) {
+  .mx-dialog__element {
+    & &:is(> h2, > h3, > h4, > h5, > h6) {
       all: unset;
     }
 
-    & > .mx-dialog__content {
+    > .mx-dialog__content {
       display: none;
       opacity: 0;
       overflow: hidden;
     }
 
-    &:is([open], [data-open="true"]) {
-      & > .mx-dialog__content {
+    &[data-state="open"] {
+      background: red;
+
+      .mx-dialog__content {
         opacity: 1;
         display: block;
 
