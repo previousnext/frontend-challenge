@@ -52,5 +52,5 @@ are no trick questions, we just want to understand your thinking.
 
 ## Ready to start?
 
-Great! Please see the [CONTRIBUTING.md](./CONTRIBUTING.md) file for setup instructions and guidelines on how to submit 
+Great! Please see the [CONTRIBUTING.md](./CONTRIBUTING.md) file for setup instructions and guidelines on how to submit
 your work. We look forward to seeing your implementation!

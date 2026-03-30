@@ -15,3 +15,5 @@ declare global {
     once?: (name: string, selector: string, context?: any) => NodeListOf<HTMLElement>
   }
 }
+
+export {}

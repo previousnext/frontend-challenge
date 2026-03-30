@@ -23,12 +23,12 @@ pnpm dev
 # ... edit files ...
 ```
 
-Refer to the [README.md](./README.md) or [src/Introduction.mdx](./src/Introduction.mdx) for the full challenge brief 
+Refer to the [README.md](./README.md) or [src/Introduction.mdx](./src/Introduction.mdx) for the full challenge brief
 and requirements.
 
 ## Guidelines for Submitting Your Work
 
-Remember, we're more interested in the decisions you make and the quality of your code than just the end result. 
+Remember, we're more interested in the decisions you make and the quality of your code than just the end result.
 Take your time to think through your implementation and document any assumptions or trade-offs you made, or if you
 ran out of time, what you would do next.
 
@@ -47,5 +47,5 @@ git push origin your-branch-name
 # 4. Open a Pull Request on GitHub and send us the link!
 ```
 
-We look forward to reviewing your submission and discussing it with you in a follow-up call! If you have any questions 
+We look forward to reviewing your submission and discussing it with you in a follow-up call! If you have any questions
 during the process, feel free to reach out.
