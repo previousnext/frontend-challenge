@@ -1,0 +1,62 @@
+/**
+ * Dialog
+ */
+
+@layer design-system.components {
+  .mx-dialog {
+    margin-inline: auto;
+    margin-block: auto;
+    transition-behavior: initial;
+    inline-size: min(100%, var(--container-max-width));
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    opacity: 0;
+    transition:
+      display 0.25s allow-discrete,
+      overlay 0.25s allow-discrete,
+      opacity 0.25s;
+
+    &[open] {
+      opacity: 1;
+
+      @starting-style {
+        opacity: 0;
+      }
+    }
+
+    &::backdrop {
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  .mx-dialog:is(.mx-dialog--peeled-up) {
+    margin-block-end: 0;
+    transform: translateY(30dvh);
+    transition:
+      display 0.25s allow-discrete,
+      overlay 0.25s allow-discrete,
+      opacity 0.25s,
+      transform 0.5s;
+
+    &[open] {
+      transform: translateY(0);
+
+      @starting-style {
+        transform: translateY(40dvh);
+      }
+    }
+  }
+
+  .mx-dialog__content {
+    anchor-name: --dialog-content;
+    padding-block: var(--spacing-m);
+  }
+
+  .mx-dialog > .mx-button {
+    position-anchor: --dialog-content;
+    position-area: top span-left;
+    position: absolute;
+    z-index: 1;
+  }
+}

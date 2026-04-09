@@ -1,0 +1,69 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Dialog 1`] = `
+"  <button class="mx-button" command="show-modal" commandfor="example-dialog">Open dialog</button>
+  <dialog class="mx-dialog" id="example-dialog">
+    <button command="close" commandfor="example-dialog" class="mx-button mx-button--icon-only" type="button">
+      <span class="mx-icon mx-icon--close"></span>
+      <span class="sr-only">Close dialog</span>
+    </button>
+    <div class="mx-dialog__content mx-vertical-flow">
+                      
+<div class="mx-container">
+<article class="mx-card mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Card Title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+    
+  </div>
+      <figure class="mx-card__media">
+      <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles" height="418" width="558">
+</picture>
+
+    </figure>
+  </article>
+</div>
+
+            </div>
+  </dialog>
+"
+`;
+
+exports[`Mx Dialog Variants 1`] = `
+"  <button class="mx-button" command="show-modal" commandfor="example-dialog">Open dialog</button>
+  <dialog class="mx-dialog" id="example-dialog">
+    <button command="close" commandfor="example-dialog" class="mx-button mx-button--icon-only" type="button">
+      <span class="mx-icon mx-icon--close"></span>
+      <span class="sr-only">Close dialog</span>
+    </button>
+    <div class="mx-dialog__content mx-vertical-flow">
+                      
+<div class="mx-container">
+<article class="mx-card mx-background--box">
+    <div class="mx-card__content mx-vertical-flow-flex">
+    
+        
+<h3>Card Title</h3>
+
+          <div class="mx-text--lede mx-vertical-flow-flex"><p>Tiles are just block cards without an image.</p></div>
+        
+    
+  </div>
+      <figure class="mx-card__media">
+      <picture>
+    <img src="https://picsum.photos/id/56/558/418?grayscale" alt="Blurry bubbles" height="418" width="558">
+</picture>
+
+    </figure>
+  </article>
+</div>
+
+            </div>
+  </dialog>
+"
+`;

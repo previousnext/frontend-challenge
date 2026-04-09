@@ -1,0 +1,26 @@
+{% set baseClass = 'mx-dialog' %}
+{% set classes = [
+  baseClass,
+  variant ? baseClass~"--"~variant : null,
+] %}
+{% set base_attributes = {
+  'closedby': 'any',
+  'id': id,
+} %}
+{% set dialog_id = base_attributes.id %}
+{% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set attributes = attributes.setAttribute('id', dialog_id) %}
+  <button class="mx-button" command="show-modal" commandfor="{{ dialog_id }}">Open dialog</button>
+  <dialog{{ attributes }}>
+    <button command="close" commandfor="{{ dialog_id }}" class="mx-button mx-button--icon-only" type="button">
+      <span class="mx-icon mx-icon--close"></span>
+      <span class="sr-only">Close dialog</span>
+    </button>
+    <div class="mx-dialog__content mx-vertical-flow">
+    {% if repeatContent > 0 %}
+    {% for _ in 1..repeatContent %}
+    {{ content }}
+    {% endfor %}
+    {% endif %}
+    </div>
+  </dialog>
