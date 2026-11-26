@@ -21,7 +21,7 @@
     &::after {
       content: "";
       display: inline-block;
-      mask-image: svg-load("../Icon/images/external-link.svg");
+      mask-image: url("../Icon/images/external-link.svg");
       mask-repeat: no-repeat;
       mask-size: contain;
       block-size: var(--spacing-s);

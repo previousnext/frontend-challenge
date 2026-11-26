@@ -21,7 +21,7 @@ The dialog should:
 - Avoid using any external UI libraries - we'd like to see your own implementation
 - Be keyboard accessible - including Escape to close, and correct focus management when opening and closing
 - Follow the existing component patterns, naming conventions, and file structure in the codebase
-- Be written in TypeScript
+- Use TypeScript where applicable
 
 ## What we're not prescribing
 
@@ -34,7 +34,7 @@ We've deliberately left the following open - please make your own decisions and 
 
 ## What to submit
 
-Along with your code, please include a brief README (a few bullet points is fine) covering:
+Along with your code, please include a brief SUBMISSION.md file (a few bullet points is fine) covering:
 
 - Any assumptions you made where the spec was unclear
 - Any trade-offs or decisions you'd approach differently with more time

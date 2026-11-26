@@ -68,7 +68,7 @@
     max-inline-size: 100%;
 
     @media (--medium-down) {
-      overflow-y: scroll;
+      overflow-block: scroll;
       -webkit-overflow-scrolling: touch;
       box-shadow: var(--box-shadow) inset;
 

@@ -5,14 +5,12 @@ const config = {
   rules: {
     "custom-property-empty-line-before": null,
     "layer-name-pattern": null,
-    "function-no-unknown": [true, { ignoreFunctions: ["/token/", "/svg-load/"] }],
+    "function-no-unknown": [true, { ignoreFunctions: ["/token/"] }],
     "at-rule-no-unknown": [true, { ignoreAtRules: ["/mixin/", "/container/"] }],
     "declaration-property-value-no-unknown": [
       true,
       {
         ignoreProperties: {
-          "mask-image": ["/svg-load/"],
-          "background-image": ["/svg-load/"],
           "min-inline-size": ["/anchor-size/"],
         },
       },

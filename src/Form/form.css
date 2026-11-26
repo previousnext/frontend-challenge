@@ -203,7 +203,7 @@
     }
 
     &:checked {
-      background-image: svg-load("./images/checkmark.svg");
+      background-image: url("./images/checkmark.svg");
       background-size: 0.75rem;
       background-position: center;
     }
@@ -337,7 +337,7 @@
     appearance: none;
     cursor: pointer;
     background-color: var(--background, var(--colour-background));
-    background-image: svg-load("./images/form-chevron-down.svg");
+    background-image: url("./images/form-chevron-down.svg");
     background-position: right var(--form-spacing, var(--spacing-s)) center;
     padding-block: 0;
     padding-inline-end: var(--spacing-xl);
@@ -458,12 +458,12 @@
   }
 
   .mx-error-message::before {
-    mask-image: svg-load("./images/form-error.svg");
+    mask-image: url("./images/form-error.svg");
     background-color: var(--error-foreground, var(--colour-error));
   }
 
   .mx-success-message::before {
-    mask-image: svg-load("./images/form-success.svg");
+    mask-image: url("./images/form-success.svg");
     background-color: var(--success-foreground, var(--colour-success));
   }
 }

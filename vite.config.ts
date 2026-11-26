@@ -1,19 +1,22 @@
 import { defineConfig, loadEnv } from "vite"
 import { resolve } from "node:path"
 import { globSync } from "node:fs"
+import { Features } from "lightningcss"
 import postcssGlobalData from "@csstools/postcss-global-data"
 import postcssDesignTokens from "postcss-design-tokens"
-import postcssPresetEnv from "postcss-preset-env"
-import postcssPxToRem from "postcss-pxtorem"
+import postcssCustomMedia from "postcss-custom-media"
 import postcssMixins from "postcss-mixins"
-import postcssInlineSvg from "postcss-inline-svg"
 import postcssPrependLayer from "postcss-prepend-layer"
 import twig from "vite-plugin-twig-drupal"
+
 import tokens from "./src/tokens.js"
 
-const entry = globSync(["src/**/*.entry.js", "src/**/*.css"], {
-  exclude: ["**/_*.css"],
-})
+const entry = [
+  ...globSync(["src/**/*.entry.js", "src/**/*.css"], {
+    exclude: ["**/_*.css"],
+  }),
+  "src/elements.ts",
+]
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "")
@@ -26,16 +29,25 @@ export default defineConfig(({ mode }) => {
       },
       cssCodeSplit: true,
       outDir: resolve(import.meta.dirname, "./dist/build"),
-      minify: mode === "production",
-      cssMinify: "esbuild",
-      sourcemap: mode === "development",
       rolldownOptions: {
         output: {
           chunkFileNames: "chunks/[name]-[hash].js",
+          minify:
+            mode === "development"
+              ? false
+              : {
+                  compress: {
+                    dropConsole: true,
+                    dropDebugger: true,
+                  },
+                },
         },
       },
     },
     css: {
+      lightningcss: {
+        exclude: Features.LightDark | Features.LogicalProperties | Features.Nesting,
+      },
       postcss: {
         plugins: [
           postcssPrependLayer({
@@ -52,42 +64,8 @@ export default defineConfig(({ mode }) => {
           postcssGlobalData({
             files: ["./src/_custom-media.css"],
           }),
+          postcssCustomMedia(),
           postcssMixins(),
-          postcssInlineSvg(),
-          postcssPresetEnv({
-            stage: 0,
-            features: {
-              "focus-visible-pseudo-class": false,
-              "logical-properties-and-values": false,
-              "cascade-layers": false,
-              "is-pseudo-class": false,
-              "lab-function": false,
-              "light-dark-function": false,
-            },
-          }),
-          postcssPxToRem({
-            propList: [
-              "font",
-              "font-size",
-              "line-height",
-              "letter-spacing",
-              "margin",
-              "margin-block-start",
-              "margin-block-end",
-              "margin-inline-start",
-              "margin-inline-end",
-              "padding",
-              "padding-block-start",
-              "padding-block-end",
-              "padding-inline-start",
-              "padding-inline-end",
-              "height",
-              "width",
-              "--*",
-              "!--base-font-size",
-            ],
-            unitPrecision: 4,
-          }),
         ],
         map: mode === "development",
       },

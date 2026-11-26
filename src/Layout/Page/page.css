@@ -7,7 +7,7 @@
     --plus: token("size.container.plus");
     --minus: token("size.container.minus");
     --diff: calc(var(--plus) - var(--minus));
-    --gutter: clamp(var(--gutter-min), 6vw, var(--gutter-max));
+    --gutter: clamp(var(--gutter-min), 6vi, var(--gutter-max));
     --full: minmax(var(--gutter), 1fr);
     --narrow: min(var(--container-max-width), 100% - (var(--gutter) * 2));
     --feature: minmax(0, var(--minus));

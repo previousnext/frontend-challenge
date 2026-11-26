@@ -37,45 +37,45 @@
     }
   }
 
-  @mixin icon arrow-down;
-  @mixin icon arrow-left;
-  @mixin icon arrow-up;
-  @mixin icon arrow-right;
-  @mixin icon chevron-down;
-  @mixin icon chevron-left;
-  @mixin icon chevron-right;
-  @mixin icon chevron-up;
-  @mixin icon close;
-  @mixin icon collapse;
-  @mixin icon download;
-  @mixin icon drupal;
-  @mixin icon error;
-  @mixin icon expand;
-  @mixin icon external-link;
-  @mixin icon facebook;
-  @mixin icon google;
-  @mixin icon info;
-  @mixin icon instagram;
-  @mixin icon linkedin;
-  @mixin icon mastodon;
-  @mixin icon bluesky;
-  @mixin icon menu;
-  @mixin icon search;
-  @mixin icon success;
-  @mixin icon twitter;
-  @mixin icon warning;
-  @mixin icon youtube;
-  @mixin icon email;
-  @mixin icon file;
-  @mixin icon link;
-  @mixin icon phone;
-  @mixin icon pin;
-  @mixin icon print;
-  @mixin icon question;
-  @mixin icon share;
+  @add-mixin icon arrow-down;
+  @add-mixin icon arrow-left;
+  @add-mixin icon arrow-up;
+  @add-mixin icon arrow-right;
+  @add-mixin icon chevron-down;
+  @add-mixin icon chevron-left;
+  @add-mixin icon chevron-right;
+  @add-mixin icon chevron-up;
+  @add-mixin icon close;
+  @add-mixin icon collapse;
+  @add-mixin icon download;
+  @add-mixin icon drupal;
+  @add-mixin icon error;
+  @add-mixin icon expand;
+  @add-mixin icon external-link;
+  @add-mixin icon facebook;
+  @add-mixin icon google;
+  @add-mixin icon info;
+  @add-mixin icon instagram;
+  @add-mixin icon linkedin;
+  @add-mixin icon mastodon;
+  @add-mixin icon bluesky;
+  @add-mixin icon menu;
+  @add-mixin icon search;
+  @add-mixin icon success;
+  @add-mixin icon twitter;
+  @add-mixin icon warning;
+  @add-mixin icon youtube;
+  @add-mixin icon email;
+  @add-mixin icon file;
+  @add-mixin icon link;
+  @add-mixin icon phone;
+  @add-mixin icon pin;
+  @add-mixin icon print;
+  @add-mixin icon question;
+  @add-mixin icon share;
 
   .mx-icon--status::before {
-    mask-image: svg-load("./images/info.svg");
+    mask-image: url("./images/info.svg");
   }
 }
 

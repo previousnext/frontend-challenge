@@ -2,20 +2,20 @@
 
 exports[`Carousel 1`] = `
 "
-<mx-carousel class="mx-carousel" role="group">
-  <div class="mx-carousel__buttons" data-buttons="">
+<mx-carousel class="mx-carousel" role="region" aria-roledescription="carousel">
+  <div class="mx-carousel__buttons" data-buttons="" role="group" aria-label="Quick page controls">
     <button class="mx-carousel__prev mx-button mx-button--icon-only" type="button" disabled="">
-      <span class="sr-only">previous</span>
+      <span class="sr-only">previous page</span>
       <span class="mx-icon mx-icon--chevron-left"></span>
     </button>
     <button class="mx-carousel__next mx-button mx-button--icon-only" type="button">
-      <span class="sr-only">next</span>
+      <span class="sr-only">next page</span>
       <span class="mx-icon mx-icon--chevron-right"></span>
     </button>
   </div>
-  <ul class="mx-carousel__scrollable overflowing" tabindex="0">
-          <li>          
-<div class="mx-container">
+  <div class="mx-carousel__scrollable overflowing" data-track="" aria-live="off" tabindex="0">
+              
+<div class="mx-container" data-index="0" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -34,9 +34,8 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="1" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -55,9 +54,8 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="2" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -76,9 +74,8 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="3" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -97,9 +94,8 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="4" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -118,9 +114,8 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="5" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -139,9 +134,8 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="6" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -160,9 +154,8 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="7" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -181,9 +174,8 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="8" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -202,9 +194,8 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="9" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -223,9 +214,8 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="10" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -244,28 +234,28 @@ exports[`Carousel 1`] = `
   </div>
   </article>
 </div>
-</li>
-      </ul>
+
+  </div>
   </mx-carousel>
 "
 `;
 
 exports[`Counters 1`] = `
 "
-<mx-carousel class="mx-carousel" role="group">
-  <div class="mx-carousel__buttons" data-buttons="">
+<mx-carousel class="mx-carousel" role="region" aria-roledescription="carousel">
+  <div class="mx-carousel__buttons" data-buttons="" role="group" aria-label="Quick page controls">
     <button class="mx-carousel__prev mx-button mx-button--icon-only" type="button" disabled="">
-      <span class="sr-only">previous</span>
+      <span class="sr-only">previous page</span>
       <span class="mx-icon mx-icon--chevron-left"></span>
     </button>
     <button class="mx-carousel__next mx-button mx-button--icon-only" type="button">
-      <span class="sr-only">next</span>
+      <span class="sr-only">next page</span>
       <span class="mx-icon mx-icon--chevron-right"></span>
     </button>
   </div>
-  <ul class="mx-carousel__scrollable overflowing" tabindex="0">
-          <li>          
-<div class="mx-container">
+  <div class="mx-carousel__scrollable overflowing" data-track="" aria-live="off" tabindex="0">
+              
+<div class="mx-container" data-index="0" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -284,9 +274,8 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="1" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -305,9 +294,8 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="2" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -326,9 +314,8 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="3" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -347,9 +334,8 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="4" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -368,9 +354,8 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="5" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -389,9 +374,8 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="6" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -410,9 +394,8 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="7" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -431,9 +414,8 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="8" inert="" aria-hidden="true">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -452,9 +434,8 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="9" inert="" aria-hidden="true">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -473,9 +454,8 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="10" inert="" aria-hidden="true">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -494,29 +474,29 @@ exports[`Counters 1`] = `
   </div>
   </article>
 </div>
-</li>
-      </ul>
-          <ol class="mx-carousel__pagination" data-pagination="counter" hidden=""></ol>
+
+  </div>
+          <div class="mx-carousel__pagination" data-pagination="counter" role="group" aria-label="Page controls"><button type="button" data-index="0" aria-label="Page 1" disabled="" aria-current="page">1</button><button type="button" data-index="1" aria-label="Page 2">2</button><button type="button" data-index="2" aria-label="Page 3">3</button></div>
   </mx-carousel>
 "
 `;
 
 exports[`Loop 1`] = `
 "
-<mx-carousel class="mx-carousel" role="group" loop="">
-  <div class="mx-carousel__buttons" data-buttons="">
+<mx-carousel class="mx-carousel" role="region" aria-roledescription="carousel" loop="">
+  <div class="mx-carousel__buttons" data-buttons="" role="group" aria-label="Quick page controls">
     <button class="mx-carousel__prev mx-button mx-button--icon-only" type="button" disabled="">
-      <span class="sr-only">previous</span>
+      <span class="sr-only">previous page</span>
       <span class="mx-icon mx-icon--chevron-left"></span>
     </button>
     <button class="mx-carousel__next mx-button mx-button--icon-only" type="button">
-      <span class="sr-only">next</span>
+      <span class="sr-only">next page</span>
       <span class="mx-icon mx-icon--chevron-right"></span>
     </button>
   </div>
-  <ul class="mx-carousel__scrollable overflowing" tabindex="0">
-          <li>          
-<div class="mx-container">
+  <div class="mx-carousel__scrollable overflowing" data-track="" aria-live="off" tabindex="0">
+              
+<div class="mx-container" data-index="0" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -535,9 +515,8 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="1" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -556,9 +535,8 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="2" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -577,9 +555,8 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="3" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -598,9 +575,8 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="4" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -619,9 +595,8 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="5" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -640,9 +615,8 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="6" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -661,9 +635,8 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="7" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -682,9 +655,8 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="8" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -703,9 +675,8 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="9" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -724,9 +695,8 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="10" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -745,28 +715,28 @@ exports[`Loop 1`] = `
   </div>
   </article>
 </div>
-</li>
-      </ul>
+
+  </div>
   </mx-carousel>
 "
 `;
 
 exports[`Paginated 1`] = `
 "
-<mx-carousel class="mx-carousel" role="group">
-  <div class="mx-carousel__buttons" data-buttons="">
+<mx-carousel class="mx-carousel" role="region" aria-roledescription="carousel">
+  <div class="mx-carousel__buttons" data-buttons="" role="group" aria-label="Quick page controls">
     <button class="mx-carousel__prev mx-button mx-button--icon-only" type="button" disabled="">
-      <span class="sr-only">previous</span>
+      <span class="sr-only">previous page</span>
       <span class="mx-icon mx-icon--chevron-left"></span>
     </button>
     <button class="mx-carousel__next mx-button mx-button--icon-only" type="button">
-      <span class="sr-only">next</span>
+      <span class="sr-only">next page</span>
       <span class="mx-icon mx-icon--chevron-right"></span>
     </button>
   </div>
-  <ul class="mx-carousel__scrollable overflowing" tabindex="0">
-          <li>          
-<div class="mx-container">
+  <div class="mx-carousel__scrollable overflowing" data-track="" aria-live="off" tabindex="0">
+              
+<div class="mx-container" data-index="0" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -785,9 +755,8 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="1" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -806,9 +775,8 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="2" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -827,9 +795,8 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li>          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="3" aria-hidden="false">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -848,9 +815,8 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="4" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -869,9 +835,8 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="5" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -890,9 +855,8 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="6" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -911,9 +875,8 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="7" aria-hidden="true" inert="">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -932,9 +895,8 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="8" inert="" aria-hidden="true">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -953,9 +915,8 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="9" inert="" aria-hidden="true">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -974,9 +935,8 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-          <li inert="">          
-<div class="mx-container">
+          
+<div class="mx-container" data-index="10" inert="" aria-hidden="true">
 <article class="mx-card mx-card--block mx-background--box">
     <div class="mx-card__content mx-vertical-flow-flex">
     
@@ -995,9 +955,9 @@ exports[`Paginated 1`] = `
   </div>
   </article>
 </div>
-</li>
-      </ul>
-          <ol class="mx-carousel__pagination" data-pagination="pagination" hidden=""></ol>
+
+  </div>
+          <div class="mx-carousel__pagination" data-pagination="pagination" role="group" aria-label="Page controls"><button type="button" data-index="0" aria-label="Page 1" disabled="" aria-current="page">1</button><button type="button" data-index="1" aria-label="Page 2">2</button><button type="button" data-index="2" aria-label="Page 3">3</button></div>
   </mx-carousel>
 "
 `;

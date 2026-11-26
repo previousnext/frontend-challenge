@@ -21,18 +21,18 @@
     padding-inline-end: 0 !important;
   }
 
-  @mixin spacing xxs;
-  @mixin spacing xs;
-  @mixin spacing s;
-  @mixin spacing m;
-  @mixin spacing l;
-  @mixin spacing xl;
-  @mixin spacing xxl;
-  @mixin spacing xxxl;
-  @mixin spacing xxxxl;
-  @mixin spacing ul;
-  @mixin spacing uul;
-  @mixin spacing uuul;
+  @add-mixin spacing xxs;
+  @add-mixin spacing xs;
+  @add-mixin spacing s;
+  @add-mixin spacing m;
+  @add-mixin spacing l;
+  @add-mixin spacing xl;
+  @add-mixin spacing xxl;
+  @add-mixin spacing xxxl;
+  @add-mixin spacing xxxxl;
+  @add-mixin spacing ul;
+  @add-mixin spacing uul;
+  @add-mixin spacing uuul;
 
   .mx-margin--reset {
     margin: 0 !important;
@@ -54,16 +54,16 @@
     margin-inline-end: 0 !important;
   }
 
-  @mixin margin xxs;
-  @mixin margin xs;
-  @mixin margin s;
-  @mixin margin m;
-  @mixin margin l;
-  @mixin margin xl;
-  @mixin margin xxl;
-  @mixin margin xxxl;
-  @mixin margin xxxxl;
-  @mixin margin ul;
-  @mixin margin uul;
-  @mixin margin uuul;
+  @add-mixin margin xxs;
+  @add-mixin margin xs;
+  @add-mixin margin s;
+  @add-mixin margin m;
+  @add-mixin margin l;
+  @add-mixin margin xl;
+  @add-mixin margin xxl;
+  @add-mixin margin xxxl;
+  @add-mixin margin xxxxl;
+  @add-mixin margin ul;
+  @add-mixin margin uul;
+  @add-mixin margin uuul;
 }

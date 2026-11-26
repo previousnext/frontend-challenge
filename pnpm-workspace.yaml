@@ -1,3 +1,29 @@
-onlyBuiltDependencies:
-  - "@swc/core"
-  - esbuild
+allowBuilds:
+  esbuild: false
+
+minimumReleaseAgeExclude:
+  - "@storybook/addon-a11y@10.6.9"
+  - "@storybook/addon-docs@10.6.9"
+  - "@storybook/addon-links@10.6.9"
+  - "@storybook/addon-vitest@10.6.9"
+  - "@storybook/builder-vite@10.6.9"
+  - "@storybook/html-vite@10.6.9"
+  - "@storybook/html@10.6.9"
+  - "@storybook/react-dom-shim@10.6.9"
+  - "@types/node@26.6.10"
+  - "@vitest/browser-playwright@5.1.2"
+  - "@vitest/browser@5.1.2"
+  - "@vitest/coverage-v8@5.1.2"
+  - "@vitest/mocker@5.1.2"
+  - "@vitest/pretty-format@5.1.2"
+  - "@vitest/spy@5.1.2"
+  - "@vitest/ui@5.1.2"
+  - "@vitest/utils@5.1.2"
+  - storybook@10.6.9
+  - vitest@5.1.2
+
+overrides:
+  drupal-twig-extensions>locutus: ^3.0.36
+
+patchedDependencies:
+  drupal-twig-extensions@1.0.0-beta.5: patches/drupal-twig-extensions@1.0.0-beta.5.patch

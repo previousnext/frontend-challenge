@@ -1,6 +1,6 @@
 /**
  * Accordion Group
- * @file Support opening and closing all.
+ * @file Support opening and closing all with a single toggle button.
  */
 
 export default class AccordionGroup extends HTMLElement {
@@ -14,10 +14,10 @@ export default class AccordionGroup extends HTMLElement {
   }
 
   connectedCallback(): void {
-    if (!this.accordions || !this.expandTrigger || !this.collapseTrigger) return
+    if (!this.accordions || !this.toggleTrigger) return
     this.handleToggle()
     const { signal }: AbortController = this.controller
-    this.addEventListener("click", this.handleClick, {
+    this.toggleTrigger.addEventListener("click", this.handleToggleAll, {
       signal,
     })
     this.accordions.forEach(details =>
@@ -31,30 +31,17 @@ export default class AccordionGroup extends HTMLElement {
     this.controller.abort()
   }
 
-  handleClick = ({ target }) => {
-    if (target === this.expandTrigger) {
-      this.handleExpand()
-    }
-    if (target === this.collapseTrigger) {
-      this.handleCollapse()
-    }
+  /** Expands everything unless everything is already open, in which case it collapses. */
+  handleToggleAll = (): void => {
+    const expand = this.toggleTrigger.getAttribute("aria-expanded") !== "true"
+    this.accordions.forEach(details => (details.open = expand))
+    this.handleToggle()
   }
 
-  handleExpand = () => {
-    this.accordions.forEach(detail => (detail.open = true))
-    this.expandTrigger.disabled = true
-    this.collapseTrigger.disabled = false
-  }
-
-  handleCollapse = () => {
-    this.accordions.forEach(detail => (detail.open = false))
-    this.expandTrigger.disabled = false
-    this.collapseTrigger.disabled = true
-  }
-
-  handleToggle = () => {
-    this.expandTrigger.disabled = [...this.accordions].every(details => details.open === true)
-    this.collapseTrigger.disabled = [...this.accordions].every(details => details.open !== true)
+  /** The trigger reads as expanded only once every item is open. */
+  handleToggle = (): void => {
+    const allOpen = [...this.accordions].every(details => details.open)
+    this.toggleTrigger.setAttribute("aria-expanded", String(allOpen))
   }
 
   get accordions(): NodeListOf<HTMLDetailsElement> | null {
@@ -65,18 +52,10 @@ export default class AccordionGroup extends HTMLElement {
     return accordions
   }
 
-  get expandTrigger(): HTMLButtonElement | null {
-    const trigger: HTMLButtonElement | null = this.querySelector("button[data-expand]")
+  get toggleTrigger(): HTMLButtonElement | null {
+    const trigger: HTMLButtonElement | null = this.querySelector("button[data-toggle-all]")
     if (!trigger) {
-      throw new Error(`${this.localName} must contain a <button data-expand> element.`)
-    }
-    return trigger
-  }
-
-  get collapseTrigger(): HTMLButtonElement | null {
-    const trigger: HTMLButtonElement | null = this.querySelector("button[data-collapse]")
-    if (!trigger) {
-      throw new Error(`${this.localName} must contain a <button data-collapse> element.`)
+      throw new Error(`${this.localName} must contain a <button data-toggle-all> element.`)
     }
     return trigger
   }

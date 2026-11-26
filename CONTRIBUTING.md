@@ -12,11 +12,12 @@ git clone git@github.com:YOUR_USERNAME/frontend-challenge.git
 cd frontend-challenge
 
 # 2. Install dependencies
-nvm use # Or Node 22+ if not using nvm
+nvm use # Or Node 24+ if not using nvm
 pnpm install
+pnpm exec playwright install chromium # Browser used by the test suite
 
 # 3. Start development
-pnpm dev
+pnpm start
 # Visit http://localhost:6006 (Storybook)
 
 # 4. Make your changes
@@ -37,6 +38,7 @@ ran out of time, what you would do next.
 pnpm format  # Format code
 pnpm lint    # Run linting
 pnpm test    # Run tests
+# If you've intentionally changed existing markup, update the snapshots with `pnpm test -u`
 
 # 2. Commit your changes
 git commit
