@@ -129,4 +129,3 @@ export const ToggleAll: Story = {
     })
   },
 }
-
