@@ -183,6 +183,8 @@ settings:
 
 overrides:
   drupal-twig-extensions>locutus: ^3.0.36
+  vite-plugin-twig-drupal>twig: ^3.0.0
+  minimatch@>=10.0.0 <11.0.1: ^11.0.1
 
 patchedDependencies:
   drupal-twig-extensions@1.0.0-beta.5: ee850472902788f28a2bdab92b8b4a48443d5e9b3b4c68b595c34cd08598fbbb
@@ -944,6 +946,9 @@ packages:
     peerDependenciesMeta:
       '@types/node':
         optional: true
+
+  '@isaacs/nonrecursive-glob-match@1.1.0':
+    resolution: {integrity: sha512-GPm/Dbvk5RLmhRnxXIa7nTpK0xtl4E0wj0MslsuNiJ1FIROU+2+9lgUC/dgF7Ey4QCWhfEsgxilMRMCdHPfDfw==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -2614,10 +2619,6 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  locutus@2.0.39:
-    resolution: {integrity: sha512-v2iub44UtGpbIv+pFkkYhZ+JsbIM0bJsQcQ1+VayUNGVA/YhM8+CkBiRACcpuuE9Q0xI1pgNzGNwzZDCp1MCww==}
-    engines: {node: '>= 10', yarn: '>= 1'}
-
   locutus@3.0.36:
     resolution: {integrity: sha512-ilsz33lqEd+KerV9JnSHM9EApVYOZ86/JTGKyafmWvhTFtjYauzT1WmZgdJ4JBGR3dY0N0PTfIq2uLvazw5QsQ==}
     engines: {node: '>= 22', yarn: '>= 1'}
@@ -2674,12 +2675,9 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
 
-  minimatch@10.2.6:
-    resolution: {integrity: sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A==}
-    engines: {node: 18 || 20 || >=22}
-
-  minimatch@3.0.8:
-    resolution: {integrity: sha512-6FsRAQsxQ61mw+qP1ZzbL9Bc78x2p5OqNgNpnoAFLTrX8n5Kxph0CsnhmKKNXTWjXqU5L0pGPR7hYk+XWZr60Q==}
+  minimatch@11.0.9:
+    resolution: {integrity: sha512-KCFkfyjqerNlSstjlhIGNXIKZGA/6O4V4RlhZ+Dsr621SPPw0mzlypE9D9ZOoPiVefHID+j7/XuMMlqfD/F60Q==}
+    engines: {node: 20 || >=22}
 
   minimatch@3.1.5:
     resolution: {integrity: sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==}
@@ -3271,11 +3269,6 @@ packages:
 
   tslib@2.9.1:
     resolution: {integrity: sha512-a4Ux9VKuIMHsOS7ENbEq6hK2ZGYIT27Rtl0E4eD9KqwxhKiQeMZE/9xb3IdYwWaSOyIBQLExhQgXDTYoiCxnWA==}
-
-  twig@1.17.1:
-    resolution: {integrity: sha512-atxccyr/BHtb1gPMA7Lvki0OuU17XBqHsNH9lzDHt9Rr1293EVZOosSZabEXz/DPVikIW8ZDqSkEddwyJnQN2w==}
-    engines: {node: '>=10'}
-    hasBin: true
 
   twig@3.0.0:
     resolution: {integrity: sha512-cMfYLWAgdW15B7L5wmanmga113e4phQmo3rk5EFuUrQd99g7I3ncxgynS38P01m4ZXBDSdMYUTV1g3A66/Y56Q==}
@@ -4063,6 +4056,8 @@ snapshots:
       iconv-lite: 0.7.3
     optionalDependencies:
       '@types/node': 26.6.10
+
+  '@isaacs/nonrecursive-glob-match@1.1.0': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -5407,8 +5402,6 @@ snapshots:
   lines-and-columns@1.2.4:
     optional: true
 
-  locutus@2.0.39: {}
-
   locutus@3.0.36: {}
 
   lodash.clonedeep@4.5.0: {}
@@ -5455,13 +5448,10 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  minimatch@10.2.6:
+  minimatch@11.0.9:
     dependencies:
+      '@isaacs/nonrecursive-glob-match': 1.1.0
       brace-expansion: 5.1.0
-
-  minimatch@3.0.8:
-    dependencies:
-      brace-expansion: 1.1.22
 
   minimatch@3.1.5:
     dependencies:
@@ -6173,18 +6163,11 @@ snapshots:
 
   tslib@2.9.1: {}
 
-  twig@1.17.1:
-    dependencies:
-      '@babel/runtime': 7.29.15
-      locutus: 2.0.39
-      minimatch: 3.0.8
-      walk: 2.3.15
-
   twig@3.0.0:
     dependencies:
       '@babel/runtime': 7.29.15
       locutus: 3.0.36
-      minimatch: 10.2.6
+      minimatch: 11.0.9
       walk: 2.3.15
 
   type-fest@0.21.3: {}
@@ -6239,7 +6222,7 @@ snapshots:
     dependencies:
       drupal-attribute: 1.2.1
       drupal-twig-extensions: 1.0.0-beta.5(patch_hash=ee850472902788f28a2bdab92b8b4a48443d5e9b3b4c68b595c34cd08598fbbb)
-      twig: 1.17.1
+      twig: 3.0.0
       vite: 8.3.8(@types/node@26.6.10)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.2(postcss@8.5.33))
 
   vite@8.3.8(@types/node@26.6.10)(esbuild@0.28.2)(jiti@2.7.0)(sugarss@5.0.2(postcss@8.5.33)):
