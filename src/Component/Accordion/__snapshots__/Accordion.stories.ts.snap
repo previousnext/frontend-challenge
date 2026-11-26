@@ -20,7 +20,6 @@ exports[`Accordion 1`] = `
   </details>
 </mx-accordion>
 
-      
 <mx-accordion>
   <details class="mx-accordion mx-accordion--divided" id="performances">
     <summary class="mx-accordion__toggle">
@@ -57,7 +56,6 @@ exports[`Default Open 1`] = `
   </details>
 </mx-accordion>
 
-      
 <mx-accordion>
   <details class="mx-accordion mx-accordion--divided" open="" id="performances-default">
     <summary class="mx-accordion__toggle">
@@ -77,12 +75,12 @@ exports[`Default Open 1`] = `
 exports[`Toggle All 1`] = `
 "<div class="mx-accordions">
     <mx-accordion-group>
-            <div class="mx-accordion__title">
+              <div class="mx-accordion__title">
         
 <h2>Accordion group</h2>
 
                   <div class="mx-accordions__toggle-all">
-            <button data-expand="" class="mx-button mx-button--light mx-button--small" type="button">Expand all</button><button data-collapse="" class="mx-button mx-button--light mx-button--small" type="button">Collapse all</button>
+            <button data-toggle-all="" aria-expanded="false" class="mx-button mx-button--light mx-button--small" type="button"><span class="mx-accordions__expand-label">Expand all</span><span class="mx-accordions__collapse-label">Collapse all</span></button>
           </div>
               </div>
         
@@ -98,7 +96,6 @@ exports[`Toggle All 1`] = `
   </details>
 </mx-accordion>
 
-      
 <mx-accordion>
   <details class="mx-accordion mx-accordion--divided" id="performances">
     <summary class="mx-accordion__toggle">

@@ -5,24 +5,16 @@
     }
   }
 
-  :is(*, ::before, ::after) {
+  *,
+  ::before,
+  ::after {
     box-sizing: border-box;
     background-repeat: no-repeat;
     margin: 0;
-    opacity: 1;
-    transition-property:
-      opacity, color, background-color, border-color, transform, rotate, display, overlay;
-    transition-duration: 0.5s;
-    transition-timing-function: var(--ease);
-    transition-behavior: allow-discrete;
-
-    @starting-style {
-      opacity: 0;
-    }
   }
 
   :focus {
-    scroll-padding-block-end: 4vh;
+    scroll-padding-block-end: 4vb;
   }
 
   :focus-visible {
@@ -88,7 +80,7 @@
       grid-template-columns: subgrid;
       grid-column: span 2;
 
-      @container (max-width: 60ch) {
+      @container (max-inline-size: 60ch) {
         gap: var(--spacing-xxxs);
 
         & > :is(dt, dd) {

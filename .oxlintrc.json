@@ -21,9 +21,9 @@
     "once": "writeable",
     "Mixtape": "writeable"
   },
-  "ignorePatterns": ["node_modules", "dist"],
+  "ignorePatterns": ["node_modules", "dist", "src/Utility/global.d.ts"],
   "rules": {
-    "no-console": "error",
+    "no-console": "warn",
     "no-unused-expressions": [
       "error",
       {
@@ -31,24 +31,14 @@
         "allowTernary": true
       }
     ],
-    "import/no-unused-imports": "error",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": ["tests/**/*.js", "**/*.test.js", "**/*.test.jsx"]
-      }
-    ],
     "consistent-return": "warn",
     "no-unused-vars": "warn",
-    "no-unassigned-import": "off",
-    "valid-jsdoc": [
-      "warn",
+    "import/no-unassigned-import": "off",
+    "react-perf/jsx-no-new-function-as-prop": "off",
+    "no-underscore-dangle": [
+      "error",
       {
-        "prefer": {
-          "returns": "return",
-          "property": "prop"
-        },
-        "requireReturn": false
+        "allow": ["internals_"]
       }
     ]
   },
@@ -58,14 +48,9 @@
       "rules": {
         "consistent-return": "off",
         "jsx-a11y/anchor-is-valid": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/jsx-uses-react": "off"
-      }
-    },
-    {
-      "files": ["tests/jest/*.js"],
-      "rules": {
-        "import/no-unassigned-import": "off"
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "jsx-a11y/prefer-tag-over-role": "warn",
+        "react/react-in-jsx-scope": "off"
       }
     }
   ]

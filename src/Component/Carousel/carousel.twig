@@ -2,25 +2,24 @@
   'mx-carousel',
 ] %}
 {% set attributes = (attributes ?? create_attribute()).addClass(classes) %}
+{% set paginated = pagination or counter %}
 
-<mx-carousel{{ attributes }} role="group" {% if loop %} loop{% endif %}>
-  <div class="mx-carousel__buttons" data-buttons hidden>
+<mx-carousel{{ attributes }} role="region" aria-roledescription="carousel" {% if loop %} loop{% endif %}>
+  <div class="mx-carousel__buttons" data-buttons hidden role="group" aria-label="Quick page controls">
     <button class="mx-carousel__prev mx-button mx-button--icon-only" type="button">
-      <span class="sr-only">previous</span>
+      <span class="sr-only">previous page</span>
       <span class="mx-icon mx-icon--chevron-left"></span>
     </button>
     <button class="mx-carousel__next mx-button mx-button--icon-only" type="button">
-      <span class="sr-only">next</span>
+      <span class="sr-only">next page</span>
       <span class="mx-icon mx-icon--chevron-right"></span>
     </button>
   </div>
-  <ul class="mx-carousel__scrollable">
-    {% for item in items %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
-  {% if pagination or counter %}
+  <div class="mx-carousel__scrollable" data-track aria-live="off">
+    {{ items }}
+  </div>
+  {% if paginated %}
     {% set type = pagination ? 'pagination' : 'counter' %}
-    <ol class="mx-carousel__pagination" data-pagination="{{ type }}" hidden></ol>
+    <div class="mx-carousel__pagination" data-pagination="{{ type }}" hidden role="group" aria-label="Page controls"></div>
   {% endif %}
 </mx-carousel>

@@ -12,7 +12,7 @@ export default class Carousel extends HTMLElement {
   loop?: boolean
   paginationType?: "pagination" | "counter"
   activePage?: number
-  itemMap?: Map<HTMLLIElement, boolean>
+  itemMap?: Map<HTMLElement, boolean>
   iO: IntersectionObserver
   rO: ResizeObserver
   mO: MutationObserver
@@ -25,11 +25,11 @@ export default class Carousel extends HTMLElement {
   }
 
   connectedCallback(): void {
-    if (!this.list) return
+    if (!this.track) return
     if (this.buttons) this.buttons.hidden = false
 
     this.activePage = 0
-    this.list.scrollLeft = 0
+    this.track.scrollLeft = 0
     this.debounced = null
     this.loop = this.hasAttribute("loop")
 
@@ -44,7 +44,13 @@ export default class Carousel extends HTMLElement {
       this.next.addEventListener("click", () => this.handleNavigation(this.activePage + 1), {
         signal,
       })
-    this.list.addEventListener("scroll", this.handleScroll, { signal })
+    // Sync controls once scrolling settles; the debounced scroll listener is
+    // only a fallback for browsers without `scrollend`.
+    if ("onscrollend" in window) {
+      this.track.addEventListener("scrollend", this.handleDisabled, { signal })
+    } else {
+      this.track.addEventListener("scroll", this.handleScroll, { signal })
+    }
 
     if (this.pagination) {
       this.paginationType = this.pagination.getAttribute("data-pagination") as
@@ -56,23 +62,28 @@ export default class Carousel extends HTMLElement {
       })
     }
 
-    const items: NodeListOf<HTMLLIElement> = this.list.querySelectorAll(":scope > li")
+    Array.from(this.track.children).forEach((child, index) => {
+      child.setAttribute("data-index", String(index))
+    })
+    const items: NodeListOf<HTMLElement> = this.track.querySelectorAll("[data-index]")
     this.itemMap = new Map()
     this.iO = new IntersectionObserver(
       entries => {
         entries.forEach(({ target, intersectionRatio }) => {
-          const li = target as HTMLLIElement
+          const item = target as HTMLElement
           if (intersectionRatio > 0.5) {
-            li.removeAttribute("inert")
-            this.itemMap.set(li, true)
+            item.removeAttribute("inert")
+            item.setAttribute("aria-hidden", "false")
+            this.itemMap.set(item, true)
           } else {
-            li.setAttribute("inert", "")
-            this.itemMap.set(li, false)
+            item.setAttribute("inert", "")
+            item.setAttribute("aria-hidden", "true")
+            this.itemMap.set(item, false)
           }
         })
       },
       {
-        root: this.list,
+        root: this.track,
         threshold: 0.5,
       },
     )
@@ -81,12 +92,12 @@ export default class Carousel extends HTMLElement {
     this.rO = new ResizeObserver(entries => {
       entries.forEach(() => this.handleOverflow())
     })
-    this.rO.observe(this.list)
+    this.rO.observe(this.track)
 
     this.mO = new MutationObserver(entries => {
       entries.forEach(() => this.handleOverflow())
     })
-    this.mO.observe(this.list, { childList: true })
+    this.mO.observe(this.track, { childList: true })
   }
 
   disconnectedCallback(): void {
@@ -101,28 +112,40 @@ export default class Carousel extends HTMLElement {
   handleNavigation = (page: number, type: "arrow" | "pagination" = "arrow") => {
     const goesForward = page > this.activePage
     const hasRestart = this.loop && this.next.hasAttribute("data-restart")
-    if (!this.pagination) this.activePage = page
     if (page === 0 || (hasRestart && goesForward && type === "arrow")) {
-      // Scroll to the start.
-      this.items[0].scrollIntoView({ inline: "start", block: "center" })
+      // Reset to page 0 rather than the requested (out-of-range) page —
+      // otherwise every subsequent click computes an out-of-bounds item
+      // index and throws instead of scrolling.
+      this.activePage = 0
+      this.items[0].scrollIntoView({ inline: "start", block: "nearest" })
       this.next.removeAttribute("data-restart")
       return
     }
+    this.activePage = page
     // Scroll to the first item of a page.
     this.items[this.visibleCount * page].scrollIntoView({
       inline: "start",
-      block: "center",
+      block: "nearest",
     })
     if (hasRestart && !goesForward) this.next.removeAttribute("data-restart")
+    const newEvent: CustomEvent<{
+      page: number
+      type: "arrow" | "pagination"
+    }> = new CustomEvent("carousel-slide", {
+      bubbles: true,
+      cancelable: true,
+      detail: { page: this.activePage, type },
+    })
+    this.dispatchEvent(newEvent)
   }
 
   handleDisabled = () => {
     let isEnd = false
-    if (this.prev) this.prev.disabled = this.list.scrollLeft < 200
+    if (this.prev) this.prev.disabled = this.track.scrollLeft < 200
     if (this.next || this.pagination) {
       isEnd =
-        Math.round(this.list.scrollLeft) >=
-        Math.round(this.list.scrollWidth - this.list.offsetWidth)
+        Math.round(this.track.scrollLeft) >=
+        Math.round(this.track.scrollWidth - this.track.offsetWidth)
     }
     if (this.next) {
       if (!this.loop) {
@@ -133,22 +156,36 @@ export default class Carousel extends HTMLElement {
     }
     if (this.pagination) {
       // Set the activePage based on scroll.
-      const startPosition = Math.round(this.list.offsetLeft + this.list.scrollLeft)
+      const startPosition = Math.round(this.track.offsetLeft + this.track.scrollLeft)
       if (isEnd) {
         // If it's the end, the last page is active.
         this.activePage = this.pageStartItems.length - 1
       } else {
-        // Otherwise when the start of a page reaches the start of it's container, then set it to the active page.
+        // Closest match, not exact equality — sub-pixel/rounding differences
+        // mean an exact match can silently miss every "middle" page.
+        let closestIndex = 0
+        let closestDistance = Infinity
         this.pageStartItems.forEach((item, index) => {
-          if (Math.round(item.offsetLeft) === startPosition) this.activePage = index
+          const distance = Math.abs(Math.round(item.offsetLeft) - startPosition)
+          if (distance < closestDistance) {
+            closestDistance = distance
+            closestIndex = index
+          }
         })
+        this.activePage = closestIndex
       }
 
       this.pagination.querySelectorAll("button").forEach(button => {
         const index = button.getAttribute("data-index")
         if (!index) return
         const page = parseInt(index, 10)
-        button.disabled = page === this.activePage
+        const isActive = page === this.activePage
+        button.disabled = isActive
+        if (isActive) {
+          button.setAttribute("aria-current", "page")
+        } else {
+          button.removeAttribute("aria-current")
+        }
       })
     }
   }
@@ -159,39 +196,43 @@ export default class Carousel extends HTMLElement {
   }
 
   handleOverflow = () => {
-    const { scrollWidth, clientWidth } = this.list
+    const { scrollWidth, clientWidth } = this.track
     const hasOverflow = scrollWidth > clientWidth
-    this.list.classList.toggle("overflowing", hasOverflow)
+    this.track.classList.toggle("overflowing", hasOverflow)
     if (hasOverflow) {
       if (this.pagination) {
         // Timeout needed for this.itemMap to get populated by i0.
         this.ioTimeout = setTimeout(this.buildPagination, 200)
       }
-      this.list.setAttribute("tabindex", "0")
+      this.track.setAttribute("tabindex", "0")
     } else {
-      this.list.removeAttribute("tabindex")
+      this.track.removeAttribute("tabindex")
     }
   }
 
   buildPagination = () => {
     if (!this.pagination.hidden) {
       // Existing pagination
-      const currentPages = this.pagination.querySelectorAll(":scope > li")
+      const currentPages = this.pagination.querySelectorAll("button")
       if (currentPages.length === this.pageStartItems.length) return
       // If the number of pages changes, remove current ones so it can be rebuilt.
-      currentPages.forEach(li => li.remove())
+      currentPages.forEach(page => page.remove())
     }
     const pages = Array.from({ length: this.pageStartItems.length }).fill(null)
     if (pages.length <= 0) return
     pages.forEach((_, index) => {
-      const li = createElement(
-        `<li><button type="button" data-index="${index}">${index + 1}</button>`,
+      const label = index + 1
+      const tab = createElement(
+        "button",
+        { type: "button", "data-index": `${index}`, "aria-label": `Page ${label}` },
+        `${label}`,
       )
-      this.pagination.append(li)
-      pages[index] = li
+      this.pagination.append(tab)
+      pages[index] = tab
     })
-    const firstPage = pages[0] as HTMLLIElement
-    firstPage.querySelector("button").disabled = true
+    const firstPage = pages[0] as HTMLButtonElement
+    firstPage.disabled = true
+    firstPage.setAttribute("aria-current", "page")
     this.pagination.hidden = false
   }
 
@@ -203,12 +244,12 @@ export default class Carousel extends HTMLElement {
     this.handleNavigation(page, "pagination")
   }
 
-  get list(): HTMLUListElement | null {
-    const list: HTMLUListElement | null = this.querySelector(":scope > ul")
-    if (!list) {
-      throw new Error(`${this.localName} must contain a <ul> element.`)
+  get track(): HTMLDivElement | null {
+    const track: HTMLDivElement | null = this.querySelector("[data-track]")
+    if (!track) {
+      throw new Error(`${this.localName} must contain an element with [data-track].`)
     }
-    return list
+    return track
   }
 
   get buttons(): HTMLElement | null {
@@ -227,7 +268,7 @@ export default class Carousel extends HTMLElement {
     return this.querySelector("[data-pagination]")
   }
 
-  get items(): HTMLLIElement[] {
+  get items(): HTMLElement[] {
     return [...this.itemMap.keys()]
   }
 
@@ -235,7 +276,7 @@ export default class Carousel extends HTMLElement {
     return [...this.itemMap.values()].filter(visible => visible).length
   }
 
-  get pageStartItems(): HTMLLIElement[] {
+  get pageStartItems(): HTMLElement[] {
     return [...this.items].filter((_, index) => index % this.visibleCount === 0)
   }
 }

@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from "@storybook/html-vite"
+import { expect, waitFor } from "storybook/test"
 import Component from "./carousel.twig"
 import "./carousel.css"
 import "./Elements/Carousel"
@@ -181,19 +182,19 @@ const meta: Meta<CarouselType> = {
         background: BackgroundStyles.BOX,
         modifiers: [ListItemModifiers.BLOCK],
       }),
-    ],
+    ].join(""),
   },
   argTypes: {
     items: {
       description:
-        "A list of `GridItem` objects, usually [Cards](/?path=/docs/component-card--docs) or [ContentBlocks](/?path=/docs/component-contentblock--docs).",
+        "A concatenated string of `GridItem` markup, usually [Cards](/?path=/docs/component-card--docs) or [ContentBlocks](/?path=/docs/component-contentblock--docs).",
       type: {
         name: "other",
         required: true,
-        value: "array",
+        value: "string",
       },
       table: {
-        type: { summary: "GridItem[]" },
+        type: { summary: "string" },
       },
     },
     loop: {
@@ -224,7 +225,60 @@ const meta: Meta<CarouselType> = {
 export default meta
 type Story = StoryObj<CarouselType>
 
-export const Carousel: Story = {}
+export const Carousel: Story = {
+  play: async ({ canvas, canvasElement, userEvent, step }) => {
+    const isMobile = matchMedia("(max-width: 767px)").matches
+    const back = await canvas.findByRole("button", { name: "previous page" }, { timeout: 2000 })
+    const next = await canvas.findByRole("button", { name: "next page" }, { timeout: 2000 })
+    // The custom element's IntersectionObserver populates its internal item
+    // map asynchronously after mount - wait for its first pass (visible via
+    // the resulting `aria-hidden`) before clicking, or navigation can run
+    // against an empty item map.
+    await waitFor(
+      () => expect(canvasElement.querySelector('[data-index="0"]')).toHaveAttribute("aria-hidden"),
+      { timeout: 2000 },
+    )
+    await step("Has prev/next buttons", async () => {
+      await expect(back).toHaveAttribute("disabled")
+      await expect(next).not.toHaveAttribute("disabled")
+    })
+    await step("Navigates on click", async () => {
+      await userEvent.click(next)
+      await waitFor(
+        () => {
+          expect(back).not.toHaveAttribute("disabled")
+          expect(next).not.toHaveAttribute("disabled")
+        },
+        { timeout: 2000 },
+      )
+      if (!isMobile) {
+        await userEvent.click(next)
+        await waitFor(
+          () => {
+            expect(back).not.toHaveAttribute("disabled")
+            expect(next).toHaveAttribute("disabled")
+          },
+          { timeout: 2000 },
+        )
+      }
+    })
+    await step("Navigates back", async () => {
+      await userEvent.click(back)
+      if (!isMobile) {
+        await userEvent.click(back)
+      }
+      await waitFor(
+        () => {
+          expect(back).toHaveAttribute("disabled")
+          expect(next).not.toHaveAttribute("disabled")
+        },
+        { timeout: 2000 },
+      )
+      // Remove focus
+      await userEvent.click(canvasElement)
+    })
+  },
+}
 
 /**
  * Display counter dot navigation.
@@ -232,6 +286,46 @@ export const Carousel: Story = {}
 export const Counters: Story = {
   args: {
     counter: true,
+  },
+  play: async ({ canvas, canvasElement, userEvent, step }) => {
+    const pagination = await canvas.findByLabelText("Page controls", {}, { timeout: 2000 })
+    const back = await canvas.findByRole("button", { name: "previous page" }, { timeout: 2000 })
+    const button1 = await canvas.findByRole("button", { name: "Page 1" })
+    const button2 = await canvas.findByRole("button", { name: "Page 2" })
+    await step("Has pager buttons", async () => {
+      await expect(pagination).not.toHaveAttribute("hidden")
+      await expect(button1).toBeInTheDocument()
+      await expect(button1).toHaveAttribute("aria-current", "page")
+      await expect(button2).toBeInTheDocument()
+      await expect(button2).not.toHaveAttribute("aria-current")
+    })
+    await step("Navigates on click", async () => {
+      await userEvent.click(button2)
+      // The pagination buttons' `aria-current` and the quick-nav buttons'
+      // `disabled` are both set inside the same debounced scroll handler, so
+      // waiting on the former also guarantees the latter has settled.
+      await waitFor(
+        () => {
+          expect(button1).not.toHaveAttribute("aria-current")
+          expect(button2).toHaveAttribute("aria-current", "page")
+          expect(back).not.toHaveAttribute("disabled")
+        },
+        { timeout: 2000 },
+      )
+    })
+    await step("Navigates back", async () => {
+      await userEvent.click(back)
+      await waitFor(
+        () => {
+          expect(button2).not.toHaveAttribute("aria-current")
+          expect(button1).toHaveAttribute("aria-current", "page")
+          expect(back).toHaveAttribute("disabled")
+        },
+        { timeout: 2000 },
+      )
+      // Remove focus
+      await userEvent.click(canvasElement)
+    })
   },
 }
 
@@ -242,6 +336,46 @@ export const Paginated: Story = {
   args: {
     pagination: true,
   },
+  play: async ({ canvas, canvasElement, userEvent, step }) => {
+    const pagination = await canvas.findByLabelText("Page controls", {}, { timeout: 2000 })
+    const back = await canvas.findByRole("button", { name: "previous page" }, { timeout: 2000 })
+    const button1 = await canvas.findByRole("button", { name: "Page 1" })
+    const button2 = await canvas.findByRole("button", { name: "Page 2" })
+    await step("Has pager buttons", async () => {
+      await expect(pagination).not.toHaveAttribute("hidden")
+      await expect(button1).toBeInTheDocument()
+      await expect(button1).toHaveAttribute("aria-current", "page")
+      await expect(button2).toBeInTheDocument()
+      await expect(button2).not.toHaveAttribute("aria-current")
+    })
+    await step("Navigates on click", async () => {
+      await userEvent.click(button2)
+      // The pagination buttons' `aria-current` and the quick-nav buttons'
+      // `disabled` are both set inside the same debounced scroll handler, so
+      // waiting on the former also guarantees the latter has settled.
+      await waitFor(
+        () => {
+          expect(button1).not.toHaveAttribute("aria-current")
+          expect(button2).toHaveAttribute("aria-current", "page")
+          expect(back).not.toHaveAttribute("disabled")
+        },
+        { timeout: 2000 },
+      )
+    })
+    await step("Navigates back", async () => {
+      await userEvent.click(back)
+      await waitFor(
+        () => {
+          expect(button2).not.toHaveAttribute("aria-current")
+          expect(button1).toHaveAttribute("aria-current", "page")
+          expect(back).toHaveAttribute("disabled")
+        },
+        { timeout: 2000 },
+      )
+      // Remove focus
+      await userEvent.click(canvasElement)
+    })
+  },
 }
 
 /**
@@ -250,5 +384,75 @@ export const Paginated: Story = {
 export const Loop: Story = {
   args: {
     loop: true,
+  },
+  play: async ({ canvas, canvasElement, userEvent, step }) => {
+    const isMobile = matchMedia("(max-width: 767px)").matches
+    const back = await canvas.findByRole("button", { name: "previous page" }, { timeout: 2000 })
+    const next = await canvas.findByRole("button", { name: "next page" }, { timeout: 2000 })
+    // The custom element's IntersectionObserver populates its internal item
+    // map asynchronously after mount - wait for its first pass (visible via
+    // the resulting `aria-hidden`) before clicking, or navigation can run
+    // against an empty item map.
+    await waitFor(
+      () => expect(canvasElement.querySelector('[data-index="0"]')).toHaveAttribute("aria-hidden"),
+      { timeout: 2000 },
+    )
+    await step("Has prev/next buttons", async () => {
+      await expect(back).toHaveAttribute("disabled")
+      await expect(next).not.toHaveAttribute("disabled")
+    })
+    await step("Navigates on click", async () => {
+      await userEvent.click(next)
+      await waitFor(
+        () => {
+          expect(back).not.toHaveAttribute("disabled")
+          expect(next).not.toHaveAttribute("disabled")
+        },
+        { timeout: 2000 },
+      )
+      await userEvent.click(next)
+      await waitFor(
+        () => {
+          expect(back).not.toHaveAttribute("disabled")
+          expect(next).not.toHaveAttribute("disabled")
+        },
+        { timeout: 2000 },
+      )
+      if (!isMobile) {
+        // With `loop`, `next` is never `disabled` at the end - the custom
+        // element instead marks it `data-restart` once its debounced scroll
+        // handler has confirmed the end was reached. Wait for that marker
+        // before the "Loops back" step's click, or it can race the debounce
+        // and request an out-of-range page.
+        await waitFor(() => expect(next).toHaveAttribute("data-restart"), { timeout: 2000 })
+      }
+    })
+    await step("Loops back", async () => {
+      if (!isMobile) {
+        await userEvent.click(next)
+        await waitFor(
+          () => {
+            expect(back).toHaveAttribute("disabled")
+            expect(next).not.toHaveAttribute("disabled")
+          },
+          { timeout: 2000 },
+        )
+      } else {
+        // On mobile there's too many pages to click through to so we just
+        // click back instead to restore the initial state. The desktop
+        // test covers the loop functionality and the behaviour is the same.
+        await userEvent.click(back)
+        await userEvent.click(back)
+        await waitFor(
+          () => {
+            expect(back).toHaveAttribute("disabled")
+            expect(next).not.toHaveAttribute("disabled")
+          },
+          { timeout: 2000 },
+        )
+      }
+      // Remove focus
+      await userEvent.click(canvasElement)
+    })
   },
 }

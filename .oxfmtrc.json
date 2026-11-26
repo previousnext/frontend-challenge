@@ -10,6 +10,8 @@
     "package-lock.json",
     "/storybook-static",
     "/storybook",
-    "docs/*.md"
+    "docs/*.md",
+    "src/Atom/Icon/_mixin-icon.css",
+    "src/Atom/Spacing/_mixins.css"
   ]
 }

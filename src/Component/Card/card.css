@@ -11,7 +11,7 @@
     &[class*="mx-background--"] {
       border-radius: var(--border-radius);
 
-      @container (min-width: token("breakpoint.contentCard")) {
+      @container (min-inline-size: token("breakpoint.contentCard")) {
         --content-min-spacing: var(--content-max-spacing, var(--spacing-m));
       }
 
@@ -37,7 +37,7 @@
     &:has(.mx-card__media) {
       grid-template: "media" "content" 1fr / 1fr;
 
-      @container (min-width: token("breakpoint.contentCard")) {
+      @container (min-inline-size: token("breakpoint.contentCard")) {
         --card-gap: var(--gap-l);
         --card-alignment: center;
 
@@ -49,12 +49,12 @@
         }
       }
 
-      @container (min-width: token("breakpoint.l")) {
+      @container (min-inline-size: token("breakpoint.l")) {
         --card-gap: var(--large-card-gap, 6rem);
       }
 
       &[class*="mx-background--"] {
-        @container (min-width: token("breakpoint.contentCard")) {
+        @container (min-inline-size: token("breakpoint.contentCard")) {
           & .mx-card__content {
             padding-block-start: var(--content-min-spacing, var(--spacing-s));
           }

@@ -1,0 +1,26 @@
+diff --git a/dist/filters/format_date/definition.cjs b/dist/filters/format_date/definition.cjs
+index 9f6c0b862d3786ea883d6e67ead2531352b4dbeb..6639984bbe3e91446420643fc70274a50f37f02e 100644
+--- a/dist/filters/format_date/definition.cjs
++++ b/dist/filters/format_date/definition.cjs
+@@ -7,7 +7,7 @@ exports.acceptedArguments = void 0;
+ exports.configInit = configInit;
+ exports.formatDate = formatDate;
+ exports.options = exports.name = void 0;
+-var _date = _interopRequireDefault(require("locutus/php/datetime/date.js"));
++var _date = { default: require("locutus/php/datetime/date").date };
+ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+ /**
+  * @file The format_date filter
+diff --git a/lib/filters/format_date/definition.js b/lib/filters/format_date/definition.js
+index dd88cca7ea91991b72b95006ffb8a7d161beab30..14726c466d263f437fc6b599500a70a764cc8fcf 100644
+--- a/lib/filters/format_date/definition.js
++++ b/lib/filters/format_date/definition.js
+@@ -8,7 +8,7 @@
+  * ```
+  */
+ 
+-import date from 'locutus/php/datetime/date.js';
++import { date } from 'locutus/php/datetime/date';
+ 
+ export const name = 'format_date';
+ 

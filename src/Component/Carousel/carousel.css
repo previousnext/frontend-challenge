@@ -16,8 +16,9 @@
     gap: var(--horizontal-gap, var(--gap));
     grid-auto-flow: column;
     grid-auto-columns: minmax(var(--inline-size, 25ch), 1fr);
-    overflow: auto hidden;
-    scroll-snap-type: x mandatory;
+    overflow-block: hidden;
+    overflow-inline: auto;
+    scroll-snap-type: inline mandatory;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     scrollbar-color: var(--scrollbar-color, var(--line-colour, var(--colour-border)) transparent);

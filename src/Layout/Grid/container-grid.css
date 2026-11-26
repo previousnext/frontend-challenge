@@ -6,7 +6,7 @@
   .grid.container {
     --container-name: grid-item;
 
-    @container grid-item (min-width: token("breakpoint.l")) {
+    @container grid-item (min-inline-size: token("breakpoint.l")) {
       --grid-gap: var(--large-grid-gap, var(--gap-l));
     }
 
@@ -29,87 +29,87 @@
     }
 
     & .grid--11-col {
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 11;
       }
     }
 
     & .grid--10-col {
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 10;
       }
     }
 
     & .grid--9-col {
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 9;
       }
     }
 
     & .grid--8-col {
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 8;
       }
     }
 
     & .grid--7-col {
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 7;
       }
     }
 
     & .grid--6-col {
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 6;
       }
     }
 
     & .grid--5-col {
-      @container grid-item (min-width: token("breakpoint.s")) {
+      @container grid-item (min-inline-size: token("breakpoint.s")) {
         --grid-span: 6;
       }
 
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 5;
       }
     }
 
     & .grid--4-col {
-      @container grid-item (min-width: token("breakpoint.s")) {
+      @container grid-item (min-inline-size: token("breakpoint.s")) {
         --grid-span: 6;
       }
 
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 4;
       }
     }
 
     & .grid--3-col {
-      @container grid-item (min-width: token("breakpoint.s")) {
+      @container grid-item (min-inline-size: token("breakpoint.s")) {
         --grid-span: 6;
       }
 
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 3;
       }
     }
 
     & .grid--2-col {
-      @container grid-item (min-width: token("breakpoint.s")) {
+      @container grid-item (min-inline-size: token("breakpoint.s")) {
         --grid-span: 3;
       }
 
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 2;
       }
     }
 
     & .grid--1-col {
-      @container grid-item (min-width: token("breakpoint.s")) {
+      @container grid-item (min-inline-size: token("breakpoint.s")) {
         --grid-span: 3;
       }
 
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-span: 1;
       }
     }
@@ -141,49 +141,49 @@
     }
 
     &.grid--xs-2-cols {
-      @container grid-item (min-width: token("breakpoint.xs")) {
+      @container grid-item (min-inline-size: token("breakpoint.xs")) {
         --grid-repeat: 2;
       }
     }
 
     &.grid--sm-2-cols {
-      @container grid-item (min-width: token("breakpoint.s")) {
+      @container grid-item (min-inline-size: token("breakpoint.s")) {
         --grid-repeat: 2;
       }
     }
 
     &.grid--md-2-cols {
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-repeat: 2;
       }
     }
 
     &.grid--md-3-cols {
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-repeat: 3;
       }
     }
 
     &.grid--lg-3-cols {
-      @container grid-item (min-width: token("breakpoint.l")) {
+      @container grid-item (min-inline-size: token("breakpoint.l")) {
         --grid-repeat: 3;
       }
     }
 
     &.grid--md-4-cols {
-      @container grid-item (min-width: token("breakpoint.m")) {
+      @container grid-item (min-inline-size: token("breakpoint.m")) {
         --grid-repeat: 4;
       }
     }
 
     &.grid--lg-4-cols {
-      @container grid-item (min-width: token("breakpoint.l")) {
+      @container grid-item (min-inline-size: token("breakpoint.l")) {
         --grid-repeat: 4;
       }
     }
 
     &.grid--xl-4-cols {
-      @container grid-item (min-width: token("breakpoint.xl")) {
+      @container grid-item (min-inline-size: token("breakpoint.xl")) {
         --grid-repeat: 4;
       }
     }

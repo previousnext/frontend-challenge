@@ -64,15 +64,18 @@ export const isInternalLink = (href: string, internalHostnames: string[]): boole
   }
 }
 
-export const createElement = (string: string): Element | null => {
-  try {
-    const parser = new DOMParser()
-    const doc = parser.parseFromString(string, "text/html")
-    return doc.body.firstElementChild
-  } catch (error) {
-    if (process.env.NODE_ENV !== "production") console.error(error)
-    return null
-  }
+export const createElement = <K extends keyof HTMLElementTagNameMap>(
+  tagName: K,
+  attributes: Record<string, string | boolean> = {},
+  ...children: (Node | string)[]
+): HTMLElementTagNameMap[K] => {
+  const element = document.createElement(tagName)
+  Object.entries(attributes).forEach(([name, value]) => {
+    if (value === false) return
+    element.setAttribute(name, value === true ? "" : value)
+  })
+  element.append(...children)
+  return element
 }
 
 export const getElementBox = (
