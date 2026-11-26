@@ -1,0 +1,14 @@
+# Code owners for dependency manifests and lock files.
+# GitHub requests a review from the owner on any PR that changes these files,
+# including Dependabot updates.
+
+# Composer
+/patches/             @rikki-iki
+
+# Node
+/package.json         @rikki-iki
+/pnpm-lock.yaml       @rikki-iki
+/pnpm-workspace.yaml  @rikki-iki
+
+# This file
+/.github/CODEOWNERS   @rikki-iki
